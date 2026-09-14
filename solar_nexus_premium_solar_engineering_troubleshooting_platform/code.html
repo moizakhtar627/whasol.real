@@ -608,20 +608,27 @@
     document.addEventListener('DOMContentLoaded', function() {
       const visualStyle = document.createElement('style');
       visualStyle.textContent = `
-        :root { --whasol-ink: #07131d; --whasol-panel: #0d1d29; --whasol-line: #28404b; --whasol-cyan: #54d6e8; --whasol-amber: #f4b64e; }
-        body { background: var(--whasol-ink) !important; color: #e8f0f2; }
-        header { background: rgba(7, 19, 29, 0.94) !important; border-bottom: 1px solid var(--whasol-line); }
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+        :root { --whasol-ink: #081217; --whasol-panel: #102129; --whasol-line: #29434b; --whasol-cyan: #68d3d0; --whasol-amber: #f2b84b; --whasol-copy: #b8c8c9; }
+        body { background: var(--whasol-ink) !important; color: #edf5f3; font-family: 'DM Sans', sans-serif !important; }
+        header { background: rgba(8, 18, 23, 0.96) !important; border-bottom: 1px solid var(--whasol-line); }
+        header span, header a { font-family: 'DM Sans', sans-serif !important; }
         main section { border-color: var(--whasol-line) !important; }
         main .rounded-xl, main .rounded-lg { border-radius: 8px !important; }
         main .rounded-full { border-radius: 999px !important; }
-        main [class*="shadow-"] { box-shadow: 0 10px 28px rgba(0, 0, 0, 0.24) !important; }
-        main [class*="blur-"] { opacity: .28 !important; filter: blur(80px) !important; }
-        main [class*="bg-surface-container"] { border: 1px solid rgba(40, 64, 75, .72); }
-        main h1, main h2, main h3 { letter-spacing: -0.015em !important; }
-        main h1 { max-width: 12ch; }
-        main p { color: #afc1c7; }
-        main a[class*="bg-primary-container"] { background: var(--whasol-cyan) !important; box-shadow: 0 6px 18px rgba(84, 214, 232, .18) !important; }
-        main a[class*="bg-primary-container"]:hover { background: #8ae7f2 !important; }
+        main [class*="shadow-"] { box-shadow: 0 10px 28px rgba(0, 0, 0, 0.26) !important; }
+        main [class*="blur-"] { display: none !important; }
+        main [class*="bg-surface-container"] { border: 1px solid rgba(41, 67, 75, .76); }
+        main h1, main h2, main h3, main h4 { font-family: 'DM Sans', sans-serif !important; letter-spacing: -0.015em !important; }
+        main h1 { max-width: 12ch; font-weight: 700 !important; }
+        main p { color: var(--whasol-copy); }
+        main [class*="font-code"], main [class*="font-label"] { font-family: 'IBM Plex Mono', monospace !important; letter-spacing: .04em !important; }
+        main a[class*="bg-primary-container"] { background: var(--whasol-cyan) !important; box-shadow: 0 6px 18px rgba(104, 211, 208, .18) !important; }
+        main a[class*="bg-primary-container"]:hover { background: #9be7df !important; }
+        #universal-search { border-top: 1px solid var(--whasol-line); border-bottom: 1px solid var(--whasol-line); }
+        #universal-search .brand-marquee { display: flex !important; min-width: max-content; animation: brand-marquee 26s linear infinite !important; }
+        #universal-search .brand-marquee a, #universal-search .brand-marquee span { font-family: 'DM Sans', sans-serif !important; font-size: 1.05rem !important; letter-spacing: .02em !important; }
+        #universal-search .overflow-hidden { border: 1px solid var(--whasol-line); background: #0b1a21 !important; }
         footer { border-top: 1px solid var(--whasol-line); }
       `;
       document.head.appendChild(visualStyle);
