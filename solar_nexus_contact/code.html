@@ -3,7 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Engineering | Solar Nexus</title>
+  <title>Contact WhaSol Engineering | Solar Troubleshooting Help</title>
+  <meta name="description" content="Contact the WhaSol engineering desk for practical guidance on solar inverter errors, battery issues, wiring faults, and PV system problems." />
+  <link rel="canonical" href="https://whasol-real.vercel.app/solar_nexus_contact/code.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact WhaSol Engineering | Solar Troubleshooting Help" />
+  <meta property="og:description" content="Send your solar equipment details and symptoms to the WhaSol engineering desk." />
+  <meta property="og:url" content="https://whasol-real.vercel.app/solar_nexus_contact/code.html" />
+  <meta property="og:site_name" content="WhaSol" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Contact WhaSol Engineering" />
+  <meta name="twitter:description" content="Get practical help with solar inverter, battery, wiring, and PV system issues." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -27,14 +37,28 @@
     button.disabled = true;
 
     try {
-      await emailjs.sendForm('service_dwio7tw', 'template_xfic2ap', form);
+      const formData = new FormData(form);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const equipment = formData.get('equipment') || 'Not provided';
+      const message = formData.get('message');
+
+      await emailjs.send('service_dwio7tw', 'template_xfic2ap', {
+        name: name,
+        from_name: name,
+        email: email,
+        reply_to: email,
+        equipment: equipment,
+        message: message,
+        subject: 'New WhaSol engineering request'
+      });
       status.textContent = 'Send successfully.';
       status.classList.remove('border-sky-400', 'bg-slate-950', 'text-sky-200');
       status.classList.add('border-green-400', 'bg-green-950', 'text-green-200');
       form.reset();
     } catch (error) {
       console.error('EmailJS submission failed', error);
-      status.textContent = 'Unable to send your request. Please try again.';
+      status.textContent = 'Unable to send your request. ' + (error.text || 'Please try again.');
       status.classList.remove('border-sky-400', 'bg-slate-950', 'text-sky-200');
       status.classList.add('border-red-400', 'bg-red-950', 'text-red-200');
     } finally {
