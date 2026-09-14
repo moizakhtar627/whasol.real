@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/solar_nexus_premium_solar_engineering_troubleshooting_platform/code.html"
+    }
+  ]
+}
