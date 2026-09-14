@@ -838,13 +838,13 @@
       });
 
       const routes = {
-        home: '../solar_nexus_premium_solar_engineering_troubleshooting_platform/code.html',
-        troubleshooting: '../solar_nexus_troubleshooting_knowledge_library/code.html',
-        'error-codes': '../solar_nexus_inverter_error_codes_database/code.html',
-        brands: '../solar_nexus_inverter_error_codes_database/code.html#brands',
-        blogs: '../solar_nexus_engineering_blogs_technical_journal/code.html',
-        about: '../solar_nexus_about/code.html',
-        contact: '../solar_nexus_contact/code.html'
+        home: '../index.html',
+        troubleshooting: '../guides/',
+        'error-codes': '../error-codes/',
+        brands: '../error-codes/#brands',
+        blogs: '../blog/',
+        about: '../about-us/',
+        contact: '../contact-us/'
       };
       document.querySelectorAll('a[data-path]').forEach(function (link) {
         if (routes[link.dataset.path]) link.href = routes[link.dataset.path];

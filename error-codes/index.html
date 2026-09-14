@@ -797,6 +797,20 @@
           brandNode.nodeValue = brandNode.nodeValue.replace(/Solar Nexus Engineering Intelligence/g, 'WhaSol').replace(/Solar Nexus/g, 'WhaSol').replace(/SOLAR NEXUS/g, 'WHASOL').replace(/Engineering Intelligence/g, '');
         }
       }
+
+      const routes = {
+        home: '../index.html',
+        troubleshooting: '../guides/',
+        'error-codes': '../error-codes/',
+        brands: '../error-codes/#brands',
+        blogs: '../blog/',
+        about: '../about-us/',
+        contact: '../contact-us/'
+      };
+      document.querySelectorAll('a[data-path]').forEach(function (link) {
+        const route = routes[link.dataset.path];
+        if (route) link.href = route;
+      });
     });
     const searchInput = document.getElementById('errorSearchInput');
     const clearBtn = document.getElementById('clearSearchBtn');
