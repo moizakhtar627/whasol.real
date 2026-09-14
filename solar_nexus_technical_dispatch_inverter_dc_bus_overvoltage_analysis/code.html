@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#3c494d", "on-primary-fixed": "#001f27", "tertiary-container": "#febd37", "on-secondary-fixed-variant": "#633f00", "surface": "#0a1422", "on-secondary": "#452b00", "secondary-container": "#c48313", "secondary-fixed-dim": "#ffb955", "primary": "#b6edff", "on-primary-fixed-variant": "#004e5e", "surface-container-highest": "#2c3545", "primary-fixed": "#b1ecff", "background": "#0a1422", "surface-variant": "#2c3545", "error": "#ffb4ab", "primary-fixed-dim": "#35d7fd", "on-tertiary-fixed": "#271900", "error-container": "#93000a", "tertiary-fixed-dim": "#fcbb35", "secondary-fixed": "#ffddb4", "on-primary-container": "#005c6e", "on-tertiary-fixed-variant": "#5e4200", "surface-container": "#16202f", "on-error": "#690005", "on-background": "#d9e3f7", "inverse-on-surface": "#273140", "tertiary-fixed": "#ffdea8", "on-tertiary": "#422d00", "inverse-primary": "#00677c", "tertiary": "#ffe0ae", "on-error-container": "#ffdad6", "on-surface": "#d9e3f7", "primary-container": "#38d9ff", "on-secondary-fixed": "#291800", "outline": "#869398", "surface-dim": "#0a1422", "surface-container-high": "#212a39", "surface-tint": "#35d7fd", "surface-bright": "#303a49", "surface-container-low": "#121c2a", "on-secondary-container": "#3c2500", "surface-container-lowest": "#050e1c", "inverse-surface": "#d9e3f7", "secondary": "#ffb955", "on-surface-variant": "#bbc9ce", "on-primary": "#003641", "on-tertiary-container": "#6f4e00" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "2.5rem", "space-md": "1rem", "gutter": "1.5rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "title-md": ["Inter"], "body-md": ["Inter"], "display-xl-mobile": ["Space Grotesk"], "label-md": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "body-lg": ["Inter"], "code-telemetry": ["Space Grotesk"], "body-sm": ["Inter"], "headline-sm": ["Space Grotesk"], "label-sm": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "display-xl": ["Space Grotesk"], "title-lg": ["Inter"] }, "fontSize": { "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "display-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "code-telemetry": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "500" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.45)]"><div class="h-20 w-full px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md shrink-0"><img alt="Solar Nexus Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wgam0DDD6e-vdtEzaBZwIuLc6sTIiyTDeAqKHOAD5K6dw-vRNg-luIfT7uH8KcvSrxrQysvovE24wagFeSEfH0ks4HeVLrYu9TT9dZUg9cPTNo5KlLPkDcB8ABaONPK-T5CKHxyme5np5MRX9XecUbKy3h0_4pGujj0u_bw9QLA242TCbSD28idX9uW6CGPOZWsOW9NsBvW2ig_3736XFFpZjvMHfLsiWrlGJRres7Ud6Eu7fuwWbcnyCX"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Solar Nexus</span><span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Engineering Intelligence</span></div></div><nav class="hidden xl:flex items-center gap-space-sm bg-surface-container-lowest/50 p-space-xs rounded-full shadow-[inset_0_1px_4px_rgba(0,0,0,0.5)]" data-active-classes="bg-surface-container text-primary font-bold"><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="troubleshooting" href="#">Troubleshooting</a><a aria-current="page" class="px-space-md py-space-xs rounded-full transition-colors bg-surface-container text-primary font-bold" data-path="error-codes" href="#">Error Codes</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="brands" href="#">Brands &amp; Models</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="blogs" href="#">Blogs</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About Us</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md shrink-0"><button class="hidden sm:flex items-center gap-space-md px-space-md py-space-xs rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-code-telemetry text-code-telemetry">Search guides...</span><kbd class="px-space-xs py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface">⌘K</kbd></button><a class="px-space-lg py-space-xs rounded-full bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider shadow-[0_0_20px_rgba(56,217,255,0.35)] hover:bg-primary transition-all flex items-center gap-space-xs" data-path="troubleshooting" href="#"><span class="material-symbols-outlined text-[16px]">build</span>Find a Solution</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Article Header Section -->
+<header class="w-full bg-surface-container-lowest px-margin py-space-xl relative overflow-hidden shadow-xl">
+<div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-primary-container/10 blur-[100px] pointer-events-none"></div>
+<div class="absolute -bottom-24 left-1/4 w-80 h-80 rounded-full bg-secondary/5 blur-[90px] pointer-events-none"></div>
+<div class="max-w-[1520px] mx-auto w-full flex flex-col gap-space-lg relative z-10">
+<!-- Breadcrumb Navigation -->
+<nav aria-label="Breadcrumbs" class="flex flex-wrap items-center gap-space-xs font-code-telemetry text-code-telemetry text-outline">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">terminal</span>SYS_ROOT
+        </a>
+<span>/</span>
+<a class="hover:text-primary transition-colors" href="#">Blogs</a>
+<span>/</span>
+<a class="hover:text-primary transition-colors" href="#">Inverter Architecture</a>
+<span>/</span>
+<span class="text-primary font-semibold">HF Transformerless Bus Overvoltage</span>
+</nav>
+<!-- Technical Metadata Pills -->
+<div class="flex flex-wrap items-center gap-space-sm font-label-md text-label-md">
+<span class="px-space-md py-1 rounded-full bg-primary-container/15 text-primary tracking-wider uppercase flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Topology &amp; MPPT Dynamics
+        </span>
+<span class="px-space-md py-1 rounded-full bg-surface-container-high text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+          OCT 14, 2024
+        </span>
+<span class="px-space-md py-1 rounded-full bg-surface-container-high text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+          14 MIN READ
+        </span>
+<span class="px-space-md py-1 rounded-full bg-surface-container-high text-on-surface-variant font-code-telemetry text-code-telemetry">
+          REV 2.1.4
+        </span>
+<span class="px-space-md py-1 rounded-full bg-secondary-container/20 text-secondary tracking-widest uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+          CLEARANCE: EE ADVANCED / FIELD PE
+        </span>
+</div>
+<!-- Main Title & Subtitle -->
+<div class="flex flex-col gap-space-md">
+<h1 class="font-display-xl text-display-xl tracking-tight text-on-surface text-balance max-w-5xl">
+          Dissecting High-Frequency Transformerless Inverter Topology: Why DC Bus Overvoltage (<span class="text-primary">Error 02</span>) Occurs During Cloud Transients
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-4xl leading-relaxed">
+          A rigorous root-cause investigation into perturbation MPPT sampling lag, intermediate DC link capacitor surge headroom saturation, and firmware mitigation loops across Sungrow, Growatt, and Solis hybrid power conversion units.
+        </p>
+</div>
+<!-- Author Card & Action Utility Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-lg pt-space-md bg-surface-container-low/40 rounded-xl p-space-md shadow-inner">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img alt="Marcus Vance PE Avatar" class="w-14 h-14 rounded-full object-cover shadow-[0_0_12px_rgba(56,217,255,0.35)]" src="https://lh3.googleusercontent.com/aida/AEtjO1WEf7gi6DLZ1emZ9WAPmzJFeVmTJkeUM68o-_VgPPNfUJomLPTI_ps-ZV1TWxWuctQnJTU2RfVWebD8XrFFdD83GYHdZXQ0J9q-RMmmg9i52wcvt6XNPBMvGZJZv3ZcWPtKnxXqWN1c7VZwpQWdi5nJ2TZmVbJI9cSbckL1NJqchQI7_YARODuf8Wx1UgxMNoZZf-beTgminsVSsQTh-SnGvuA5hTM3_6M56A-djvBcjAM1rcFMudn8LXg2"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-primary rounded-full ring-2 ring-surface-container-lowest" title="Author Verified"></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Marcus Vance, PE</span>
+<span class="material-symbols-outlined text-primary text-[18px]" title="Licensed Professional Engineer">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lead PV Power Electronics Architect • IEEE Industrial Applications Society Member</span>
+</div>
+</div>
+<!-- Telemetry Utility Buttons -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-all" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[16px]">print</span>
+            Print Schematic
+          </button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-all" id="copyLinkBtn" onclick="navigator.clipboard.writeText(window.location.href); const t = this.querySelector('span:last-child'); t.textContent='Copied!'; setTimeout(()=&gt;t.textContent='Copy Link', 2000)" type="button">
+<span class="material-symbols-outlined text-[16px]">share</span>
+<span>Copy Link</span>
+</button>
+<a class="px-space-md py-space-xs rounded-full bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1.5 hover:bg-primary transition-all shadow-[0_0_16px_rgba(56,217,255,0.3)]" href="#schematic-breakdown">
+<span class="material-symbols-outlined text-[16px]">download</span>
+            Download Engineering Brief (PDF)
+          </a>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Editorial & Analysis Container -->
+<div class="max-w-[1520px] mx-auto w-full px-margin py-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Content Core (8 Cols / ~68%) -->
+<article class="lg:col-span-8 flex flex-col gap-space-xl min-w-0">
+<!-- Executive Summary Glass Callout -->
+<section class="bg-surface-container/90 rounded-xl p-space-lg shadow-xl relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-container shadow-[0_0_12px_#38d9ff]"></div>
+<div class="flex items-center gap-space-sm font-label-md text-label-md text-primary tracking-wider uppercase mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">troubleshoot</span>
+            Diagnostic Executive Summary
+          </div>
+<p class="font-body-lg text-body-lg text-on-surface mb-space-md">
+            Transformerless string inverters employ two-stage topology: a high-efficiency DC-DC boost stage feeding a shared intermediate DC link, inverted into single/three-phase AC by an IGBT or SiC bridge. When rapid cloud-edge optical focusing causes irradiance to jump from <strong>200 W/m² to over 1,350 W/m² in &lt;180ms</strong>, the mismatch between MPPT algorithm slew rates and real-time power export dynamics triggers rapid overvoltage saturation in the DC link capacitor bank, tripping <strong>Error 02 / OV-DC</strong> before safety thresholds are exceeded.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm font-code-telemetry text-code-telemetry">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="text-on-surface-variant block font-body-sm text-body-sm">Typical Trip Spike</span>
+<span class="text-secondary font-headline-sm text-headline-sm">542 VDC</span>
+<span class="text-outline block text-[11px]">Normal nominal: 380-420 V</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="text-on-surface-variant block font-body-sm text-body-sm">Transient Slew Window</span>
+<span class="text-primary font-headline-sm text-headline-sm">114 ms</span>
+<span class="text-outline block text-[11px]">Algorithm response lag</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="text-on-surface-variant block font-body-sm text-body-sm">Primary Failure Mode</span>
+<span class="text-error font-headline-sm text-headline-sm">P&amp;O Hunting</span>
+<span class="text-outline block text-[11px]">Zero-crossing clamp</span>
+</div>
+</div>
+</section>
+<!-- Rich Visual: Interactive Inverter Stage Block Diagram -->
+<section class="flex flex-col gap-space-md" id="schematic-breakdown">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider">Topological Architecture</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Two-Stage Transformerless Circuit Schematic</h2>
+</div>
+<span class="font-code-telemetry text-code-telemetry text-outline">FIGURE 1.0 // TOPOLOGY DIAGRAM</span>
+</div>
+<!-- SVG Topology Diagram -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-2xl overflow-x-auto relative">
+<div class="min-w-[700px] flex flex-col gap-space-md">
+<div class="flex justify-between items-center text-xs font-code-telemetry text-outline-variant pb-2">
+<span>STAGE 1: DC-DC BOOST CONVERTER</span>
+<span>STAGE 2: DC LINK CAPACITOR BUS</span>
+<span>STAGE 3: FULL-BRIDGE INVERTER</span>
+<span>GRID COUPLING</span>
+</div>
+<svg class="w-full h-auto text-on-surface select-none" viewbox="0 0 820 220">
+<!-- PV Generator -->
+<rect fill="#16202f" height="120" rx="4" stroke="none" width="90" x="10" y="50"></rect>
+<path d="M 25 70 L 85 70 M 25 90 L 85 90 M 25 110 L 85 110 M 25 130 L 85 130 M 25 150 L 85 150" stroke="#3c494d" stroke-dasharray="3,3" stroke-width="1.5"></path>
+<text fill="#d9e3f7" font-family="Space Grotesk" font-size="12" font-weight="600" text-anchor="middle" x="55" y="105">PV ARRAY</text>
+<text fill="#38d9ff" font-family="Space Grotesk" font-size="10" text-anchor="middle" x="55" y="125">Voc 600V</text>
+<!-- Connecting Conductor -->
+<line stroke="#38d9ff" stroke-width="2.5" x1="100" x2="160" y1="80" y2="80"></line>
+<line stroke="#869398" stroke-width="2" x1="100" x2="160" y1="140" y2="140"></line>
+<!-- Boost Stage Inductor & Switch -->
+<rect fill="#121c2a" height="140" rx="6" width="130" x="160" y="40"></rect>
+<circle cx="195" cy="80" fill="#16202f" r="14"></circle>
+<path d="M 185 80 Q 195 65 205 80" fill="none" stroke="#38d9ff" stroke-width="2"></path>
+<text fill="#d9e3f7" font-family="Space Grotesk" font-size="11" x="225" y="84">L_boost</text>
+<rect fill="#212a39" height="24" rx="2" width="30" x="180" y="110"></rect>
+<text fill="#35d7fd" font-family="Space Grotesk" font-size="9" text-anchor="middle" x="195" y="126">MOSFET</text>
+<text fill="#869398" font-family="Space Grotesk" font-size="10" text-anchor="middle" x="225" y="155">MPPT PWM 16kHz</text>
+<!-- Diode to Bus -->
+<polygon fill="#38d9ff" points="305,75 305,85 320,80"></polygon>
+<line stroke="#38d9ff" stroke-width="2" x1="320" x2="320" y1="73" y2="87"></line>
+<line stroke="#38d9ff" stroke-width="2" x1="290" x2="305" y1="80" y2="80"></line>
+<line stroke="#38d9ff" stroke-width="2.5" x1="320" x2="360" y1="80" y2="80"></line>
+<line stroke="#869398" stroke-width="2" x1="290" x2="360" y1="140" y2="140"></line>
+<!-- Intermediate DC Link (FAULT HOTSPOT) -->
+<rect fill="#212a39" height="170" opacity="0.9" rx="6" width="120" x="360" y="25"></rect>
+<line stroke="#ffb955" stroke-width="3" x1="360" x2="480" y1="25" y2="25"></line>
+<text fill="#ffb955" font-family="Space Grotesk" font-size="11" font-weight="700" text-anchor="middle" x="420" y="48">CRITICAL NODE</text>
+<text fill="#ffb955" font-family="Space Grotesk" font-size="12" font-weight="600" text-anchor="middle" x="420" y="65">DC BUS (C_dc)</text>
+<!-- Capacitors in parallel -->
+<rect fill="#0a1422" height="50" rx="2" stroke="#ffb955" stroke-width="1.5" width="16" x="385" y="80"></rect>
+<rect fill="#0a1422" height="50" rx="2" stroke="#ffb955" stroke-width="1.5" width="16" x="435" y="80"></rect>
+<text fill="#d9e3f7" font-family="Space Grotesk" font-size="11" text-anchor="middle" x="420" y="150">2x 1800μF 600V</text>
+<text fill="#ffb4ab" font-family="Space Grotesk" font-size="10" font-weight="700" text-anchor="middle" x="420" y="175">TRIP: 550 VDC (ERR 02)</text>
+<!-- Bus link out -->
+<line stroke="#38d9ff" stroke-width="2.5" x1="480" x2="525" y1="80" y2="80"></line>
+<line stroke="#869398" stroke-width="2" x1="480" x2="525" y1="140" y2="140"></line>
+<!-- Full Bridge Stage -->
+<rect fill="#121c2a" height="140" rx="6" width="145" x="525" y="40"></rect>
+<rect fill="#212a39" height="24" rx="2" width="30" x="545" y="55"></rect>
+<text fill="#d9e3f7" font-family="Space Grotesk" font-size="9" text-anchor="middle" x="560" y="71">IGBT 1</text>
+<rect fill="#212a39" height="24" rx="2" width="30" x="620" y="55"></rect>
+<text fill="#d9e3f7" font-family="Space Grotesk" font-size="9" text-anchor="middle" x="635" y="71">IGBT 2</text>
+<rect fill="#212a39" height="24" rx="2" width="30" x="545" y="105"></rect>
+<text fill="#d9e3f7" font-family="Space Grotesk" font-size="9" text-anchor="middle" x="560" y="121">IGBT 3</text>
+<rect fill="#212a39" height="24" rx="2" width="30" x="620" y="105"></rect>
+<text fill="#d9e3f7" font-family="Space Grotesk" font-size="9" text-anchor="middle" x="635" y="121">IGBT 4</text>
+<text fill="#869398" font-family="Space Grotesk" font-size="10" text-anchor="middle" x="597" y="155">PWM Inversion</text>
+<!-- LCL Filter & Grid Coupling -->
+<line stroke="#38d9ff" stroke-width="2" x1="670" x2="710" y1="90" y2="90"></line>
+<line stroke="#38d9ff" stroke-width="2" x1="670" x2="710" y1="130" y2="130"></line>
+<rect fill="#16202f" height="110" rx="6" width="95" x="710" y="55"></rect>
+<path d="M 725 85 Q 735 70 745 85 M 745 85 Q 755 100 765 85" fill="none" stroke="#38d9ff" stroke-width="2"></path>
+<text fill="#d9e3f7" font-family="Space Grotesk" font-size="11" font-weight="600" text-anchor="middle" x="757" y="120">AC GRID</text>
+<text fill="#869398" font-family="Space Grotesk" font-size="10" text-anchor="middle" x="757" y="140">230V / 50Hz</text>
+</svg>
+</div>
+<div class="mt-space-md pt-space-sm text-xs font-body-sm text-on-surface-variant flex items-center justify-between">
+<span class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span> High-Voltage Transient Surge Region: C_dc Bank Accumulation
+              </span>
+<span class="font-code-telemetry">MODBUS_ADDR: 0x011A</span>
+</div>
+</div>
+</section>
+<!-- Section 1: The Physics of Cloud Transients -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs font-code-telemetry text-code-telemetry text-primary">
+<span>01</span>
+<span>//</span>
+<span>ELECTRODYNAMIC MECHANISMS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">The Physics of Cloud-Edge Optical Transients</h2>
+<div class="font-body-lg text-body-lg text-on-surface-variant space-y-4">
+<p>
+              In field installations across mixed climates, sudden changes in cloud cover are not merely a shift from dim diffuse sky to nominal direct irradiance (1000 W/m²). Instead, the physical phenomenon known as <strong>cloud enhancement (forward Mie scattering)</strong> acts as an atmospheric prism. Highly localized solar rays reflect off the dense silver linings of cumulus cloud formations, causing instantaneous ground-level global horizontal irradiance (GHI) to exceed <strong class="text-on-surface">1,350 to 1,450 W/m²</strong> for periods ranging from 800 milliseconds to 15 seconds.
+            </p>
+<p>
+              Silicon solar cells, governed by quantum photodiode behavior, respond nearly instantaneously (&lt;100 microseconds) to incoming photon flux. The instantaneous current \(I_{pv}\) spikes proportionally:
+            </p>
+</div>
+<!-- Math / Equation Card -->
+<div class="bg-surface-container rounded-xl p-space-lg shadow-md my-space-sm">
+<div class="flex flex-col gap-space-sm font-code-telemetry text-code-telemetry">
+<span class="text-secondary font-bold text-label-md">EQUATION 1: INTERMEDIATE BUS VOLTAGE EQUILIBRIUM</span>
+<div class="bg-surface-container-lowest p-space-md rounded-lg text-primary text-base font-semibold overflow-x-auto">
+                V_{bus}(t) = \sqrt{ \frac{2}{C_{dc}} \int_{0}^{t} \Big[ P_{pv}(\tau) - P_{grid}(\tau) - P_{loss}(\tau) \Big] d\tau + V_{bus}(0)^2 }
+              </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Where \(P_{pv}\) is incoming instantaneous DC array power, \(P_{grid}\) is real power injected into the utility line through the bridge, and \(C_{dc}\) is total equivalent capacitance of the electrolyte link.
+              </p>
+</div>
+</div>
+<div class="font-body-lg text-body-lg text-on-surface-variant space-y-4">
+<p>
+              Under equilibrium conditions, \(P_{pv} \approx P_{grid}\). However, standard <em>Perturb and Observe (P&amp;O)</em> or <em>Incremental Conductance (INC)</em> MPPT firmware operates at discrete cycle intervals—typically sampling every 50 to 200 milliseconds. When the cloud boundary passes:
+            </p>
+<ul class="list-disc pl-6 space-y-2 text-on-surface">
+<li><strong>The Array Operating Point Drift:</strong> The solar array voltage attempts to settle near open-circuit potential while current surges by 30-40%.</li>
+<li><strong>Energy Trap at \(C_{dc}\):</strong> The DC-DC boost converter chokes the input, but charge stored in boost inductors coupled with current inertia continues to dump coulombs directly onto the capacitor bank.</li>
+<li><strong>Grid Export Throttling Lag:</strong> Anti-islanding algorithms and phase-locked loop (PLL) synchronization constrain how quickly the inverter bridge can ramp AC injection without violating IEEE 1547 / UL 1741 power quality limits.</li>
+</ul>
+</div>
+</section>
+<!-- Section 2: Mathematical Telemetry Breakdown & Waveform Curve -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs font-code-telemetry text-code-telemetry text-primary">
+<span>02</span>
+<span>//</span>
+<span>TIME-DOMAIN TRANSIENT CURVE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Transient Surge Waveform Analysis</h2>
+<!-- Inline SVG Graph -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-lg flex flex-col gap-space-md">
+<div class="flex justify-between items-center flex-wrap gap-2">
+<span class="font-code-telemetry text-code-telemetry text-secondary font-bold">DIGITAL STORAGE OSCILLOSCOPE LOG: 4CH SAMPLE #0893</span>
+<span class="font-body-sm text-body-sm text-outline">TIMEBASE: 50ms/DIV | CH1: V_BUS (100V/DIV) | CH2: GHI (200W/m²/DIV)</span>
+</div>
+<div class="w-full overflow-hidden">
+<svg class="w-full h-auto select-none" viewbox="0 0 760 220">
+<!-- Grid lines -->
+<defs>
+<pattern height="44" id="grid" patternunits="userSpaceOnUse" width="76">
+<line stroke="#1e293b" stroke-width="0.8" x1="0" x2="76" y1="0" y2="0"></line>
+<line stroke="#1e293b" stroke-width="0.8" x1="0" x2="0" y1="0" y2="44"></line>
+</pattern>
+</defs>
+<rect fill="#050e1c" height="220" width="760"></rect>
+<rect fill="url(#grid)" height="220" width="760"></rect>
+<!-- Trip Line Threshold -->
+<line stroke="#ffb4ab" stroke-dasharray="6,4" stroke-width="1.5" x1="0" x2="760" y1="52" y2="52"></line>
+<text fill="#ffb4ab" font-family="Space Grotesk" font-size="11" font-weight="700" text-anchor="end" x="740" y="46">TRIP THRESHOLD: 550 VDC</text>
+<!-- Normal Operating Band -->
+<rect fill="#35d7fd" height="40" opacity="0.05" width="760" x="0" y="110"></rect>
+<text fill="#35d7fd" font-family="Space Grotesk" font-size="11" opacity="0.5" x="20" y="135">NOMINAL DC BUS WINDOW (380V - 420V)</text>
+<!-- Irradiance Curve (Secondary - Amber) -->
+<path d="M 10 180 Q 220 180 250 175 Q 280 150 300 60 L 320 40 L 450 45 L 600 70 L 750 75" fill="none" stroke="#ffb955" stroke-opacity="0.8" stroke-width="2"></path>
+<text fill="#ffb955" font-family="Space Grotesk" font-size="10" x="320" y="32">Irradiance (W/m²)</text>
+<!-- DC Link Voltage Curve (Primary - Cyan) -->
+<!-- Spikes over 550V and triggers shutoff drop -->
+<path d="M 10 125 L 260 125 Q 290 124 310 100 Q 330 65 350 42 L 365 38 L 370 200 L 750 200" fill="none" stroke="#38d9ff" stroke-width="2.5"></path>
+<circle cx="365" cy="38" fill="#ffb4ab" r="4"></circle>
+<!-- Error Trip Annotation Marker -->
+<rect fill="#93000a" height="34" rx="4" width="160" x="380" y="24"></rect>
+<text fill="#ffdad6" font-family="Space Grotesk" font-size="11" font-weight="700" text-anchor="middle" x="460" y="40">ERROR 02 TRIPPED</text>
+<text fill="#ffdad6" font-family="Space Grotesk" font-size="9" text-anchor="middle" x="460" y="52">V_BUS PEAK: 564.8 VDC @ T+114ms</text>
+</svg>
+</div>
+<div class="flex flex-wrap items-center justify-between text-xs font-code-telemetry text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="w-3 h-1 bg-primary inline-block"></span> CH1: Intermediate DC Bus Voltage</span>
+<span class="flex items-center gap-1.5"><span class="w-3 h-1 bg-secondary inline-block"></span> CH2: Pyranometer Array Irradiance</span>
+<span class="text-error font-semibold">T_recovery: Inverter Reconnect Timer = 300s</span>
+</div>
+</div>
+</section>
+<!-- Firmware Register Telemetry Snippet -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs font-code-telemetry text-code-telemetry text-primary">
+<span>03</span>
+<span>//</span>
+<span>FIRMWARE REGISTER MAP</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Modbus Register Interrogation: 0x011A</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            When inspecting inverter telemetry via RS-485 Modbus RTU or TCP logger, the critical hardware fault flag resides in the internal protection supervisor register. Below is an authentic memory register breakdown for Growatt MIN/MOD and Sungrow SG hybrid controllers:
+          </p>
+<div class="bg-surface-container-lowest rounded-xl shadow-xl overflow-hidden font-code-telemetry text-code-telemetry">
+<div class="bg-surface-container-high px-space-md py-space-xs flex justify-between items-center">
+<span class="text-primary font-bold text-label-md">REGISTER MAP 0x011A // FAULT_BUS_SURGE_LATCH</span>
+<span class="text-outline text-xs">BITFIELD 16-BIT</span>
+</div>
+<div class="p-space-md overflow-x-auto text-sm space-y-2">
+<div class="text-outline-variant">// Inverter DSP Core Protection Log Output</div>
+<div class="text-on-surface"><span class="text-secondary">[0x0001]</span> BUS_VOLTAGE_SAMPLE_RMS: <span class="text-primary">5648 (564.8 VDC)</span></div>
+<div class="text-on-surface"><span class="text-secondary">[0x0002]</span> BUS_HARDWARE_OVP_LIMIT: <span class="text-primary">5500 (550.0 VDC)</span></div>
+<div class="text-on-surface"><span class="text-secondary">[0x0003]</span> IGBT_GATE_DRIVER_STATE: <span class="text-error">0x00 (IMMEDIATE SHUTDOWN LATCH)</span></div>
+<div class="text-on-surface"><span class="text-secondary">[0x0004]</span> MPPT1_SLEW_CURRENT: <span class="text-on-surface-variant">14.82 A (dI/dt = +8.4 A/ms)</span></div>
+<div class="text-on-surface"><span class="text-secondary">[0x0005]</span> FAULT_CODE_RETURN: <span class="text-secondary">0x0002 (ERR_02_DC_BUS_OV)</span></div>
+</div>
+</div>
+</section>
+<!-- Section 3: Diagnostic Step-by-Step Remediation Protocol -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs font-code-telemetry text-code-telemetry text-primary">
+<span>04</span>
+<span>//</span>
+<span>FIELD REMEDIATION PROTOCOL</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Engineering Remediation Step-by-Step</h2>
+<div class="space-y-space-md">
+<!-- Step 1 -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-md flex gap-space-md items-start">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary font-headline-sm text-headline-sm flex items-center justify-center shrink-0">1</span>
+<div class="flex flex-col gap-1 min-w-0">
+<h3 class="font-title-lg text-title-lg text-on-surface">Recalculate String Voc Under Sub-Zero Conditions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Verify string sizing using the module's cold-temperature open-circuit coefficient \(\beta_{Voc}\). An oversized string sitting near the 550V ceiling during 10°C ambient temperatures will violate bus safety margins the instant cloud lens refraction strikes.
+                </p>
+<div class="font-code-telemetry text-xs text-secondary mt-1">Checklist: Max PV Voc(T_min) &lt; 0.85 × Inverter Max Bus Rating</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-md flex gap-space-md items-start">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary font-headline-sm text-headline-sm flex items-center justify-center shrink-0">2</span>
+<div class="flex flex-col gap-1 min-w-0">
+<h3 class="font-title-lg text-title-lg text-on-surface">Measure DC Link Capacitor ESR Degradation with LCR Meter</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Electrolytic DC bus capacitors dry out due to thermal stress in enclosed inverters. A 20% degradation in capacitance combined with increased Equivalent Series Resistance (ESR) halves the transient charge buffer, creating false Error 02 trips during moderate irradiance swings.
+                </p>
+<div class="font-code-telemetry text-xs text-secondary mt-1">Acceptable Metric: Dissipation factor D &lt; 0.15 @ 120Hz test frequency</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-md flex gap-space-md items-start">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary font-headline-sm text-headline-sm flex items-center justify-center shrink-0">3</span>
+<div class="flex flex-col gap-1 min-w-0">
+<h3 class="font-title-lg text-title-lg text-on-surface">Enable "Fast Dynamic MPPT Damping" Firmware Register</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Access the advanced installer portal on Solis, Sungrow, or Growatt. Transition the MPPT tracking mode from "High Precision Efficiency" to "Dynamic Irradiance Compensation". This widens the sampling frequency to 20ms and enables feed-forward DC bus voltage clamping before hardware OVP trips.
+                </p>
+<div class="font-code-telemetry text-xs text-primary mt-1">Firmware setting: Register 0x03B2 [ENABLE_FAST_FEEDFORWARD_CLAMP = 1]</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Comprehensive OEM Threshold Comparison Table -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider">OEM Telemetry Matrix</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Manufacturer Trip Thresholds &amp; Error Signatures</h2>
+</div>
+<span class="font-code-telemetry text-code-telemetry text-outline">UPDATED Q4 2024</span>
+</div>
+<div class="bg-surface-container-low rounded-xl shadow-xl overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-high font-label-md text-label-md uppercase text-on-surface">
+<tr>
+<th class="p-space-md">OEM / Inverter Family</th>
+<th class="p-space-md">Fault Code</th>
+<th class="p-space-md">Hardware OVP Limit</th>
+<th class="p-space-md">Trip Delay</th>
+<th class="p-space-md">Recommended Firmware Fix</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface-variant font-code-telemetry text-code-telemetry">
+<tr class="bg-surface-container/40 hover:bg-surface-container transition-colors">
+<td class="p-space-md font-semibold text-on-surface">Growatt MIN 2500-6000TL-X</td>
+<td class="p-space-md text-error font-bold">Error 02</td>
+<td class="p-space-md">550 VDC</td>
+<td class="p-space-md">&lt; 150 µs</td>
+<td class="p-space-md text-primary">vZAAA-0016 Update (Dampened MPPT)</td>
+</tr>
+<tr class="bg-surface-container/20 hover:bg-surface-container transition-colors">
+<td class="p-space-md font-semibold text-on-surface">Sungrow SG5.0 - SG10RT</td>
+<td class="p-space-md text-error font-bold">Fault 002</td>
+<td class="p-space-md">980 VDC</td>
+<td class="p-space-md">&lt; 100 µs</td>
+<td class="p-space-md text-primary">ARM_P21_V11_B24 Patch</td>
+</tr>
+<tr class="bg-surface-container/40 hover:bg-surface-container transition-colors">
+<td class="p-space-md font-semibold text-on-surface">Solis S6-EH1P-3K/6K</td>
+<td class="p-space-md text-error font-bold">OV-DC</td>
+<td class="p-space-md">520 VDC</td>
+<td class="p-space-md">&lt; 200 µs</td>
+<td class="p-space-md text-primary">Parameter 2101 Derating Clamp</td>
+</tr>
+<tr class="bg-surface-container/20 hover:bg-surface-container transition-colors">
+<td class="p-space-md font-semibold text-on-surface">Inverex Yukon 5.2kW</td>
+<td class="p-space-md text-error font-bold">Fault F02</td>
+<td class="p-space-md">480 VDC</td>
+<td class="p-space-md">&lt; 350 µs</td>
+<td class="p-space-md text-primary">MCU DSP HEX Rev 7.42</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Mandatory NFPA 70E Safety Banner -->
+<section class="bg-secondary-container/15 rounded-xl p-space-lg shadow-lg relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary shadow-[0_0_12px_#ffb955]"></div>
+<div class="flex items-center gap-space-sm font-label-md text-label-md text-secondary tracking-wider uppercase mb-space-xs">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+            NFPA 70E High-Voltage Shock Hazard Warning
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">DC Link Capacitor Residual Stored Energy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+            Even after disconnecting the DC array isolator and tripping the AC breaker, the internal intermediate bus capacitors retain lethal direct-current potentials exceeding <strong>500 VDC</strong>. Never open the electronics chassis without observing the mandatory discharge protocol.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm font-body-sm text-body-sm">
+<div class="flex items-center gap-2 bg-surface-container-lowest/80 p-space-sm rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[18px]">lock_clock</span>
+<span>Wait a minimum of <strong>10 full minutes</strong> after total disconnection.</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest/80 p-space-sm rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[18px]">electric_meter</span>
+<span>Verify bus terminals read <strong>&lt; 10 VDC</strong> with a CAT III/IV meter.</span>
+</div>
+</div>
+</section>
+<!-- Peer-Review Sign-off -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-center justify-between flex-wrap gap-space-md shadow-sm">
+<div class="flex items-center gap-space-sm font-code-telemetry text-code-telemetry text-outline">
+<span class="material-symbols-outlined text-primary text-[20px]">fact_check</span>
+<span>PEER REVIEWED BY: <strong>Dr. Elena Rostova, PhD, IEEE Fellow</strong> (Smart Grid Lab)</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">SIGNOFF CERTIFIED</span>
+</div>
+<!-- Previous / Next Technical Nav -->
+<nav aria-label="Adjacent Articles" class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-lg">
+<a class="bg-surface-container hover:bg-surface-container-high transition-all p-space-md rounded-xl shadow-md flex flex-col gap-1 group" href="#">
+<span class="font-code-telemetry text-xs text-outline group-hover:text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">arrow_back</span> PREVIOUS STUDY
+            </span>
+<span class="font-title-md text-title-md text-on-surface">Analyzing PID (Potential Induced Degradation) in High-Humidity Utility Arrays</span>
+</a>
+<a class="bg-surface-container hover:bg-surface-container-high transition-all p-space-md rounded-xl shadow-md flex flex-col gap-1 text-right group" href="#">
+<span class="font-code-telemetry text-xs text-outline group-hover:text-primary flex items-center justify-end gap-1">
+              NEXT STUDY <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</span>
+<span class="font-title-md text-title-md text-on-surface">Arc Fault Circuit Interrupter (AFCI) False Tripping in Inverters with Optimizers</span>
+</a>
+</nav>
+<!-- Verified Engineering Comments Section -->
+<section class="flex flex-col gap-space-md pt-space-lg">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-on-surface">Field Engineering Discussions (2)</h3>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Vetted Contributors Only</span>
+</div>
+<!-- Comment 1 -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-primary flex items-center justify-center font-bold text-xs">
+                  TB
+                </div>
+<div>
+<span class="font-title-md text-title-md text-on-surface">Thurston Brown, CEng</span>
+<span class="font-body-sm text-body-sm text-outline block">Principal Commissioning Engineer, Apex Renewables</span>
+</div>
+</div>
+<span class="font-code-telemetry text-xs text-outline">12 HOURS AGO</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pl-10 mt-1">
+              Excellent diagnostic breakdown Marcus. We encountered this exact issue on a 48-unit commercial rooftop array in Bavaria. Solis units were repeatedly locking into OV-DC at exactly 13:10 CEST during scattered cumulus transit. Lowering the MPPT tracking step parameter from 5V/s to 2V/s completely eliminated trips without impacting daily MWh output by more than 0.12%.
+            </p>
+</div>
+<!-- Comment 2 -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-secondary flex items-center justify-center font-bold text-xs">
+                  KL
+                </div>
+<div>
+<span class="font-title-md text-title-md text-on-surface">Klaus Lindner</span>
+<span class="font-body-sm text-body-sm text-outline block">Senior Firmware Engineer, Munich Power Lab</span>
+</div>
+</div>
+<span class="font-code-telemetry text-xs text-outline">1 DAY AGO</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pl-10 mt-1">
+              One critical addendum: on older transformerless inverters with bipolar split DC links (+Vbus / -Vbus with midpoint ground reference), ground leakage capacitive current can artificially offset the midpoint sensing resistor ladder, inducing an asymmetry trip that registers as a false positive Bus Overvoltage.
+            </p>
+</div>
+</section>
+</article>
+<!-- Right Diagnostic Sidebar (4 Cols / ~32% Sticky) -->
+<aside class="lg:col-span-4 flex flex-col gap-space-lg sticky top-24">
+<!-- Table of Contents Dynamic Card -->
+<div class="bg-surface-container rounded-xl p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider">Document Index</span>
+<span class="material-symbols-outlined text-outline text-[18px]">format_list_bulleted</span>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm">
+<li>
+<a class="p-2 rounded bg-surface-container-high text-primary font-semibold flex items-center justify-between" href="#">
+<span>01. Executive Summary</span>
+<span class="material-symbols-outlined text-[14px]">arrow_right</span>
+</a>
+</li>
+<li>
+<a class="p-2 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-between" href="#schematic-breakdown">
+<span>02. Circuit Topology Overview</span>
+</a>
+</li>
+<li>
+<a class="p-2 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-between" href="#">
+<span>03. The Cloud-Edge Surge Physics</span>
+</a>
+</li>
+<li>
+<a class="p-2 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-between" href="#">
+<span>04. Firmware Register Telemetry</span>
+</a>
+</li>
+<li>
+<a class="p-2 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-between" href="#">
+<span>05. Remediation Protocol</span>
+</a>
+</li>
+<li>
+<a class="p-2 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-between" href="#">
+<span>06. OEM Threshold Comparison</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Quick Spec Diagnostic Tooling Card -->
+<div class="bg-surface-container rounded-xl p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider">Required Field Instruments</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">handyman</span>
+</div>
+<div class="flex flex-col gap-space-sm font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm p-space-sm bg-surface-container-lowest rounded-lg">
+<span class="material-symbols-outlined text-primary text-[20px]">speed</span>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">CAT III 1000V / CAT IV 600V True-RMS Multimeter</span>
+<span class="text-outline text-xs">Fluke 87V or equivalent for Voc verification</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm bg-surface-container-lowest rounded-lg">
+<span class="material-symbols-outlined text-primary text-[20px]">ssid_chart</span>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">HV Isolated Differential Probe (≥100MHz)</span>
+<span class="text-outline text-xs">For real-time bus ripple capture</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm bg-surface-container-lowest rounded-lg">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Precision Benchtop/Handheld LCR Meter</span>
+<span class="text-outline text-xs">For capacitor ESR degradation characterization</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Linked Error Codes -->
+<div class="bg-surface-container rounded-xl p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider">Related Fault Codices</span>
+<span class="material-symbols-outlined text-outline text-[18px]">dataset</span>
+</div>
+<div class="flex flex-col gap-space-xs font-code-telemetry text-code-telemetry">
+<a class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors flex items-center justify-between group" href="#">
+<div class="flex flex-col">
+<span class="text-primary font-bold">ERROR 02</span>
+<span class="text-on-surface-variant text-xs">DC Link Bus Overvoltage Trip</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[18px]">chevron_right</span>
+</a>
+<a class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors flex items-center justify-between group" href="#">
+<div class="flex flex-col">
+<span class="text-secondary font-bold">ERROR 08</span>
+<span class="text-on-surface-variant text-xs">Inverter Soft Start Failed</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary text-[18px]">chevron_right</span>
+</a>
+<a class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors flex items-center justify-between group" href="#">
+<div class="flex flex-col">
+<span class="text-error font-bold">FAULT 103</span>
+<span class="text-on-surface-variant text-xs">Grid Transient Overfrequency 51.5Hz</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-error text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Direct Diagnostic Telemetry Upload Widget -->
+<div class="bg-gradient-to-br from-surface-container to-surface-container-high rounded-xl p-space-lg shadow-xl flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider">Live Diagnostic Lab</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Experiencing Unresolved Inverter Trips?</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Upload your CSV datalogger export (Modbus 1s telemetry) directly to our Solar Nexus diagnostic parsing engine to cross-reference with our cloud transient waveform library.
+          </p>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.title = document.title.replace(/Solar Nexus/g, 'WhaSol');
+    document.querySelectorAll('header img').forEach(function(logo) { logo.src = '../whasol-logo-clean.svg'; logo.alt = 'WhaSol'; logo.className = 'h-20 w-80 object-contain'; if (logo.nextElementSibling) logo.nextElementSibling.style.display = 'none'; });
+    document.querySelectorAll('header .w-8.h-8.rounded-full.bg-primary').forEach(function(profile) { profile.remove(); });
+    const brandWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    let brandNode;
+    while (brandNode = brandWalker.nextNode()) {
+      if (brandNode.parentElement && !['SCRIPT', 'STYLE'].includes(brandNode.parentElement.tagName)) {
+        brandNode.nodeValue = brandNode.nodeValue.replace(/Solar Nexus Engineering Intelligence/g, 'WhaSol').replace(/Solar Nexus/g, 'WhaSol').replace(/SOLAR NEXUS/g, 'WHASOL').replace(/Engineering Intelligence/g, '');
+      }
+    }
+  });
+</script>
+<button class="w-full py-space-xs rounded-full bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider font-bold shadow-[0_0_20px_rgba(56,217,255,0.35)] hover:bg-primary transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">cloud_upload</span>
+            Upload Telemetry Log
+          </button>
+<a class="text-center font-body-sm text-body-sm text-outline hover:text-primary transition-colors flex items-center justify-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">forum</span>
+            Discuss in Master Electrician Forum
+          </a>
+</div>
+</aside>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest pt-space-xl pb-space-lg mt-space-xl"><div class="w-full px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md pr-space-lg"><div class="flex items-center gap-space-md"><img alt="Solar Nexus Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wgam0DDD6e-vdtEzaBZwIuLc6sTIiyTDeAqKHOAD5K6dw-vRNg-luIfT7uH8KcvSrxrQysvovE24wagFeSEfH0ks4HeVLrYu9TT9dZUg9cPTNo5KlLPkDcB8ABaONPK-T5CKHxyme5np5MRX9XecUbKy3h0_4pGujj0u_bw9QLA242TCbSD28idX9uW6CGPOZWsOW9NsBvW2ig_3736XFFpZjvMHfLsiWrlGJRres7Ud6Eu7fuwWbcnyCX"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface">Solar Nexus</span><span class="font-label-sm text-label-sm text-primary uppercase">Engineering Intelligence</span></div></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Making Solar Technology Easier to Understand. Practical guides, inverter diagnostics, and engineering intelligence for real-world solar systems.</p><div class="flex items-center gap-space-xs font-code-telemetry text-code-telemetry text-secondary"><span class="material-symbols-outlined text-[18px]">verified</span>Certified Solar Diagnostic Platform</div></div><div class="flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface uppercase tracking-wider">Explore</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm"><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="home" href="#">Home</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="troubleshooting" href="#">Troubleshooting Guides</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="error-codes" href="#">Inverter Error Codes</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="brands" href="#">Brands &amp; Inverter Models</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="blogs" href="#">Engineering Blogs</a></li></ul></div><div class="flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface uppercase tracking-wider">Equipment Categories</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><li class="hover:text-primary transition-colors cursor-pointer">Solar Hybrid Inverters</li><li class="hover:text-primary transition-colors cursor-pointer">Lithium Battery Banks</li><li class="hover:text-primary transition-colors cursor-pointer">Solar PV Arrays</li><li class="hover:text-primary transition-colors cursor-pointer">Electrical &amp; Wiring</li><li class="hover:text-primary transition-colors cursor-pointer">Voltage &amp; Grid Sync</li></ul></div><div class="flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface uppercase tracking-wider">Platform &amp; Safety</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><li class="flex items-center gap-space-xs text-secondary hover:text-tertiary transition-colors cursor-pointer"><span class="material-symbols-outlined text-[14px]">warning</span>High-Voltage Safety Protocols</li><li class="hover:text-primary transition-colors cursor-pointer">Verification Standards</li><li class="hover:text-primary transition-colors"><a data-path="about" href="#">About Solar Nexus</a></li><li class="hover:text-primary transition-colors"><a data-path="contact" href="#">Contact Engineering</a></li><li class="hover:text-primary transition-colors cursor-pointer">Diagnostic Disclaimer</li></ul></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm font-code-telemetry text-code-telemetry"><span class="inline-block w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="text-primary">Diagnostic Systems Nominal</span><span class="text-outline-variant">|</span><span class="text-on-surface-variant">v2.4 Live Telemetry</span></div><div class="font-body-sm text-body-sm text-on-surface-variant">© 2025 Solar Nexus Engineering Intelligence. All rights reserved.</div><div class="flex items-center gap-space-lg font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" href="#">Terms of Service</a><a class="hover:text-on-surface transition-colors" href="#">HV Safety</a></div></div></div></footer></body></html>

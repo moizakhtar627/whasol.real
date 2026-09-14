@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Solar Nexus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{background:'#0a1422',surface:'#16202f','surface-low':'#121c2a','surface-high':'#212a39',primary:'#b6edff','primary-container':'#38d9ff',secondary:'#ffb955','on-surface':'#d9e3f7','muted':'#bbc9ce'},fontFamily:{display:['Space Grotesk'],body:['Inter']}}}};</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.title = 'About Us | WhaSol';
+    const brandLink = document.querySelector('header a');
+    if (brandLink) brandLink.innerHTML = '<img src="../whasol-logo-clean.svg" alt="WhaSol" class="h-20 w-80 object-contain" />';
+    document.body.innerHTML = document.body.innerHTML.replace(/Solar Nexus/g, 'WhaSol').replace(/Engineering Intelligence/g, '');
+  });
+</script>
+</head>
+<body class="min-h-screen bg-background font-body text-on-surface">
+  <header class="sticky top-0 z-10 border-b border-surface-high/70 bg-background/90 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-5">
+      <a href="../solar_nexus_premium_solar_engineering_troubleshooting_platform/code.html" class="flex items-center gap-3"><span class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-container text-background"><span class="material-symbols-outlined">solar_power</span></span><span><strong class="block font-display text-lg">Solar Nexus</strong><small class="uppercase tracking-[0.2em] text-primary">Engineering Intelligence</small></span></a>
+      <nav class="hidden items-center gap-2 text-sm font-semibold md:flex"><a class="rounded-full px-4 py-2 text-muted hover:bg-surface hover:text-primary" href="../solar_nexus_premium_solar_engineering_troubleshooting_platform/code.html">Home</a><a class="rounded-full bg-surface px-4 py-2 text-primary" href="code.html">About Us</a><a class="rounded-full px-4 py-2 text-muted hover:bg-surface hover:text-primary" href="../solar_nexus_contact/code.html">Contact</a></nav>
+    </div>
+  </header>
+  <main>
+    <section class="mx-auto flex min-h-[70vh] max-w-7xl items-center px-6 py-28">
+      <div class="max-w-5xl"><p class="mb-4 font-mono text-sm uppercase tracking-[0.22em] text-secondary">About Solar Nexus</p><h1 class="max-w-4xl font-display text-5xl font-bold leading-tight md:text-7xl">Who Are We?</h1><p class="mt-8 max-w-4xl text-xl leading-9 text-muted">We are a solar technology knowledge platform dedicated to making complex solar systems easier to understand. From inverter errors and battery issues to wiring, voltage problems, and brand-specific troubleshooting, we provide clear and practical information to help users find the right answers.</p><p class="mt-6 max-w-4xl text-xl leading-9 text-muted">Our goal is to connect technology with understanding—helping homeowners, technicians, electricians, and solar enthusiasts solve problems with confidence and make smarter decisions for their solar systems.</p></div>
+    </section>
+    <section class="border-y border-surface-high bg-surface-low"><div class="mx-auto grid max-w-7xl gap-8 px-6 py-16 md:grid-cols-3"><div><span class="material-symbols-outlined text-4xl text-primary">fact_check</span><h2 class="mt-5 font-display text-2xl font-bold">Practical first</h2><p class="mt-3 leading-7 text-muted">Every guide is organized around the next safe, useful diagnostic step.</p></div><div><span class="material-symbols-outlined text-4xl text-secondary">hub</span><h2 class="mt-5 font-display text-2xl font-bold">System thinking</h2><p class="mt-3 leading-7 text-muted">We connect equipment, symptoms, error codes, and operating conditions.</p></div><div><span class="material-symbols-outlined text-4xl text-primary">verified_user</span><h2 class="mt-5 font-display text-2xl font-bold">Safety always</h2><p class="mt-3 leading-7 text-muted">High-voltage warnings stay visible, with certified help recommended when needed.</p></div></div></section>
+    <section class="mx-auto max-w-7xl px-6 py-16"><div class="rounded-2xl bg-surface p-8 md:flex md:items-center md:justify-between md:gap-8"><div><p class="font-mono text-sm uppercase tracking-widest text-primary">Need a hand?</p><h2 class="mt-3 font-display text-3xl font-bold">Talk with the Solar Nexus team.</h2></div><a class="mt-6 inline-flex items-center gap-2 rounded-full bg-primary-container px-6 py-3 font-semibold text-background hover:bg-primary md:mt-0" href="../solar_nexus_contact/code.html">Contact Engineering <span class="material-symbols-outlined">arrow_forward</span></a></div></section>
+  </main>
+</body>
+</html>

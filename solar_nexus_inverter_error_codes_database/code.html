@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#3c494d", "on-primary-fixed": "#001f27", "tertiary-container": "#febd37", "on-secondary-fixed-variant": "#633f00", "surface": "#0a1422", "on-secondary": "#452b00", "secondary-container": "#c48313", "secondary-fixed-dim": "#ffb955", "primary": "#b6edff", "on-primary-fixed-variant": "#004e5e", "surface-container-highest": "#2c3545", "primary-fixed": "#b1ecff", "background": "#0a1422", "surface-variant": "#2c3545", "error": "#ffb4ab", "primary-fixed-dim": "#35d7fd", "on-tertiary-fixed": "#271900", "error-container": "#93000a", "tertiary-fixed-dim": "#fcbb35", "secondary-fixed": "#ffddb4", "on-primary-container": "#005c6e", "on-tertiary-fixed-variant": "#5e4200", "surface-container": "#16202f", "on-error": "#690005", "on-background": "#d9e3f7", "inverse-on-surface": "#273140", "tertiary-fixed": "#ffdea8", "on-tertiary": "#422d00", "inverse-primary": "#00677c", "tertiary": "#ffe0ae", "on-error-container": "#ffdad6", "on-surface": "#d9e3f7", "primary-container": "#38d9ff", "on-secondary-fixed": "#291800", "outline": "#869398", "surface-dim": "#0a1422", "surface-container-high": "#212a39", "surface-tint": "#35d7fd", "surface-bright": "#303a49", "surface-container-low": "#121c2a", "on-secondary-container": "#3c2500", "surface-container-lowest": "#050e1c", "inverse-surface": "#d9e3f7", "secondary": "#ffb955", "on-surface-variant": "#bbc9ce", "on-primary": "#003641", "on-tertiary-container": "#6f4e00" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "2.5rem", "space-md": "1rem", "gutter": "1.5rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "title-md": ["Inter"], "body-md": ["Inter"], "display-xl-mobile": ["Space Grotesk"], "label-md": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "body-lg": ["Inter"], "code-telemetry": ["Space Grotesk"], "body-sm": ["Inter"], "headline-sm": ["Space Grotesk"], "label-sm": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "display-xl": ["Space Grotesk"], "title-lg": ["Inter"] }, "fontSize": { "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "display-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "code-telemetry": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "500" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.45)]"><div class="h-20 w-full px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md shrink-0"><img alt="Solar Nexus Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wgam0DDD6e-vdtEzaBZwIuLc6sTIiyTDeAqKHOAD5K6dw-vRNg-luIfT7uH8KcvSrxrQysvovE24wagFeSEfH0ks4HeVLrYu9TT9dZUg9cPTNo5KlLPkDcB8ABaONPK-T5CKHxyme5np5MRX9XecUbKy3h0_4pGujj0u_bw9QLA242TCbSD28idX9uW6CGPOZWsOW9NsBvW2ig_3736XFFpZjvMHfLsiWrlGJRres7Ud6Eu7fuwWbcnyCX"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Solar Nexus</span><span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Engineering Intelligence</span></div></div><nav class="hidden xl:flex items-center gap-space-sm bg-surface-container-lowest/50 p-space-xs rounded-full shadow-[inset_0_1px_4px_rgba(0,0,0,0.5)]" data-active-classes="bg-surface-container text-primary font-bold"><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="troubleshooting" href="#">Troubleshooting</a><a aria-current="page" class="px-space-md py-space-xs rounded-full transition-colors bg-surface-container text-primary font-bold" data-path="error-codes" href="#">Error Codes</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="brands" href="#">Brands &amp; Models</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="blogs" href="#">Blogs</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About Us</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md shrink-0"><button class="hidden sm:flex items-center gap-space-md px-space-md py-space-xs rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-code-telemetry text-code-telemetry">Search guides...</span><kbd class="px-space-xs py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface">⌘K</kbd></button><a class="px-space-lg py-space-xs rounded-full bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider shadow-[0_0_20px_rgba(56,217,255,0.35)] hover:bg-primary transition-all flex items-center gap-space-xs" data-path="troubleshooting" href="#"><span class="material-symbols-outlined text-[16px]">build</span>Find a Solution</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Top Diagnostic Ambient Glow Header -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest pt-space-xl pb-space-lg">
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary/10 blur-[120px] pointer-events-none"></div>
+<div class="absolute top-1/2 right-0 w-[480px] h-96 rounded-full bg-secondary/10 blur-[140px] pointer-events-none"></div>
+<div class="w-full px-margin">
+<!-- Breadcrumb Bar -->
+<nav class="flex items-center gap-space-xs font-code-telemetry text-code-telemetry text-on-surface-variant mb-space-md">
+<span>CORE</span>
+<span class="text-outline-variant">/</span>
+<span>TELEMETRY</span>
+<span class="text-outline-variant">/</span>
+<span class="text-primary-container font-semibold">DIAGNOSTIC_ERR_DB</span>
+</nav>
+<!-- Central Hero Content -->
+<div class="max-w-4xl flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-high w-fit">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Centralized Solar Inverter Telemetry Database</span>
+</div>
+<h1 class="font-display-xl text-display-xl tracking-tight text-on-surface">
+          Find Your Inverter <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-container to-secondary">Error Code.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          Query deterministic fault signatures, telemetry thresholds, root cause matrices, and authorized remediation runbooks for utility, commercial, and residential PV hardware.
+        </p>
+</div>
+<!-- High Precision Search Bar -->
+<div class="mt-space-lg w-full max-w-4xl">
+<div class="relative flex items-center bg-surface-container-low rounded-xl p-2 shadow-2xl transition-all focus-within:shadow-[0_0_30px_rgba(56,217,255,0.25)]">
+<span class="material-symbols-outlined text-primary-container text-2xl ml-3 shrink-0">troubleshoot</span>
+<input class="w-full bg-transparent px-space-md py-space-sm font-code-telemetry text-code-telemetry text-on-surface placeholder:text-outline focus:outline-none" id="errorSearchInput" placeholder="Enter error code (e.g. 02, F01, E-012, 103, 2064), brand, or inverter model..." type="text"/>
+<div class="hidden sm:flex items-center gap-space-xs pr-space-sm">
+<span class="px-2 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant uppercase">ESC to clear</span>
+<button class="hidden text-on-surface-variant hover:text-primary transition-colors p-1" id="clearSearchBtn" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<button class="px-space-lg py-space-sm rounded-lg bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider font-bold shadow-[0_0_15px_rgba(56,217,255,0.4)] hover:bg-primary transition-all shrink-0 flex items-center gap-1" type="button">
+<span>Query</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Comprehensive Filter Console -->
+<section class="w-full px-margin py-space-md bg-surface-container-lowest">
+<div class="flex flex-col gap-space-md p-space-md bg-surface-container rounded-xl shadow-lg">
+<!-- Row 1: Brand Selectors -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Manufacturer Domain</span>
+<span class="font-code-telemetry text-code-telemetry text-primary" id="matchCounter">6 Records Indexed</span>
+</div>
+<div class="flex flex-wrap gap-2" id="brandPillGroup">
+<button class="brand-pill px-space-md py-1 rounded-full font-label-md text-label-md bg-primary-container text-on-primary transition-all font-semibold shadow-sm" data-brand="all">All Brands</button>
+<button class="brand-pill px-space-md py-1 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" data-brand="Growatt">Growatt</button>
+<button class="brand-pill px-space-md py-1 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" data-brand="Inverex">Inverex</button>
+<button class="brand-pill px-space-md py-1 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" data-brand="Sungrow">Sungrow</button>
+<button class="brand-pill px-space-md py-1 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" data-brand="Solis">Solis</button>
+<button class="brand-pill px-space-md py-1 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" data-brand="Huawei">Huawei</button>
+<button class="brand-pill px-space-md py-1 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" data-brand="SolaX">SolaX</button>
+<button class="brand-pill px-space-md py-1 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" data-brand="Deye">Deye</button>
+<button class="brand-pill px-space-md py-1 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" data-brand="MaxPower">MaxPower</button>
+</div>
+</div>
+<!-- Split Selectors: Topology Type & Severity Level -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Topology Type Tabs -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Architecture Topology</span>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-1 p-1 bg-surface-container-low rounded-lg" id="topologyGroup">
+<button class="type-pill text-center py-1.5 px-2 rounded font-label-sm text-label-sm bg-surface-container text-primary font-bold" data-type="all">All Types</button>
+<button class="type-pill text-center py-1.5 px-2 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" data-type="hybrid">Hybrid Storage</button>
+<button class="type-pill text-center py-1.5 px-2 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" data-type="ongrid">On-Grid String</button>
+<button class="type-pill text-center py-1.5 px-2 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" data-type="offgrid">Off-Grid</button>
+</div>
+</div>
+<!-- Severity Level Filters -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Triage Severity Rating</span>
+<div class="flex flex-wrap items-center gap-2">
+<button class="severity-pill px-3 py-1 rounded font-label-sm text-label-sm bg-surface-container text-on-surface font-semibold" data-severity="all">Any Severity</button>
+<button class="severity-pill px-3 py-1 rounded font-label-sm text-label-sm bg-error-container/30 text-error hover:bg-error-container/50 transition-colors flex items-center gap-1.5" data-severity="critical">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+              Critical Fault (Trip)
+            </button>
+<button class="severity-pill px-3 py-1 rounded font-label-sm text-label-sm bg-secondary/15 text-secondary hover:bg-secondary/25 transition-colors flex items-center gap-1.5" data-severity="warning">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Warning (Derated)
+            </button>
+<button class="severity-pill px-3 py-1 rounded font-label-sm text-label-sm bg-primary/10 text-primary hover:bg-primary/20 transition-colors flex items-center gap-1.5" data-severity="info">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+              Grid Event / Info
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- High-Precision Telemetry Metrics Strip -->
+<section class="w-full px-margin py-space-sm bg-surface-container-lowest">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Global Telemetry Nodes</span>
+<span class="font-headline-md text-headline-md text-on-surface">1,842</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">hub</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Validated Runbooks</span>
+<span class="font-headline-md text-headline-md text-secondary">319 Guides</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">assignment_turned_in</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Mean Resolution Time</span>
+<span class="font-headline-md text-headline-md text-primary-container">14.2 min</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">timer</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Safety Quarantine Rate</span>
+<span class="font-headline-md text-headline-md text-error">99.98%</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-error">
+<span class="material-symbols-outlined">security</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Telemetry Table / Expandable Diagnostic Cards -->
+<section class="w-full px-margin py-space-lg bg-surface-container-lowest">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">dataset</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Telemetry Fault Ledger</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Click any row to deploy full remediation schematic</span>
+</div>
+<!-- Table Card Wrapper -->
+<div class="flex flex-col gap-3" id="errorCardsContainer">
+<!-- RECORD 1: Error 02 -->
+<article class="error-item bg-surface-container rounded-xl transition-all shadow-md overflow-hidden hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]" data-brand="Growatt Inverex" data-code="02 Error 02 SPF" data-severity="critical" data-topology="offgrid hybrid">
+<div class="p-space-md cursor-pointer select-none accordion-trigger flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container/70">
+<div class="flex items-start md:items-center gap-space-md min-w-0">
+<div class="flex flex-col items-center justify-center w-20 h-16 rounded-lg bg-surface-container-low shrink-0 text-center px-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">CODE</span>
+<span class="font-headline-sm text-headline-sm text-error font-bold tracking-tighter">02</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title-md text-title-md text-on-surface truncate">DC Bus Voltage Exceeded Overvoltage Threshold (&gt;500V DC)</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container/40 text-error font-code-telemetry text-label-sm uppercase font-semibold">Critical Trip</span>
+</div>
+<div class="flex items-center gap-space-md mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="text-primary font-semibold">Growatt / Inverex</span>
+<span>•</span>
+<span>SPF 3000-5000 Series</span>
+<span>•</span>
+<span>Bus Sensor: Active</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-center">
+<div class="hidden xl:flex flex-col items-end font-code-telemetry text-code-telemetry">
+<span class="text-error">BUS_VOLT &gt; 500.0V</span>
+<span class="text-outline text-label-sm">LIMIT: 450V NOMINAL</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center transition-transform chevron-btn" type="button">
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Expanded Diagnostic Payload -->
+<div class="accordion-content hidden px-space-md pb-space-md pt-space-xs">
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-md">
+<!-- High-Voltage Banner -->
+<div class="p-space-md rounded-lg bg-error-container/20 text-on-error-container flex items-start gap-space-md">
+<span class="material-symbols-outlined text-error text-2xl shrink-0 mt-0.5">electric_bolt</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-error font-bold">SAFETY CRITICAL: Live High-Voltage DC Present</span>
+<p class="font-body-md text-body-md text-on-surface-variant">DC voltage remains stored across internal electrolytic bus capacitors even after AC breaker isolation. Wear class 00 1000V rated insulated gloves and wait 5 minutes before interior terminal contact.</p>
+</div>
+</div>
+<!-- Root Causes & Remediation Matrix Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-lg">biotech</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Root Cause Diagnostics</span>
+</div>
+<ul class="flex flex-col gap-2 font-body-md text-body-md text-on-surface">
+<li class="flex items-start gap-2">
+<span class="text-primary-container mt-1">•</span>
+<span><strong>Sub-Zero Open Circuit Voltage (Voc) Surge:</strong> PV array Voc rating exceeded max limit due to solar panel temperature coefficient during freezing weather conditions.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary-container mt-1">•</span>
+<span><strong>DC Bus Capacitor Drift:</strong> Internal DC surge capacitors degraded or shorted by harmonic voltage spikes.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary-container mt-1">•</span>
+<span><strong>Sampling Circuit Mismatch:</strong> Feedback resistor network misreading bus reference voltage.</span>
+</li>
+</ul>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-lg">build_circle</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Step-by-Step Field Solution</span>
+</div>
+<ol class="flex flex-col gap-2 font-body-md text-body-md text-on-surface list-decimal list-inside">
+<li>Isolate the solar DC isolator switch immediately to protect internal MOSFET stages.</li>
+<li>Measure open circuit voltage across PV+ and PV- using a True-RMS calibrated digital multimeter.</li>
+<li>If measured DC voltage &gt; 450V, split string series arrays into parallel configurations or remove 1-2 modules.</li>
+<li>Verify cold temperature multiplier: Voc(max) = Voc * [1 + (Tmin - 25) * Temp_Coeff].</li>
+<li>Discharge DC bus, re-engage DC switch, and perform controlled cold reboot.</li>
+</ol>
+</div>
+</div>
+<!-- Action Runbook Footer -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs font-code-telemetry text-code-telemetry text-on-surface-variant">
+<span class="text-outline">TELEMETRY REG:</span>
+<span class="text-primary">MODBUS_ADDR_0x0024</span>
+<span class="text-outline">|</span>
+<span>SAMPLE_RATE: 10ms</span>
+</div>
+<a class="px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary font-label-md text-label-md uppercase flex items-center gap-space-xs transition-colors" href="#">
+<span>How to Fix Inverter Error Code 02 Guide</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- RECORD 2: Error 08 / E08 -->
+<article class="error-item bg-surface-container rounded-xl transition-all shadow-md overflow-hidden hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]" data-brand="Inverex Axpert MaxPower" data-code="08 E08 Error 08 Voltronic" data-severity="critical" data-topology="offgrid hybrid">
+<div class="p-space-md cursor-pointer select-none accordion-trigger flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container/70">
+<div class="flex items-start md:items-center gap-space-md min-w-0">
+<div class="flex flex-col items-center justify-center w-20 h-16 rounded-lg bg-surface-container-low shrink-0 text-center px-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">CODE</span>
+<span class="font-headline-sm text-headline-sm text-error font-bold tracking-tighter">08 / E08</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title-md text-title-md text-on-surface truncate">Inverter Output Soft Start Failed (Inverter L-N Voltage Collapse)</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container/40 text-error font-code-telemetry text-label-sm uppercase font-semibold">Critical Shutdown</span>
+</div>
+<div class="flex items-center gap-space-md mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="text-primary font-semibold">Inverex / Voltronic Axpert</span>
+<span>•</span>
+<span>VM / King / Max Series</span>
+<span>•</span>
+<span>Stage: Inversion Sync</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-center">
+<div class="hidden xl:flex flex-col items-end font-code-telemetry text-code-telemetry">
+<span class="text-error">V_OUT &lt; 180VAC</span>
+<span class="text-outline text-label-sm">TIME_WINDOW: 120ms</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center transition-transform chevron-btn" type="button">
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Expanded Content -->
+<div class="accordion-content hidden px-space-md pb-space-md pt-space-xs">
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-md">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-lg">biotech</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Root Cause Diagnostics</span>
+</div>
+<ul class="flex flex-col gap-2 font-body-md text-body-md text-on-surface">
+<li class="flex items-start gap-2">
+<span class="text-primary-container mt-1">•</span>
+<span><strong>Massive Inductive Load Inrush:</strong> Motor compressor (e.g. 1.5-ton AC or submersible borehole pump) connected during initial boot cycle drawing &gt;5x locked rotor amps.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary-container mt-1">•</span>
+<span><strong>Output MOSFET Punch-Through:</strong> Short circuit failure in the H-bridge power module preventing AC sine wave synthesis.</span>
+</li>
+</ul>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-lg">build_circle</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Field Remediation</span>
+</div>
+<ol class="flex flex-col gap-2 font-body-md text-body-md text-on-surface list-decimal list-inside">
+<li>Trip down the AC Output main circuit breaker physically.</li>
+<li>Power down the inverter fully via the power toggle rocker switch.</li>
+<li>Reboot system under zero-load condition and observe if error 08 clears to 230V nominal.</li>
+<li>Re-engage distribution breakers sequentially one-by-one to pinpoint the rogue heavy motor appliance.</li>
+<li>Install a dedicated motor soft-starter module on heavy inductive equipment.</li>
+</ol>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs font-code-telemetry text-code-telemetry text-on-surface-variant">
+<span class="text-outline">DIAGNOSTIC STATUS:</span>
+<span class="text-secondary">HARDWARE_PROTECTION_LOCK</span>
+</div>
+<a class="px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary font-label-md text-label-md uppercase flex items-center gap-space-xs transition-colors" href="#">
+<span>Axpert Error 08 Soft-Start Remediation Guide</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- RECORD 3: Fault 103 / F103 -->
+<article class="error-item bg-surface-container rounded-xl transition-all shadow-md overflow-hidden hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]" data-brand="Sungrow" data-code="103 F103 Fault 103 SG SH" data-severity="info" data-topology="ongrid hybrid">
+<div class="p-space-md cursor-pointer select-none accordion-trigger flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container/70">
+<div class="flex items-start md:items-center gap-space-md min-w-0">
+<div class="flex flex-col items-center justify-center w-20 h-16 rounded-lg bg-surface-container-low shrink-0 text-center px-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">CODE</span>
+<span class="font-headline-sm text-headline-sm text-primary-container font-bold tracking-tighter">F103</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title-md text-title-md text-on-surface truncate">Grid Overfrequency / Frequency Exceeded Islanding Threshold</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary font-code-telemetry text-label-sm uppercase font-semibold">Grid Interruption</span>
+</div>
+<div class="flex items-center gap-space-md mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="text-primary font-semibold">Sungrow SG / SH Series</span>
+<span>•</span>
+<span>Grid-Tied Commercial &amp; Residential</span>
+<span>•</span>
+<span>Sensor: AC Phase Lock Loop</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-center">
+<div class="hidden xl:flex flex-col items-end font-code-telemetry text-code-telemetry">
+<span class="text-primary-container">FREQ: &gt; 50.50 Hz</span>
+<span class="text-outline text-label-sm">GRID_SYNC: HALTED</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center transition-transform chevron-btn" type="button">
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Expanded Payload -->
+<div class="accordion-content hidden px-space-md pb-space-md pt-space-xs">
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-md">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-lg">biotech</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Underlying Causes</span>
+</div>
+<ul class="flex flex-col gap-2 font-body-md text-body-md text-on-surface">
+<li class="flex items-start gap-2">
+<span class="text-primary-container mt-1">•</span>
+<span><strong>Utility Feed Unbalance:</strong> Local grid distribution substation shedding massive industrial loads, creating transient frequency spiking above 50.50Hz / 60.50Hz.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary-container mt-1">•</span>
+<span><strong>Diesel Generator Frequency Jitter:</strong> Microgrid generator governor cycling wildly or hunting throttle positions.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary-container mt-1">•</span>
+<span><strong>Country Grid Code Parameter Incompatibility:</strong> Incorrect regional compliance settings applied during initial inverter commissioning.</span>
+</li>
+</ul>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-lg">build_circle</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Calibration Steps</span>
+</div>
+<ol class="flex flex-col gap-2 font-body-md text-body-md text-on-surface list-decimal list-inside">
+<li>Sample real-time utility frequency with a high-bandwidth digital power analyzer.</li>
+<li>Access the <strong>iSolarCloud</strong> mobile app via local Wi-Fi dongle connection.</li>
+<li>Verify country/region grid standard (e.g. VDE-AR-N 4105, EN 50549, or AS4777).</li>
+<li>If operating with on-site backup generator, calibrate generator engine mechanical governor to stable 50Hz (±0.2Hz).</li>
+<li>Inverter will automatically synchronize and ramp power within 300 seconds of grid frequency normalization.</li>
+</ol>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs font-code-telemetry text-code-telemetry text-on-surface-variant">
+<span class="text-outline">ANTI-ISLANDING:</span>
+<span class="text-primary">IEEE 1547 COMPLIANT</span>
+</div>
+<a class="px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary font-label-md text-label-md uppercase flex items-center gap-space-xs transition-colors" href="#">
+<span>Sungrow Frequency Calibration Protocol</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- RECORD 4: Error 56 -->
+<article class="error-item bg-surface-container rounded-xl transition-all shadow-md overflow-hidden hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]" data-brand="Solis" data-code="56 Error 56 Solis BMS" data-severity="warning" data-topology="hybrid">
+<div class="p-space-md cursor-pointer select-none accordion-trigger flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container/70">
+<div class="flex items-start md:items-center gap-space-md min-w-0">
+<div class="flex flex-col items-center justify-center w-20 h-16 rounded-lg bg-surface-container-low shrink-0 text-center px-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">CODE</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold tracking-tighter">56</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title-md text-title-md text-on-surface truncate">Battery Communication Fault (BMS-Comm Failure / CAN Timeout)</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary font-code-telemetry text-label-sm uppercase font-semibold">Warning (Derated)</span>
+</div>
+<div class="flex items-center gap-space-md mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="text-primary font-semibold">Solis Hybrid S6 / RHI</span>
+<span>•</span>
+<span>Lithium Storage High/Low Voltage</span>
+<span>•</span>
+<span>Port: CAN / RS485</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-center">
+<div class="hidden xl:flex flex-col items-end font-code-telemetry text-code-telemetry">
+<span class="text-secondary">PACK_HEARTBEAT: TIMEOUT</span>
+<span class="text-outline text-label-sm">BATTERY STANDBY MODE</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center transition-transform chevron-btn" type="button">
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Expanded Payload -->
+<div class="accordion-content hidden px-space-md pb-space-md pt-space-xs">
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-md">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-lg">biotech</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Root Cause Diagnostics</span>
+</div>
+<ul class="flex flex-col gap-2 font-body-md text-body-md text-on-surface">
+<li class="flex items-start gap-2">
+<span class="text-primary-container mt-1">•</span>
+<span><strong>RJ45 Pinout Mismatch:</strong> Incompatible pin mapping between Solis CAN port (Pin 4: CAN-H, Pin 5: CAN-L) and third-party battery (e.g., Pylontech, Dyness, BYD).</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary-container mt-1">•</span>
+<span><strong>DIP Switch Addressing Error:</strong> Master battery module address set incorrectly, preventing master heartbeat beacon generation.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary-container mt-1">•</span>
+<span><strong>BMS Protocol Selection:</strong> Inverter battery profile configuration mismatch in advanced setup settings.</span>
+</li>
+</ul>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-lg">build_circle</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Actionable Solution</span>
+</div>
+<ol class="flex flex-col gap-2 font-body-md text-body-md text-on-surface list-decimal list-inside">
+<li>Verify communication cable crimp sequence using a standard RJ45 cable tester.</li>
+<li>Plug cable into dedicated CAN port on the Solis inverter, NOT into the DRM/Meter port.</li>
+<li>Set battery pack DIP switch #1 to UP (ON) and #2, #3, #4 to DOWN (OFF) for master unit designation.</li>
+<li>Navigate to Solis screen: <strong>Advanced Settings &gt; Battery Select &gt; Lead-Acid / Lithium &gt; Select BMS Model</strong>.</li>
+<li>Restart the battery system first, wait for BMS contactor click, then power up inverter.</li>
+</ol>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs font-code-telemetry text-code-telemetry text-on-surface-variant">
+<span class="text-outline">COMMUNICATION BUS:</span>
+<span class="text-primary">CAN 2.0B / 500kbps</span>
+</div>
+<a class="px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary font-label-md text-label-md uppercase flex items-center gap-space-xs transition-colors" href="#">
+<span>Solis Lithium BMS Pinout Chart &amp; Guide</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- RECORD 5: Alarm 2064 -->
+<article class="error-item bg-surface-container rounded-xl transition-all shadow-md overflow-hidden hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]" data-brand="Huawei" data-code="2064 Alarm 2064 SUN2000 AFCI Arc" data-severity="critical" data-topology="ongrid hybrid">
+<div class="p-space-md cursor-pointer select-none accordion-trigger flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container/70">
+<div class="flex items-start md:items-center gap-space-md min-w-0">
+<div class="flex flex-col items-center justify-center w-20 h-16 rounded-lg bg-surface-container-low shrink-0 text-center px-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">CODE</span>
+<span class="font-headline-sm text-headline-sm text-error font-bold tracking-tighter">2064</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title-md text-title-md text-on-surface truncate">DC Arc Fault Detected (AFCI Hardware Safety Lockout)</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container/40 text-error font-code-telemetry text-label-sm uppercase font-semibold">Safety Lockout</span>
+</div>
+<div class="flex items-center gap-space-md mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="text-primary font-semibold">Huawei FusionSolar SUN2000</span>
+<span>•</span>
+<span>Utility &amp; Commercial String Units</span>
+<span>•</span>
+<span>Sensor: DSP Arc Fourier Analyzer</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-center">
+<div class="hidden xl:flex flex-col items-end font-code-telemetry text-code-telemetry">
+<span class="text-error">ARC_ENERGY &gt; 120mJ</span>
+<span class="text-outline text-label-sm">CIRCUIT INTERRUPTED &lt;2.5s</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center transition-transform chevron-btn" type="button">
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Expanded Payload -->
+<div class="accordion-content hidden px-space-md pb-space-md pt-space-xs">
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-md">
+<!-- High-Voltage Banner -->
+<div class="p-space-md rounded-lg bg-error-container/20 text-on-error-container flex items-start gap-space-md">
+<span class="material-symbols-outlined text-error text-2xl shrink-0 mt-0.5">local_fire_department</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-error font-bold">FIRE HAZARD WARNING: Do NOT Blindly Clear Arc Alarms</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Clearing AFCI 2064 via software without physical array inspection can reignite electric arcing across loose DC joints on combustible rooftop materials.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-lg">biotech</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Root Cause Diagnostics</span>
+</div>
+<ul class="flex flex-col gap-2 font-body-md text-body-md text-on-surface">
+<li class="flex items-start gap-2">
+<span class="text-primary-container mt-1">•</span>
+<span><strong>Corroded or Mismatched MC4 Connector:</strong> Water ingress into solar connectors leading to microscopic series arc flashing under high current draw.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary-container mt-1">•</span>
+<span><strong>Cracked PV Module Junction Box:</strong> Burned bypass diode or fractured ribbon solder joint inside backsheet enclosure.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary-container mt-1">•</span>
+<span><strong>Pinched Conduit Conductor:</strong> Mechanical insulation shear against aluminum mounting racking.</span>
+</li>
+</ul>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-lg">build_circle</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Remediation Protocol</span>
+</div>
+<ol class="flex flex-col gap-2 font-body-md text-body-md text-on-surface list-decimal list-inside">
+<li>Isolate DC isolators and lock-out/tag-out the inverter cabinet.</li>
+<li>Conduct a thermal imaging camera drone sweep across the string to locate hotspot connectors.</li>
+<li>Inspect all MC4 joints along the flagged DC string for heat discoloration or charring.</li>
+<li>Cut and re-crimp verified genuine Stäubli MC4 connectors using specialized ratchet crimping tools.</li>
+<li>In FusionSolar App, connect locally as installer &gt; Maintenance &gt; <strong>AFCI Self-Check &gt; Clear Alarm</strong>.</li>
+</ol>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs font-code-telemetry text-code-telemetry text-on-surface-variant">
+<span class="text-outline">UL 1699B COMPLIANCE:</span>
+<span class="text-primary">AI-POWERED AFCI ACTIVE</span>
+</div>
+<a class="px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary font-label-md text-label-md uppercase flex items-center gap-space-xs transition-colors" href="#">
+<span>Huawei AFCI Diagnostic &amp; Clearing Runbook</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- RECORD 6: Fault F13 / W13 -->
+<article class="error-item bg-surface-container rounded-xl transition-all shadow-md overflow-hidden hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]" data-brand="Deye" data-code="F13 W13 Fault F13 Deye SUN Phase" data-severity="warning" data-topology="hybrid ongrid">
+<div class="p-space-md cursor-pointer select-none accordion-trigger flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container/70">
+<div class="flex items-start md:items-center gap-space-md min-w-0">
+<div class="flex flex-col items-center justify-center w-20 h-16 rounded-lg bg-surface-container-low shrink-0 text-center px-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">CODE</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold tracking-tighter">F13</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title-md text-title-md text-on-surface truncate">Grid Phase Sequence Reverse or Missing Neutral Connection</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary font-code-telemetry text-label-sm uppercase font-semibold">Startup Hold</span>
+</div>
+<div class="flex items-center gap-space-md mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="text-primary font-semibold">Deye SUN Hybrid Series</span>
+<span>•</span>
+<span>3-Phase 8kW – 50kW Low/High Voltage</span>
+<span>•</span>
+<span>Detector: Phase Angle Sync</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-center">
+<div class="hidden xl:flex flex-col items-end font-code-telemetry text-code-telemetry">
+<span class="text-secondary">PHASE: CW MISMATCH</span>
+<span class="text-outline text-label-sm">RELAY LOCK: ACTIVE</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center transition-transform chevron-btn" type="button">
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Expanded Payload -->
+<div class="accordion-content hidden px-space-md pb-space-md pt-space-xs">
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-md">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-lg">biotech</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Root Cause Diagnostics</span>
+</div>
+<ul class="flex flex-col gap-2 font-body-md text-body-md text-on-surface">
+<li class="flex items-start gap-2">
+<span class="text-primary-container mt-1">•</span>
+<span><strong>AC Phase Rotation Counter-Clockwise:</strong> AC grid input conductors wired backwards (L1 &amp; L2 swapped at the main AC breaker).</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary-container mt-1">•</span>
+<span><strong>Floating Neutral:</strong> Neutral wire loose or disconnected at the main distribution board or backup load port.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary-container mt-1">•</span>
+<span><strong>High Neutral-to-Earth Potential:</strong> Earth ground fault causing N-to-PE potential to float &gt;15V AC.</span>
+</li>
+</ul>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-lg">build_circle</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Field Verification</span>
+</div>
+<ol class="flex flex-col gap-2 font-body-md text-body-md text-on-surface list-decimal list-inside">
+<li>Use a handheld handheld phase sequence rotation tester on the AC terminal block (L1, L2, L3).</li>
+<li>If tester indicates reverse rotation, switch off grid breaker and swap conductors L1 and L2.</li>
+<li>Measure voltage between Neutral (N) and Ground (PE). Nominal target: &lt; 5V AC.</li>
+<li>Torque all AC terminal screws to manufacturer specification (typically 2.5 N·m).</li>
+<li>Restart inverter; Deye system will automatically verify 120° phase separation and engage contactor.</li>
+</ol>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs font-code-telemetry text-code-telemetry text-on-surface-variant">
+<span class="text-outline">AC TOPOLOGY:</span>
+<span class="text-primary">3L + N + PE / 400V</span>
+</div>
+<a class="px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary font-label-md text-label-md uppercase flex items-center gap-space-xs transition-colors" href="#">
+<span>Deye Phase Alignment &amp; Neutral Calibration</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- No Results State (Hidden by default) -->
+<div class="hidden p-space-xl text-center bg-surface-container rounded-xl flex flex-col items-center gap-space-md" id="noResultsState">
+<span class="material-symbols-outlined text-outline text-5xl">search_off</span>
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">No Telemetry Matches Found</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Verify the exact fault code or manufacturer keyword. You can also query the complete offline PDF catalog below.</p>
+</div>
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-high text-primary font-label-md text-label-md uppercase" id="resetFiltersBtn" type="button">Reset All Filters</button>
+</div>
+</div>
+</section>
+<!-- Rapid Error Code Lookup Cheat Sheet & Optical LED Matrix -->
+<section class="w-full px-margin py-space-xl bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-xl">
+<!-- LED Indicator Matrix -->
+<div class="lg:col-span-2 p-space-lg rounded-xl bg-surface-container flex flex-col gap-space-md shadow-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-2xl">lens_blur</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Optical LED Status Decode Matrix</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Universal Field Reference</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Quick-triage hardware health when LCD digital displays are unpowered or frozen during severe DC bus collapse:
+        </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md mt-space-xs">
+<!-- State 1 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-start gap-space-md">
+<div class="w-4 h-4 rounded-full bg-primary-container shadow-[0_0_12px_rgba(56,217,255,0.8)] shrink-0 mt-1"></div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Solid Green LED</span>
+<span class="font-body-sm text-body-sm text-primary font-semibold">Normal Grid Synchronized Generation</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">DC string input active, MPPT tracking nominal, sine wave export engaged.</p>
+</div>
+</div>
+<!-- State 2 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-start gap-space-md">
+<div class="w-4 h-4 rounded-full bg-primary animate-pulse shadow-[0_0_12px_rgba(182,237,255,0.8)] shrink-0 mt-1"></div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Blinking Green LED</span>
+<span class="font-body-sm text-body-sm text-primary font-semibold">Standby / Self-Checking Sequence</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Waiting for irradiation threshold, grid countdown (60s), or insulation test.</p>
+</div>
+</div>
+<!-- State 3 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-start gap-space-md">
+<div class="w-4 h-4 rounded-full bg-secondary animate-pulse shadow-[0_0_12px_rgba(255,185,85,0.8)] shrink-0 mt-1"></div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Blinking Amber / Yellow</span>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">Warning / Derated Thermal State</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Heatsink fan throttling, BMS battery derating, or high grid voltage event.</p>
+</div>
+</div>
+<!-- State 4 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-start gap-space-md">
+<div class="w-4 h-4 rounded-full bg-error shadow-[0_0_12px_rgba(255,180,171,0.8)] shrink-0 mt-1"></div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Solid Red LED</span>
+<span class="font-body-sm text-body-sm text-error font-semibold">Critical Hardware Trip / Ground Fault</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Immediate shutdown. Relays opened. System locked pending technician audit.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Offline Documentation / Download Hub -->
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col justify-between gap-space-md shadow-lg">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-3xl">picture_as_pdf</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">2025 Offline Error Code Directory</h3>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mt-1">Revision 4.8.2 (PDF &amp; CSV)</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Engineered for remote off-grid technicians without cellular access. Comprehensive lookup directory containing 4,200+ fault signatures across 42 manufacturers.
+          </p>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between font-code-telemetry text-code-telemetry">
+<span class="text-outline">FILE_SIZE: 28.4 MB</span>
+<span class="text-secondary">MD5: a9f3e...b104</span>
+</div>
+</div>
+<button class="w-full py-space-sm rounded-lg bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider font-bold shadow-[0_0_20px_rgba(56,217,255,0.35)] hover:bg-primary transition-all flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-lg">download</span>
+<span>Download PDF Directory</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Safety Protocol High-Voltage Footer Banner -->
+<section class="w-full px-margin pb-space-lg bg-surface-container-lowest">
+<div class="p-space-lg rounded-xl bg-surface-container border-l-4 border-secondary flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg shadow-xl">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-full bg-secondary/15 flex items-center justify-center text-secondary shrink-0 mt-1 lg:mt-0">
+<span class="material-symbols-outlined text-3xl">warning</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-secondary uppercase tracking-wider font-bold">Electrical Safety Directive: High-Voltage DC Hazard</span>
+<span class="px-2 py-0.5 rounded bg-secondary/20 text-secondary font-label-sm text-label-sm uppercase">NFPA 70E Standard</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+            Solar photovoltaic strings generate deadly direct current (DC) potentials exceeding 1,000 Volts when illuminated. Opening inverter enclosures without certified PPE, calibrated multi-meters, and proper Lockout/Tagout (LOTO) protocols poses severe electrical arc flash and electrocution hazards.
+          </p>
+</div>
+</div>
+<a class="px-space-md py-space-sm rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md uppercase tracking-wider shrink-0 transition-colors flex items-center gap-space-xs" href="#">
+<span class="material-symbols-outlined text-sm">menu_book</span>
+<span>View HV Protocols</span>
+</a>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    document.addEventListener('DOMContentLoaded', function() {
+      document.title = document.title.replace(/Solar Nexus/g, 'WhaSol');
+      document.querySelectorAll('header img').forEach(function(logo) { logo.src = '../whasol-logo-clean.svg'; logo.alt = 'WhaSol'; logo.className = 'h-20 w-80 object-contain'; if (logo.nextElementSibling) logo.nextElementSibling.style.display = 'none'; });
+      document.querySelectorAll('header .w-8.h-8.rounded-full.bg-primary').forEach(function(profile) { profile.remove(); });
+      const brandWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      let brandNode;
+      while (brandNode = brandWalker.nextNode()) {
+        if (brandNode.parentElement && !['SCRIPT', 'STYLE'].includes(brandNode.parentElement.tagName)) {
+          brandNode.nodeValue = brandNode.nodeValue.replace(/Solar Nexus Engineering Intelligence/g, 'WhaSol').replace(/Solar Nexus/g, 'WhaSol').replace(/SOLAR NEXUS/g, 'WHASOL').replace(/Engineering Intelligence/g, '');
+        }
+      }
+    });
+    const searchInput = document.getElementById('errorSearchInput');
+    const clearBtn = document.getElementById('clearSearchBtn');
+    const brandPills = document.querySelectorAll('.brand-pill');
+    const typePills = document.querySelectorAll('.type-pill');
+    const severityPills = document.querySelectorAll('.severity-pill');
+    const errorItems = document.querySelectorAll('.error-item');
+    const matchCounter = document.getElementById('matchCounter');
+    const noResults = document.getElementById('noResultsState');
+    const resetBtn = document.getElementById('resetFiltersBtn');
+
+    let activeBrand = 'all';
+    let activeType = 'all';
+    let activeSeverity = 'all';
+    let searchQuery = '';
+
+    // Accordion Toggle
+    errorItems.forEach(item => {
+      const trigger = item.querySelector('.accordion-trigger');
+      const content = item.querySelector('.accordion-content');
+      const chevron = item.querySelector('.chevron-btn');
+
+      trigger.addEventListener('click', () => {
+        const isClosed = content.classList.contains('hidden');
+        // Close others for clean single-view
+        errorItems.forEach(other => {
+          if (other !== item) {
+            other.querySelector('.accordion-content').classList.add('hidden');
+            other.querySelector('.chevron-btn').style.transform = 'rotate(0deg)';
+          }
+        });
+
+        if (isClosed) {
+          content.classList.remove('hidden');
+          chevron.style.transform = 'rotate(180deg)';
+        } else {
+          content.classList.add('hidden');
+          chevron.style.transform = 'rotate(0deg)';
+        }
+      });
+    });
+
+    // Filter Logic
+    function applyFilters() {
+      let visibleCount = 0;
+      const q = searchQuery.toLowerCase().trim();
+
+      errorItems.forEach(card => {
+        const brands = card.getAttribute('data-brand') || '';
+        const topology = card.getAttribute('data-topology') || '';
+        const severity = card.getAttribute('data-severity') || '';
+        const codeText = card.getAttribute('data-code') || '';
+        const cardAllText = card.innerText.toLowerCase();
+
+        const matchBrand = (activeBrand === 'all') || brands.toLowerCase().includes(activeBrand.toLowerCase());
+        const matchType = (activeType === 'all') || topology.toLowerCase().includes(activeType.toLowerCase());
+        const matchSeverity = (activeSeverity === 'all') || severity.toLowerCase() === activeSeverity.toLowerCase();
+        const matchQuery = (q === '') || cardAllText.includes(q) || codeText.toLowerCase().includes(q);
+
+        if (matchBrand && matchType && matchSeverity && matchQuery) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      matchCounter.textContent = visibleCount + (visibleCount === 1 ? ' Record Indexed' : ' Records Indexed');
+
+      if (visibleCount === 0) {
+        noResults.classList.remove('hidden');
+      } else {
+        noResults.classList.add('hidden');
+      }
+    }
+
+    // Search input handler
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      if (searchQuery.length > 0) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+      applyFilters();
+    });
+
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchQuery = '';
+      clearBtn.classList.add('hidden');
+      applyFilters();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && document.activeElement === searchInput) {
+        searchInput.value = '';
+        searchQuery = '';
+        clearBtn.classList.add('hidden');
+        applyFilters();
+      }
+    });
+
+    // Brand Buttons
+    brandPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        brandPills.forEach(p => {
+          p.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold', 'shadow-sm');
+          p.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+        });
+        pill.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+        pill.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold', 'shadow-sm');
+        activeBrand = pill.getAttribute('data-brand');
+        applyFilters();
+      });
+    });
+
+    // Topology Type Buttons
+    typePills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        typePills.forEach(p => {
+          p.classList.remove('bg-surface-container', 'text-primary', 'font-bold');
+          p.classList.add('text-on-surface-variant');
+        });
+        pill.classList.add('bg-surface-container', 'text-primary', 'font-bold');
+        pill.classList.remove('text-on-surface-variant');
+        activeType = pill.getAttribute('data-type');
+        applyFilters();
+      });
+    });
+
+    // Severity Buttons
+    severityPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        severityPills.forEach(p => p.classList.remove('ring-2', 'ring-primary-container'));
+        pill.classList.add('ring-2', 'ring-primary-container');
+        activeSeverity = pill.getAttribute('data-severity');
+        applyFilters();
+      });
+    });
+
+    // Reset Filters
+    resetBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchQuery = '';
+      clearBtn.classList.add('hidden');
+
+      activeBrand = 'all';
+      brandPills.forEach((p, idx) => {
+        if (idx === 0) {
+          p.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold');
+          p.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+        } else {
+          p.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold');
+          p.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+        }
+      });
+
+      activeType = 'all';
+      typePills.forEach((p, idx) => {
+        if (idx === 0) {
+          p.classList.add('bg-surface-container', 'text-primary', 'font-bold');
+          p.classList.remove('text-on-surface-variant');
+        } else {
+          p.classList.remove('bg-surface-container', 'text-primary', 'font-bold');
+          p.classList.add('text-on-surface-variant');
+        }
+      });
+
+      activeSeverity = 'all';
+      severityPills.forEach(p => p.classList.remove('ring-2', 'ring-primary-container'));
+
+      applyFilters();
+    });
+
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest pt-space-xl pb-space-lg mt-space-xl"><div class="w-full px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md pr-space-lg"><div class="flex items-center gap-space-md"><img alt="Solar Nexus Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wgam0DDD6e-vdtEzaBZwIuLc6sTIiyTDeAqKHOAD5K6dw-vRNg-luIfT7uH8KcvSrxrQysvovE24wagFeSEfH0ks4HeVLrYu9TT9dZUg9cPTNo5KlLPkDcB8ABaONPK-T5CKHxyme5np5MRX9XecUbKy3h0_4pGujj0u_bw9QLA242TCbSD28idX9uW6CGPOZWsOW9NsBvW2ig_3736XFFpZjvMHfLsiWrlGJRres7Ud6Eu7fuwWbcnyCX"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface">Solar Nexus</span><span class="font-label-sm text-label-sm text-primary uppercase">Engineering Intelligence</span></div></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Making Solar Technology Easier to Understand. Practical guides, inverter diagnostics, and engineering intelligence for real-world solar systems.</p><div class="flex items-center gap-space-xs font-code-telemetry text-code-telemetry text-secondary"><span class="material-symbols-outlined text-[18px]">verified</span>Certified Solar Diagnostic Platform</div></div><div class="flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface uppercase tracking-wider">Explore</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm"><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="home" href="#">Home</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="troubleshooting" href="#">Troubleshooting Guides</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="error-codes" href="#">Inverter Error Codes</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="brands" href="#">Brands &amp; Inverter Models</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="blogs" href="#">Engineering Blogs</a></li></ul></div><div class="flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface uppercase tracking-wider">Equipment Categories</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><li class="hover:text-primary transition-colors cursor-pointer">Solar Hybrid Inverters</li><li class="hover:text-primary transition-colors cursor-pointer">Lithium Battery Banks</li><li class="hover:text-primary transition-colors cursor-pointer">Solar PV Arrays</li><li class="hover:text-primary transition-colors cursor-pointer">Electrical &amp; Wiring</li><li class="hover:text-primary transition-colors cursor-pointer">Voltage &amp; Grid Sync</li></ul></div><div class="flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface uppercase tracking-wider">Platform &amp; Safety</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><li class="flex items-center gap-space-xs text-secondary hover:text-tertiary transition-colors cursor-pointer"><span class="material-symbols-outlined text-[14px]">warning</span>High-Voltage Safety Protocols</li><li class="hover:text-primary transition-colors cursor-pointer">Verification Standards</li><li class="hover:text-primary transition-colors"><a data-path="about" href="#">About Solar Nexus</a></li><li class="hover:text-primary transition-colors"><a data-path="contact" href="#">Contact Engineering</a></li><li class="hover:text-primary transition-colors cursor-pointer">Diagnostic Disclaimer</li></ul></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm font-code-telemetry text-code-telemetry"><span class="inline-block w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="text-primary">Diagnostic Systems Nominal</span><span class="text-outline-variant">|</span><span class="text-on-surface-variant">v2.4 Live Telemetry</span></div><div class="font-body-sm text-body-sm text-on-surface-variant">© 2025 Solar Nexus Engineering Intelligence. All rights reserved.</div><div class="flex items-center gap-space-lg font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" href="#">Terms of Service</a><a class="hover:text-on-surface transition-colors" href="#">HV Safety</a></div></div></div></footer></body></html>
