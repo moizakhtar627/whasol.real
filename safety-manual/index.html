@@ -28,7 +28,7 @@
     <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-5">
       <a href="../index.html" class="flex items-center gap-3"><span class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-container text-background"><span class="material-symbols-outlined">solar_power</span></span><span><strong class="block font-display text-lg">Solar Nexus</strong><small class="uppercase tracking-[0.2em] text-primary">Engineering Intelligence</small></span></a>
       <nav class="hidden items-center gap-2 text-sm font-semibold xl:flex" data-active-classes="bg-surface text-primary" data-inactive-classes="text-muted hover:bg-surface hover:text-primary"><a class="rounded-full px-4 py-2" data-path="home" href="#">Home</a><a class="rounded-full px-4 py-2" data-path="troubleshooting" href="#">Troubleshooting</a><a class="rounded-full px-4 py-2" data-path="error-codes" href="#">Error Codes</a><a class="rounded-full px-4 py-2" data-path="brands" href="#">Brands &amp; Models</a><a class="rounded-full px-4 py-2" data-path="blogs" href="#">Blogs</a><a class="rounded-full px-4 py-2" data-path="about" href="#">About Us</a><a class="rounded-full px-4 py-2" data-path="contact" href="#">Contact</a></nav>
-      <button id="mobile-nav-toggle" class="flex h-10 w-10 items-center justify-center rounded-lg bg-surface text-primary xl:hidden" type="button" aria-label="Toggle navigation menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button>
+      <button id="mobile-nav-toggle" class="flex h-10 w-10 items-center justify-center rounded-lg bg-surface text-primary xl:hidden" type="button" aria-label="Open navigation menu" aria-expanded="false"><span class="nav-hamburger" aria-hidden="true"><span class="nav-hamburger-line"></span><span class="nav-hamburger-line"></span><span class="nav-hamburger-line"></span></span></button>
     </div>
     <div id="mobile-nav-menu" class="hidden mx-auto max-w-7xl px-6 pb-5 xl:hidden"><nav class="flex flex-col gap-1 text-sm font-semibold" data-active-classes="bg-surface text-primary" data-inactive-classes="text-muted hover:bg-surface hover:text-primary"><a class="rounded-full px-4 py-2" data-path="home" href="#">Home</a><a class="rounded-full px-4 py-2" data-path="troubleshooting" href="#">Troubleshooting</a><a class="rounded-full px-4 py-2" data-path="error-codes" href="#">Error Codes</a><a class="rounded-full px-4 py-2" data-path="brands" href="#">Brands &amp; Models</a><a class="rounded-full px-4 py-2" data-path="blogs" href="#">Blogs</a><a class="rounded-full px-4 py-2" data-path="about" href="#">About Us</a><a class="rounded-full px-4 py-2" data-path="contact" href="#">Contact</a></nav></div>
   </header>
@@ -308,8 +308,9 @@
   (function() {
     document.addEventListener('DOMContentLoaded', function() {
       document.title = 'Solar Safety Manual | WhaSol';
+      document.body.innerHTML = document.body.innerHTML.replace(/Solar Nexus/g, 'WhaSol').replace(/Engineering Intelligence/g, '');
       var brandLink = document.querySelector('header a');
-      if (brandLink) brandLink.innerHTML = '<img src="../whasol-logo-clean.svg" alt="WhaSol" class="whasol-logo object-contain" />';
+      if (brandLink) brandLink.innerHTML = '<img src="../whasol-logo.png" alt="WhaSol" class="whasol-logo object-contain" />';
       var mobileNavToggle = document.getElementById('mobile-nav-toggle');
       var mobileNavMenu = document.getElementById('mobile-nav-menu');
       if (mobileNavToggle && mobileNavMenu) {
@@ -317,15 +318,21 @@
           var isOpen = !mobileNavMenu.classList.contains('hidden');
           mobileNavMenu.classList.toggle('hidden');
           mobileNavToggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
-          var iconEl = mobileNavToggle.querySelector('.material-symbols-outlined');
-          if (iconEl) iconEl.textContent = isOpen ? 'menu' : 'close';
+          mobileNavToggle.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+        });
+        document.addEventListener('click', function(ev) {
+          if (!mobileNavToggle || !mobileNavMenu) return;
+          if (ev.target.closest('#mobile-nav-toggle') || ev.target.closest('#mobile-nav-menu')) return;
+          if (mobileNavMenu.classList.contains('hidden')) return;
+          mobileNavMenu.classList.add('hidden');
+          mobileNavToggle.setAttribute('aria-expanded', 'false');
+          mobileNavToggle.setAttribute('aria-label', 'Open navigation menu');
         });
         mobileNavMenu.addEventListener('click', function(ev) {
           if (ev.target.closest('a[data-path]')) {
             mobileNavMenu.classList.add('hidden');
             mobileNavToggle.setAttribute('aria-expanded', 'false');
-            var iconEl2 = mobileNavToggle.querySelector('.material-symbols-outlined');
-            if (iconEl2) iconEl2.textContent = 'menu';
+            mobileNavToggle.setAttribute('aria-label', 'Open navigation menu');
           }
         });
       }
@@ -368,7 +375,6 @@
           }
         });
       });
-      document.body.innerHTML = document.body.innerHTML.replace(/Solar Nexus/g, 'WhaSol').replace(/Engineering Intelligence/g, '');
     });
   })();
   </script>

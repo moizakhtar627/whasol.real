@@ -35,20 +35,57 @@ svg {
 /* --- 2. Header / navigation --- */
 
 /* WhaSol logo: responsive across all pages.
-   Replaces the old JS-applied `h-20 w-80` (320px) sizing. */
+   Mobile ~116-136px, tablet/desktop up to 152px. The native
+   1.79:1 ratio keeps heights around 65-85px inside the bar. */
 .whasol-logo {
-  width: clamp(6.25rem, 22vw, 8.75rem);
+  width: clamp(7.25rem, 32vw, 8.25rem);
   height: auto;
   max-width: 100%;
   flex-shrink: 1;
 }
 
-/* Compact fixed header bar on mobile.
-   `.header-bar` is added by the shared JS to the first child
-   of the fixed header (A-type pages): h-16 on mobile, lg:h-20. */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .whasol-logo {
+    width: clamp(8.5rem, 12vw, 9.5rem);
+  }
+}
+
 @media (min-width: 1280px) {
   .whasol-logo {
-    width: 8.75rem;
+    width: 9.5rem;
+  }
+}
+
+/* Fixed header (A-type pages): slightly taller desktop bar so the
+   larger logo gets breathing room. Offsets below keep main + sticky
+   aligned to the new desktop bar height. */
+@media (min-width: 1024px) {
+  header.fixed > div:first-child,
+  .header-bar {
+    height: 5.5rem !important;
+  }
+  main.lg\:pt-20 {
+    padding-top: 5.5rem !important;
+  }
+  .sticky.lg\:top-20 {
+    top: 5.5rem !important;
+  }
+}
+
+/* Make the header background match the logo's own opaque dark-navy
+   (#0b1828) so the logo has no contrasting rectangle behind it. */
+header.fixed,
+header.sticky {
+  background-color: #0b1828 !important;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  header.fixed,
+  header.sticky {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
 }
 
@@ -56,29 +93,99 @@ svg {
   header.fixed > div:first-child,
   .header-bar {
     height: auto !important;
-    min-height: 4rem !important;
+    min-height: 4.5rem !important;
     gap: 0.5rem !important;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
 
-  /* Mobile nav toggle: comfortable tap target */
-  #mobile-nav-toggle {
-    width: 2.75rem;
-    height: 2.75rem;
+  /* Compact vertical padding for legacy sticky headers so the
+     larger logo doesn't make the bar unnecessarily tall. */
+  header.sticky > div:first-child {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+}
+
+/* Mobile nav toggle: comfortable 44px tap target (hidden on desktop). */
+#mobile-nav-toggle {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+/* Pure-CSS hamburger icon: three animated lines that turn into an
+   "X" when the menu is open (aria-expanded is driven by shared JS). */
+.nav-hamburger {
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 18px;
+}
+
+.nav-hamburger-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: #d9e3f7;
+  transition: transform 0.25s ease, top 0.25s ease, opacity 0.2s ease;
+}
+
+.nav-hamburger-line:nth-child(1) { top: 0; }
+.nav-hamburger-line:nth-child(2) { top: 8px; }
+.nav-hamburger-line:nth-child(3) { top: 16px; }
+
+#mobile-nav-toggle[aria-expanded="true"] .nav-hamburger-line:nth-child(1) {
+  top: 8px;
+  transform: rotate(45deg);
+}
+
+#mobile-nav-toggle[aria-expanded="true"] .nav-hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+#mobile-nav-toggle[aria-expanded="true"] .nav-hamburger-line:nth-child(3) {
+  top: 8px;
+  transform: rotate(-45deg);
+}
+
+/* Smooth 250ms slide/fade when the mobile menu opens. */
+#mobile-nav-menu:not(.hidden) {
+  animation: nav-drop 0.25s ease;
+}
+
+@keyframes nav-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #mobile-nav-toggle .nav-hamburger-line,
+  #mobile-nav-menu:not(.hidden) {
+    animation: none;
+    transition: none;
   }
 }
 
 /* Mobile dropdown panel: stays on screen, scrolls if very long,
    above page content, and fully closed by the shared JS. */
 #mobile-nav-menu {
-  max-height: calc(100dvh - 4rem);
+  max-height: calc(100dvh - 5rem);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   width: 100%;
 }
 
-@media (max-width: 767px) {
+/* The hamburger/menu is used below xl (1280px), so the dropdown must
+   overlay content as a fixed panel across the whole range. */
+@media (max-width: 1279px) {
   #mobile-nav-menu {
     position: absolute;
     top: 100%;
@@ -118,15 +225,32 @@ svg {
 }
 
 /* --- 3. Page top offset under the fixed header --- */
+/* Mobile bar is auto-height (up to ~74px once the larger logo is
+   inside), so keep content clear of it with a matching offset. */
 @media (max-width: 767px) {
   main.pt-16 {
-    padding-top: 4rem !important;
+    padding-top: 4.75rem !important;
   }
   main.pt-20 {
-    padding-top: 4rem !important;
+    padding-top: 4.75rem !important;
   }
+  .sticky.top-16,
   .sticky.top-20 {
-    top: 4rem !important;
+    top: 4.75rem !important;
+  }
+}
+
+/* Tablet: fixed bar is still h-20 (80px) here, so align main + sticky. */
+@media (min-width: 768px) and (max-width: 1023px) {
+  main.pt-16 {
+    padding-top: 5rem !important;
+  }
+  main.pt-20 {
+    padding-top: 5rem !important;
+  }
+  .sticky.top-16,
+  .sticky.top-20 {
+    top: 5rem !important;
   }
 }
 
