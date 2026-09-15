@@ -20,6 +20,8 @@
   <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{background:'#0a1422',surface:'#16202f','surface-low':'#121c2a','surface-high':'#212a39',primary:'#b6edff','primary-container':'#38d9ff',secondary:'#ffb955',error:'#ffb4ab','on-surface':'#d9e3f7','muted':'#bbc9ce'},fontFamily:{display:['Space Grotesk'],body:['Inter']}}}};</script>
   <style>body{font-family:'Inter',sans-serif;}</style>
 <link rel="stylesheet" href="../animations.css" />
+<link rel="stylesheet" href="../responsive.css" />
+<link rel="icon" type="image/png" href="../whasol-logo.png" />
 </head>
 <body class="min-h-screen bg-background text-on-surface">
   <header class="sticky top-0 z-10 border-b border-surface-high/70 bg-background/90 backdrop-blur-xl">
@@ -307,7 +309,7 @@
     document.addEventListener('DOMContentLoaded', function() {
       document.title = 'Solar Safety Manual | WhaSol';
       var brandLink = document.querySelector('header a');
-      if (brandLink) brandLink.innerHTML = '<img src="../whasol-logo-clean.svg" alt="WhaSol" class="h-20 w-80 object-contain" />';
+      if (brandLink) brandLink.innerHTML = '<img src="../whasol-logo-clean.svg" alt="WhaSol" class="whasol-logo object-contain" />';
       var mobileNavToggle = document.getElementById('mobile-nav-toggle');
       var mobileNavMenu = document.getElementById('mobile-nav-menu');
       if (mobileNavToggle && mobileNavMenu) {
