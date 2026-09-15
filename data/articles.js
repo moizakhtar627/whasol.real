@@ -19,10 +19,19 @@
  *   excerpt: "1-3 sentence summary shown on cards",
  *   category: "inverter" | "battery" | "solar-panel" | "wiring" | "voltage",
  *   brand: "Brand name (e.g. SolaX, Sungrow, Growatt, Universal Solar)",
+ *   author: "Author name (e.g. 'Raj Patel, PE') - optional",
  *   tags: ["array", "of", "keywords", "for", "search"],
  *   publishedAt: "ISO 8601 date string (e.g. 2026-09-15T09:00:00)",
- *   slug: "guides/article-url-slug"
+ *   featuredImage: "URL/path to article hero image - optional",
+ *   slug: "guides/article-url-slug" or "blog/article-url-slug",
+ *   content: "Full article body (markdown or HTML) for the future article detail page"
  * }
+ *
+ * Blog page category display names map to these keys as follows:
+ *   inverter    -> INVERTER ARCHITECTURE
+ *   battery     -> BATTERY CHEMISTRY
+ *   solar-panel -> SOLAR PV ARRAY DIAGNOSTICS
+ *   wiring      -> WIRING & CONNECTIONS
  *
  * Categories must match one of these keys:
  *   inverter     -> Inverter Problems
