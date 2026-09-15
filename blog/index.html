@@ -2,14 +2,38 @@
 
 <html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>WhaSol | Solar Engineering Blog &amp; Insights</title>
-<meta name="description" content="Articles on inverter diagnostics, battery technology and solar engineering from the WhaSol team - smart solar engineering."/>
+<meta name="description" content="Expert articles on inverter diagnostics, lithium battery systems, CAN bus protocols, AFCI protection, and solar panel performance optimization by WhaSol certified engineers. Smart solar engineering insights for installers and system designers."/>
 <link rel="canonical" href="https://whasol-real.vercel.app/blog/"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="WhaSol | Solar Engineering Blog &amp; Insights"/>
-<meta property="og:description" content="Articles on inverter diagnostics, battery technology and solar engineering from the WhaSol team - smart solar engineering."/>
+<meta property="og:description" content="Expert articles on inverter diagnostics, lithium battery systems, CAN bus protocols, AFCI protection, and solar panel performance optimization by WhaSol certified engineers."/>
 <meta property="og:url" content="https://whasol-real.vercel.app/blog/"/>
 <meta property="og:site_name" content="WhaSol"/>
+<meta property="og:image" content="https://whasol-real.vercel.app/whasol-logo.png"/>
+<meta property="og:image:alt" content="WhaSol Solar Engineering Blog"/>
 <meta name="twitter:card" content="summary"/>
+<meta name="twitter:author" content="@WhaSolSolar"/>
+<meta name="twitter:image" content="https://whasol-real.vercel.app/whasol-logo.png"/>
+<meta name="twitter:title" content="WhaSol | Solar Engineering Blog & Insights"/>
+<meta name="twitter:description" content="Expert articles on inverter diagnostics, lithium battery systems, CAN bus protocols, AFCI protection, and solar panel performance optimization by WhaSol certified engineers."/>
+<meta name="robots" content="index, follow"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "WhaSol Solar Engineering Blog",
+  "description": "Expert articles on inverter diagnostics, lithium battery systems, CAN bus protocols, AFCI protection, and solar panel performance optimization by WhaSol certified engineers.",
+  "url": "https://whasol-real.vercel.app/blog/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "WhaSol",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://whasol-real.vercel.app/whasol-logo.png"
+    }
+  }
+}
+</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#3c494d", "on-primary-fixed": "#001f27", "tertiary-container": "#febd37", "on-secondary-fixed-variant": "#633f00", "surface": "#0a1422", "on-secondary": "#452b00", "secondary-container": "#c48313", "secondary-fixed-dim": "#ffb955", "primary": "#b6edff", "on-primary-fixed-variant": "#004e5e", "surface-container-highest": "#2c3545", "primary-fixed": "#b1ecff", "background": "#0a1422", "surface-variant": "#2c3545", "error": "#ffb4ab", "primary-fixed-dim": "#35d7fd", "on-tertiary-fixed": "#271900", "error-container": "#93000a", "tertiary-fixed-dim": "#fcbb35", "secondary-fixed": "#ffddb4", "on-primary-container": "#005c6e", "on-tertiary-fixed-variant": "#5e4200", "surface-container": "#16202f", "on-error": "#690005", "on-background": "#d9e3f7", "inverse-on-surface": "#273140", "tertiary-fixed": "#ffdea8", "on-tertiary": "#422d00", "inverse-primary": "#00677c", "tertiary": "#ffe0ae", "on-error-container": "#ffdad6", "on-surface": "#d9e3f7", "primary-container": "#38d9ff", "on-secondary-fixed": "#291800", "outline": "#869398", "surface-dim": "#0a1422", "surface-container-high": "#212a39", "surface-tint": "#35d7fd", "surface-bright": "#303a49", "surface-container-low": "#121c2a", "on-secondary-container": "#3c2500", "surface-container-lowest": "#050e1c", "inverse-surface": "#d9e3f7", "secondary": "#ffb955", "on-surface-variant": "#bbc9ce", "on-primary": "#003641", "on-tertiary-container": "#6f4e00" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "2.5rem", "space-md": "1rem", "gutter": "1.5rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "title-md": ["Inter"], "body-md": ["Inter"], "display-xl-mobile": ["Space Grotesk"], "label-md": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "body-lg": ["Inter"], "code-telemetry": ["Space Grotesk"], "body-sm": ["Inter"], "headline-sm": ["Space Grotesk"], "label-sm": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "display-xl": ["Space Grotesk"], "title-lg": ["Inter"] }, "fontSize": { "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "display-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "code-telemetry": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "500" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.45)]"><div class="h-20 w-full px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md shrink-0"><img alt="Solar Nexus Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wgam0DDD6e-vdtEzaBZwIuLc6sTIiyTDeAqKHOAD5K6dw-vRNg-luIfT7uH8KcvSrxrQysvovE24wagFeSEfH0ks4HeVLrYu9TT9dZUg9cPTNo5KlLPkDcB8ABaONPK-T5CKHxyme5np5MRX9XecUbKy3h0_4pGujj0u_bw9QLA242TCbSD28idX9uW6CGPOZWsOW9NsBvW2ig_3736XFFpZjvMHfLsiWrlGJRres7Ud6Eu7fuwWbcnyCX"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Solar Nexus</span><span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Engineering Intelligence</span></div></div><nav class="hidden xl:flex items-center gap-space-sm bg-surface-container-lowest/50 p-space-xs rounded-full shadow-[inset_0_1px_4px_rgba(0,0,0,0.5)]" data-active-classes="bg-surface-container text-primary font-bold" data-inactive-classes="text-on-surface-variant hover:text-on-surface"><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md transition-colors" data-path="home" href="#">Home</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md transition-colors" data-path="troubleshooting" href="#">Troubleshooting</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md transition-colors" data-path="error-codes" href="#">Error Codes</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="brands" href="#">Brands &amp; Models</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="blogs" href="#">Blogs</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About Us</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden xl:block w-80 shrink-0" aria-hidden="true"></div><button id="mobile-nav-toggle" class="xl:hidden flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button" aria-label="Toggle navigation menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button></div></div><div id="mobile-nav-menu" class="xl:hidden hidden px-margin pt-space-md pb-space-md border-t border-surface-container/60 bg-surface-container-lowest/95"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container text-primary font-bold" data-inactive-classes="text-on-surface-variant hover:text-on-surface"><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md transition-colors" data-path="home" href="#">Home</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md transition-colors" data-path="troubleshooting" href="#">Troubleshooting</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md transition-colors" data-path="error-codes" href="#">Error Codes</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md transition-colors" data-path="brands" href="#">Brands &amp; Models</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md transition-colors" data-path="blogs" href="#">Blogs</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md transition-colors" data-path="about" href="#">About Us</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md transition-colors" data-path="contact" href="#">Contact</a></nav></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
 <!-- Subtle Ambient Glow Orbs behind header content -->
@@ -93,379 +117,223 @@
 </div>
 <!-- Featured Technical Spotlight (Editorial Banner) -->
 <section class="w-full px-margin py-space-md">
-<div class="relative w-full rounded-xl bg-surface-container-low shadow-xl overflow-hidden group">
-<!-- Glow ambient behind featured card -->
-<div class="absolute -bottom-16 -right-16 w-96 h-96 bg-primary-container/10 blur-[90px] pointer-events-none"></div>
+<div class="relative w-full rounded-xl bg-surface-container-low shadow-xl overflow-hidden group" data-slug="blog/dissecting-transformerless-inverter-topology">
 <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
-<!-- Visual Diagram / Hologram Telemetry Mockup (Left 5 Cols) -->
+<!-- Visual Diagram / Laboratory Photo Mockup (Left 5 Cols) -->
 <div class="lg:col-span-5 relative bg-surface-container-lowest p-space-lg flex flex-col justify-between overflow-hidden">
-<!-- Background Schematic Canvas Mockup -->
-<div class="absolute inset-0 opacity-20 pointer-events-none">
-<svg class="w-full h-full" fill="none" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-<path class="text-primary" d="M50 80 H 450 V 220 H 50 Z" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1.5"></path>
-<path class="text-secondary" d="M120 220 V 420 H 380 V 220" stroke="currentColor" stroke-width="1.5"></path>
-<circle class="text-primary-container" cx="120" cy="220" fill="currentColor" r="6"></circle>
-<circle class="text-secondary" cx="380" cy="220" fill="currentColor" r="6"></circle>
-<circle class="text-primary" cx="250" cy="320" r="30" stroke="currentColor" stroke-width="2"></circle>
-<path class="text-primary" d="M230 320 L 270 320 M 250 300 L 250 340" stroke="currentColor" stroke-width="2"></path>
-<line class="text-outline-variant" stroke="currentColor" stroke-width="2" x1="80" x2="200" y1="120" y2="120"></line>
-<line class="text-outline-variant" stroke="currentColor" stroke-width="2" x1="80" x2="280" y1="150" y2="150"></line>
-<line class="text-outline-variant" stroke="currentColor" stroke-width="2" x1="80" x2="230" y1="180" y2="180"></line>
-</svg>
-</div>
-<!-- Top Telemetry Status Chip -->
-<div class="relative z-10 flex items-center justify-between gap-space-sm">
-<div class="flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container shadow-sm">
-<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
-<span class="font-code-telemetry text-label-sm text-secondary font-semibold uppercase tracking-wider">CRITICAL TRANSIENT STUDY</span>
-</div>
-<span class="font-code-telemetry text-label-sm text-on-surface-variant">PAPER ID: #SN-9042</span>
-</div>
-<!-- Centered Real-Time Oscilloscope Graph Preview -->
-<div class="relative z-10 my-space-lg p-space-md rounded-lg bg-surface-container/70 backdrop-blur-md shadow-md">
-<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
-<span class="font-code-telemetry text-label-sm text-primary">DC BUS TRANSIENT VOLTAGE (VDC)</span>
-<span class="font-code-telemetry text-label-sm text-secondary font-bold">PEAK: 842.1 V</span>
-</div>
-<!-- Oscilloscope SVG -->
-<svg class="w-full h-24 text-primary-container" fill="none" viewBox="0 0 400 90">
-<path d="M0 60 L 60 60 L 100 58 L 130 59 L 160 55 L 180 12 L 200 78 L 220 38 L 245 62 L 280 60 L 400 60" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
-<path class="text-secondary" d="M180 12 L 180 85" stroke="currentColor" stroke-dasharray="2 2" stroke-width="1"></path>
-<circle class="text-secondary" cx="180" cy="12" fill="currentColor" r="4"></circle>
-</svg>
-<div class="flex items-center justify-between font-code-telemetry text-label-sm text-on-surface-variant mt-space-xs">
-<span>0.00 ms (Cloud Shadow)</span>
-<span class="text-secondary font-semibold">T_trip: 14.8 μs</span>
-<span>100.0 ms</span>
-</div>
+<img alt="Solar technician analyzing inverter waveforms with an oscilloscope in a laboratory" class="absolute inset-0 w-full h-full object-cover opacity-25" loading="lazy" src="https://images.pexels.com/photos/33438229/pexels-photo-33438229.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"/>
+<div class="relative z-10 flex flex-col justify-between h-full">
+<!-- Top Status Chip -->
+<div class="flex items-center justify-between gap-space-sm">
+<span class="px-2.5 py-0.5 rounded bg-secondary/15 text-secondary text-xs font-semibold">Huawei / Growatt / Deye</span>
+<span class="text-xs text-on-surface-variant time-ago" data-time="2026-08-20T10:00:00"></span>
 </div>
 <!-- Bottom Telemetry Specs -->
-<div class="relative z-10 grid grid-cols-3 gap-space-xs text-center pt-space-xs">
+<div class="grid grid-cols-3 gap-space-xs text-center pt-space-sm">
 <div class="p-space-xs rounded bg-surface-container">
-<div class="font-code-telemetry text-headline-sm text-primary font-bold">1200V</div>
-<div class="font-label-sm text-label-sm text-on-surface-variant">SiC MOSFET Rating</div>
+<div class="text-lg font-semibold text-primary">1200V</div>
+<div class="text-xs text-on-surface-variant">SiC MOSFET Rating</div>
 </div>
 <div class="p-space-xs rounded bg-surface-container">
-<div class="font-code-telemetry text-headline-sm text-secondary font-bold">&lt; 15μs</div>
-<div class="font-label-sm text-label-sm text-on-surface-variant">MPPT Sampling Window</div>
+<div class="text-lg font-semibold text-secondary">&lt; 15μs</div>
+<div class="text-xs text-on-surface-variant">MPPT Sampling Window</div>
 </div>
 <div class="p-space-xs rounded bg-surface-container">
-<div class="font-code-telemetry text-headline-sm text-on-surface font-bold">0.02%</div>
-<div class="font-label-sm text-label-sm text-on-surface-variant">THD Injected</div>
+<div class="text-lg font-semibold text-on-surface">0.02%</div>
+<div class="text-xs text-on-surface-variant">THD Injected</div>
+</div>
 </div>
 </div>
 </div>
 <!-- Editorial Content Pane (Right 7 Cols) -->
-<div class="lg:col-span-7 p-space-xl flex flex-col justify-between">
+<div class="lg:col-span-7 p-6 lg:p-8 flex flex-col justify-between">
 <div>
-<!-- Pill Badges Header -->
 <div class="flex flex-wrap items-center gap-space-sm mb-space-md">
-<span class="px-space-md py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm uppercase tracking-widest font-semibold">
-                PEER-REVIEWED TECHNICAL WHITE PAPER
-              </span>
-<span class="flex items-center gap-space-xs font-code-telemetry text-label-sm text-on-surface-variant">
-<span class="material-symbols-outlined text-[15px]">schedule</span> 12 min read
-              </span>
-<span class="text-outline-variant">•</span>
-<span class="font-code-telemetry text-label-sm text-on-surface-variant">PUBLISHED MARCH 2025</span>
+<span class="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-semibold">Technical Paper</span>
 </div>
-<!-- Title -->
-<h2 class="font-headline-lg text-headline-lg text-on-surface group-hover:text-primary-container transition-colors mb-space-md leading-tight">
+<h2 class="text-xl lg:text-2xl font-semibold text-on-surface group-hover:text-primary-container transition-colors mb-space-md leading-tight">
               Dissecting High-Frequency Transformerless Inverter Topology: Why DC Bus Overvoltage Trips Happen During Rapid Cloud Transient
             </h2>
-<!-- Summary Body -->
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-lg">
+<p class="text-sm text-on-surface-variant leading-relaxed mb-space-lg line-clamp-3">
               An exhaustive breakdown of maximum power point tracking (MPPT) slew-rates, IGBT switching transients, and parasitic circuit inductance in transformerless (TL) solar inverters. Learn how to calibrate DC bus capacitance safety thresholds to eliminate nuisance trips without compromising NEC 690.12 rapid shutdown compliance.
             </p>
-<!-- Technical Key Tags -->
-<div class="flex flex-wrap items-center gap-space-xs mb-space-lg">
-<span class="px-space-md py-1 rounded bg-surface-container font-code-telemetry text-label-sm text-on-surface">
-                IGBT Thermal Stress
-              </span>
-<span class="px-space-md py-1 rounded bg-surface-container font-code-telemetry text-label-sm text-on-surface">
-                MPPT Slew Dynamics
-              </span>
-<span class="px-space-md py-1 rounded bg-surface-container font-code-telemetry text-label-sm text-on-surface">
-                600V-1000V Commercial Arrays
-              </span>
-<span class="px-space-md py-1 rounded bg-surface-container font-code-telemetry text-label-sm text-secondary">
-                NEC 690.12 Compliant
-              </span>
-</div>
 </div>
 <!-- Author Attribution & Action CTA -->
-<div class="pt-space-md flex flex-wrap items-center justify-between gap-space-md">
-<!-- Author Block -->
+<div class="pt-space-md flex flex-wrap items-center justify-between gap-space-md border-t border-surface-container-highest/50">
 <div class="flex items-center gap-space-md">
-<img alt="Dr. Soren Vance, Lead PE PV Diagnostics" class="w-12 h-12 rounded-full object-cover shadow-md" src="https://lh3.googleusercontent.com/aida/AEtjO1WEf7gi6DLZ1emZ9WAPmzJFeVmTJkeUM68o-_VgPPNfUJomLPTI_ps-ZV1TWxWuctQnJTU2RfVWebD8XrFFdD83GYHdZXQ0J9q-RMmmg9i52wcvt6XNPBMvGZJZv3ZcWPtKnxXqWN1c7VZwpQWdi5nJ2TZmVbJI9cSbckL1NJqchQI7_YARODuf8Wx1UgxMNoZZf-beTgminsVSsQTh-SnGvuA5hTM3_6M56A-djvBcjAM1rcFMudn8LXg2"/>
+<img alt="Dr. Soren Vance, Lead PE PV Diagnostics" class="w-10 h-10 rounded-full object-cover shadow-md" src="https://lh3.googleusercontent.com/aida/AEtjO1WEf7gi6DLZ1emZ9WAPmzJFeVmTJkeUM68o-_VgPPNfUJomLPTI_ps-ZV1TWxWuctQnJTU2RfVWebD8XrFFdD83GYHdZXQ0J9q-RMmmg9i52wcvt6XNPBMvGZJZv3ZcWPtKnxXqWN1c7VZwpQWdi5nJ2TZmVbJI9cSbckL1NJqchQI7_YARODuf8Wx1UgxMNoZZf-beTgminsVSsQTh-SnGvuA5hTM3_6M56A-djvBcjAM1rcFMudn8LXg2"/>
 <div class="flex flex-col">
-<span class="font-title-md text-title-md text-on-surface">Dr. Soren Vance, PE</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Principal Power Electronics Engineer • Solar Nexus Labs</span>
+<span class="text-sm font-medium text-on-surface">Dr. Soren Vance, PE</span>
+<span class="text-xs text-on-surface-variant">Principal Power Electronics Engineer</span>
 </div>
 </div>
-<!-- Read CTA Button -->
-<a class="px-space-lg py-space-sm rounded-full bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider shadow-[0_0_20px_rgba(56,217,255,0.4)] hover:bg-primary transition-all flex items-center gap-space-xs font-semibold" href="#">
-              Read Technical Dispatch
-              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+<a class="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-container transition-colors" href="../blog/dissecting-transformerless-inverter-topology">
+              Read More
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </a>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Section Divider with Technical Telemetry Label -->
+<!-- Section Divider -->
 <div class="w-full px-margin py-space-sm flex items-center justify-between">
-<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase tracking-widest">
-<span class="material-symbols-outlined text-[16px]">folder_open</span>
-      ARCHIVED ENGINEERING DISPATCHES • PEER-REVIEWED ARTICLES
+<div class="flex items-center gap-2 text-sm font-medium text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">folder_open</span>
+      Engineering Articles
     </div>
-<div class="hidden sm:flex items-center gap-space-md font-code-telemetry text-label-sm text-on-surface-variant">
-<span>SORT: LATEST RELEASES</span>
-<span class="text-surface-container-highest">|</span>
-<span class="text-secondary font-semibold">DIAGNOSTIC RIGOR: LEVEL 3</span>
-</div>
 </div>
 <!-- 3-Column Engineering Article Grid -->
 <section class="w-full px-margin py-space-sm">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <!-- Card 1: CAN Bus vs RS485 -->
-<article class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-lg shadow-lg hover:bg-surface-container transition-all group">
-<div>
-<!-- Header Meta -->
-<div class="flex items-center justify-between gap-space-xs mb-space-md">
-<div class="flex items-center gap-space-xs">
-<span class="w-2 h-2 rounded-full bg-primary-container"></span>
-<span class="font-label-sm text-label-sm text-primary-container uppercase font-bold tracking-wider">BATTERY / BMS</span>
+<article class="flex flex-col justify-between rounded-xl bg-surface-container-low p-6 shadow-lg hover:bg-surface-container transition-all group" data-slug="blog/can-bus-vs-rs485">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded bg-secondary/15 text-secondary text-xs font-semibold">Pylontech / Growatt / Solis</span>
+<span class="text-xs text-on-surface-variant time-ago" data-time="2024-10-14T09:00:00"></span>
 </div>
-<div class="flex items-center gap-space-xs font-code-telemetry text-label-sm text-on-surface-variant">
-<span class="material-symbols-outlined text-[14px]">schedule</span> 8 min read
-            </div>
-</div>
-<!-- Clearance Badge -->
-<div class="inline-block px-space-xs py-0.5 rounded bg-surface-container-highest font-code-telemetry text-label-sm text-on-surface mb-space-sm">
-            CLEARANCE: INTERMEDIATE FIELD TECH
-          </div>
-<!-- Article Title -->
-<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary-container transition-colors mb-space-sm leading-snug">
+<h3 class="text-lg font-semibold text-on-surface group-hover:text-primary-container transition-colors leading-snug">
             CAN Bus vs RS485 for Lithium BMS: Decoding Pylontech, Growatt, and Solis Handshake Protocols
           </h3>
-<!-- Summary -->
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-3">
             Packet sniffer breakdown of frame IDs, baud rates, terminating 120-ohm resistor locations, and troubleshooting handshake timeout errors (Code 61 &amp; Fault 19) during initial commissioning.
           </p>
 </div>
-<div>
-<!-- Author & Action Footer -->
-<div class="pt-space-md flex items-center justify-between">
+<div class="pt-4 mt-4 border-t border-surface-container-highest/50 flex items-center justify-between">
 <div class="flex flex-col">
-<span class="font-title-md text-body-md text-on-surface font-semibold">Marcus Chen</span>
-<span class="font-code-telemetry text-label-sm text-on-surface-variant">Oct 14, 2024</span>
+<span class="text-sm font-medium text-on-surface">Marcus Chen</span>
+<span class="text-xs text-on-surface-variant">Oct 14, 2024</span>
 </div>
-<a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary hover:text-primary-container tracking-wider uppercase font-semibold transition-colors" href="#">
-              Read Article
-              <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+<a class="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-container transition-colors" href="blog/can-bus-vs-rs485">
+              Read More
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </a>
-</div>
 </div>
 </article>
 <!-- Card 2: Thermal Radiometric Imaging -->
-<article class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-lg shadow-lg hover:bg-surface-container transition-all group">
-<div>
-<!-- Header Meta -->
-<div class="flex items-center justify-between gap-space-xs mb-space-md">
-<div class="flex items-center gap-space-xs">
-<span class="w-2 h-2 rounded-full bg-secondary"></span>
-<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">SOLAR PV ARRAYS</span>
+<article class="flex flex-col justify-between rounded-xl bg-surface-container-low p-6 shadow-lg hover:bg-surface-container transition-all group" data-slug="blog/thermal-radiometric-micro-cracks">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded bg-secondary/15 text-secondary text-xs font-semibold">Universal Solar</span>
+<span class="text-xs text-on-surface-variant time-ago" data-time="2024-11-02T10:30:00"></span>
 </div>
-<div class="flex items-center gap-space-xs font-code-telemetry text-label-sm text-on-surface-variant">
-<span class="material-symbols-outlined text-[14px]">schedule</span> 7 min read
-            </div>
-</div>
-<!-- Clearance Badge -->
-<div class="inline-block px-space-xs py-0.5 rounded bg-surface-container-highest font-code-telemetry text-label-sm text-on-surface mb-space-sm">
-            CLEARANCE: ADVANCED THERMOGRAPHER
-          </div>
-<!-- Article Title -->
-<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary-container transition-colors mb-space-sm leading-snug">
+<h3 class="text-lg font-semibold text-on-surface group-hover:text-primary-container transition-colors leading-snug">
             Diagnosing Micro-Cracks and Hotspots with Thermal Radiometric Imaging Before Diode Degradation
           </h3>
-<!-- Summary -->
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-3">
             Calibrating emissivity indices for anti-reflective glass coatings. Distinguishing harmless cell mismatch from bypass diode avalanche breakdown and PID (Potential Induced Degradation).
           </p>
 </div>
-<div>
-<!-- Author & Action Footer -->
-<div class="pt-space-md flex items-center justify-between">
+<div class="pt-4 mt-4 border-t border-surface-container-highest/50 flex items-center justify-between">
 <div class="flex flex-col">
-<span class="font-title-md text-body-md text-on-surface font-semibold">Elena Rostova, PE</span>
-<span class="font-code-telemetry text-label-sm text-on-surface-variant">Nov 02, 2024</span>
+<span class="text-sm font-medium text-on-surface">Elena Rostova, PE</span>
+<span class="text-xs text-on-surface-variant">Nov 02, 2024</span>
 </div>
-<a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary hover:text-primary-container tracking-wider uppercase font-semibold transition-colors" href="#">
-              Read Article
-              <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+<a class="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-container transition-colors" href="blog/thermal-radiometric-micro-cracks">
+              Read More
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </a>
-</div>
 </div>
 </article>
 <!-- Card 3: Neutral-Ground Bonding Errors -->
-<article class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-lg shadow-lg hover:bg-surface-container transition-all group">
-<div>
-<!-- Header Meta -->
-<div class="flex items-center justify-between gap-space-xs mb-space-md">
-<div class="flex items-center gap-space-xs">
-<span class="w-2 h-2 rounded-full bg-error"></span>
-<span class="font-label-sm text-label-sm text-error uppercase font-bold tracking-wider">WIRING &amp; SAFETY</span>
+<article class="flex flex-col justify-between rounded-xl bg-surface-container-low p-6 shadow-lg hover:bg-surface-container transition-all group" data-slug="blog/neutral-ground-bonding-errors">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded bg-secondary/15 text-secondary text-xs font-semibold">Deye / Sunsynk</span>
+<span class="text-xs text-on-surface-variant time-ago" data-time="2024-12-19T09:00:00"></span>
 </div>
-<div class="flex items-center gap-space-xs font-code-telemetry text-label-sm text-on-surface-variant">
-<span class="material-symbols-outlined text-[14px]">schedule</span> 10 min read
-            </div>
-</div>
-<!-- Clearance Badge -->
-<div class="inline-block px-space-xs py-0.5 rounded bg-surface-container-highest font-code-telemetry text-label-sm text-on-surface mb-space-sm">
-            CLEARANCE: MASTER ELECTRICIAN
-          </div>
-<!-- Article Title -->
-<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary-container transition-colors mb-space-sm leading-snug">
+<h3 class="text-lg font-semibold text-on-surface group-hover:text-primary-container transition-colors leading-snug">
             Why Neutral-Ground Bonding Errors Cause Mysterious RCD / GFCI Tripping in Hybrid Backups
           </h3>
-<!-- Summary -->
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-3">
             Solving the double-bond ground loop conundrum. How internal automatic transfer relays in Deye, Sunsynk, and Schneider XW Pro interact with upstream main service panels during islanding transitions.
           </p>
 </div>
-<div>
-<!-- Author & Action Footer -->
-<div class="pt-space-md flex items-center justify-between">
+<div class="pt-4 mt-4 border-t border-surface-container-highest/50 flex items-center justify-between">
 <div class="flex flex-col">
-<span class="font-title-md text-body-md text-on-surface font-semibold">David K. Miller</span>
-<span class="font-code-telemetry text-label-sm text-on-surface-variant">Dec 19, 2024</span>
+<span class="text-sm font-medium text-on-surface">David K. Miller</span>
+<span class="text-xs text-on-surface-variant">Dec 19, 2024</span>
 </div>
-<a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary hover:text-primary-container tracking-wider uppercase font-semibold transition-colors" href="#">
-              Read Article
-              <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+<a class="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-container transition-colors" href="blog/neutral-ground-bonding-errors">
+              Read More
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </a>
-</div>
 </div>
 </article>
 <!-- Card 4: Sub-Zero Cold-Start Wakeup Thresholds -->
-<article class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-lg shadow-lg hover:bg-surface-container transition-all group">
-<div>
-<!-- Header Meta -->
-<div class="flex items-center justify-between gap-space-xs mb-space-md">
-<div class="flex items-center gap-space-xs">
-<span class="w-2 h-2 rounded-full bg-primary-container"></span>
-<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">INVERTERS &amp; STORAGE</span>
+<article class="flex flex-col justify-between rounded-xl bg-surface-container-low p-6 shadow-lg hover:bg-surface-container transition-all group" data-slug="blog/solax-byo-cold-start-wakeup">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded bg-secondary/15 text-secondary text-xs font-semibold">SolaX / BYD</span>
+<span class="text-xs text-on-surface-variant time-ago" data-time="2025-01-11T09:00:00"></span>
 </div>
-<div class="flex items-center gap-space-xs font-code-telemetry text-label-sm text-on-surface-variant">
-<span class="material-symbols-outlined text-[14px]">schedule</span> 6 min read
-            </div>
-</div>
-<!-- Clearance Badge -->
-<div class="inline-block px-space-xs py-0.5 rounded bg-surface-container-highest font-code-telemetry text-label-sm text-on-surface mb-space-sm">
-            CLEARANCE: FIELD TECH &amp; OEM
-          </div>
-<!-- Article Title -->
-<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary-container transition-colors mb-space-sm leading-snug">
+<h3 class="text-lg font-semibold text-on-surface group-hover:text-primary-container transition-colors leading-snug">
             SolaX Triple Power &amp; BYD HVM Battery Cold-Start Wakeup Thresholds in Sub-Zero Climates
           </h3>
-<!-- Summary -->
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-3">
             Analyzing internal cell PTC pre-heating coils, minimum pack DC wake voltages at -15°C, and how auxiliary solar black-start circuits reboot locked high-voltage battery management systems.
           </p>
 </div>
-<div>
-<!-- Author & Action Footer -->
-<div class="pt-space-md flex items-center justify-between">
+<div class="pt-4 mt-4 border-t border-surface-container-highest/50 flex items-center justify-between">
 <div class="flex flex-col">
-<span class="font-title-md text-body-md text-on-surface font-semibold">Tariq Al-Mansoor</span>
-<span class="font-code-telemetry text-label-sm text-on-surface-variant">Jan 11, 2025</span>
+<span class="text-sm font-medium text-on-surface">Tariq Al-Mansoor</span>
+<span class="text-xs text-on-surface-variant">Jan 11, 2025</span>
 </div>
-<a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary hover:text-primary-container tracking-wider uppercase font-semibold transition-colors" href="#">
-              Read Article
-              <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+<a class="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-container transition-colors" href="blog/solax-byo-cold-start-wakeup">
+              Read More
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </a>
-</div>
 </div>
 </article>
 <!-- Card 5: HVDC Arc-Fault AFCI False Positives -->
-<article class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-lg shadow-lg hover:bg-surface-container transition-all group">
-<div>
-<!-- Header Meta -->
-<div class="flex items-center justify-between gap-space-xs mb-space-md">
-<div class="flex items-center gap-space-xs">
-<span class="w-2 h-2 rounded-full bg-secondary"></span>
-<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">DIAGNOSTICS &amp; UL 1699B</span>
+<article class="flex flex-col justify-between rounded-xl bg-surface-container-low p-6 shadow-lg hover:bg-surface-container transition-all group" data-slug="blog/afci-false-positives">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded bg-secondary/15 text-secondary text-xs font-semibold">Sungrow / Fronius</span>
+<span class="text-xs text-on-surface-variant time-ago" data-time="2025-02-04T09:00:00"></span>
 </div>
-<div class="flex items-center gap-space-xs font-code-telemetry text-label-sm text-on-surface-variant">
-<span class="material-symbols-outlined text-[14px]">schedule</span> 9 min read
-            </div>
-</div>
-<!-- Clearance Badge -->
-<div class="inline-block px-space-xs py-0.5 rounded bg-surface-container-highest font-code-telemetry text-label-sm text-on-surface mb-space-sm">
-            CLEARANCE: ADVANCED ELECTRICAL
-          </div>
-<!-- Article Title -->
-<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary-container transition-colors mb-space-sm leading-snug">
+<h3 class="text-lg font-semibold text-on-surface group-hover:text-primary-container transition-colors leading-snug">
             HVDC Arc-Fault Circuit Interrupter (AFCI) False Positive Analysis in High-Noise Rooftop Environments
           </h3>
-<!-- Summary -->
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-3">
             Differentiating 40kHz-100kHz pink-noise switching ripple from true high-temperature series plasma arcing. Mitigation tactics for Fronius, SMA, and Sungrow rooftop installations with heavy inductive loads.
           </p>
 </div>
-<div>
-<!-- Author & Action Footer -->
-<div class="pt-space-md flex items-center justify-between">
+<div class="pt-4 mt-4 border-t border-surface-container-highest/50 flex items-center justify-between">
 <div class="flex flex-col">
-<span class="font-title-md text-body-md text-on-surface font-semibold">Dr. Soren Vance, PE</span>
-<span class="font-code-telemetry text-label-sm text-on-surface-variant">Feb 04, 2025</span>
+<span class="text-sm font-medium text-on-surface">Dr. Soren Vance, PE</span>
+<span class="text-xs text-on-surface-variant">Feb 04, 2025</span>
 </div>
-<a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary hover:text-primary-container tracking-wider uppercase font-semibold transition-colors" href="#">
-              Read Article
-              <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+<a class="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-container transition-colors" href="blog/afci-false-positives">
+              Read More
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </a>
-</div>
 </div>
 </article>
 <!-- Card 6: Anti-Islanding Trip Delays -->
-<article class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-lg shadow-lg hover:bg-surface-container transition-all group">
-<div>
-<!-- Header Meta -->
-<div class="flex items-center justify-between gap-space-xs mb-space-md">
-<div class="flex items-center gap-space-xs">
-<span class="w-2 h-2 rounded-full bg-primary-container"></span>
-<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">GRID STANDARDS</span>
+<article class="flex flex-col justify-between rounded-xl bg-surface-container-low p-6 shadow-lg hover:bg-surface-container transition-all group" data-slug="blog/anti-islanding-trip-delays">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded bg-secondary/15 text-secondary text-xs font-semibold">Universal / Utility Standard</span>
+<span class="text-xs text-on-surface-variant time-ago" data-time="2025-02-28T09:00:00"></span>
 </div>
-<div class="flex items-center gap-space-xs font-code-telemetry text-label-sm text-on-surface-variant">
-<span class="material-symbols-outlined text-[14px]">schedule</span> 11 min read
-            </div>
-</div>
-<!-- Clearance Badge -->
-<div class="inline-block px-space-xs py-0.5 rounded bg-surface-container-highest font-code-telemetry text-label-sm text-on-surface mb-space-sm">
-            CLEARANCE: UTILITY INTERCONNECT ENG
-          </div>
-<!-- Article Title -->
-<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary-container transition-colors mb-space-sm leading-snug">
+<h3 class="text-lg font-semibold text-on-surface group-hover:text-primary-container transition-colors leading-snug">
             Evaluating Anti-Islanding Protection Trip Delays Against IEEE 1547 and UL 1741 Standards
           </h3>
-<!-- Summary -->
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-3">
             Testing reactive power variation (RPV) and slip-mode frequency shift algorithms under resonant RLC load banks. How 160ms trip windows protect utility line crews without causing nuisance grid drops.
           </p>
 </div>
-<div>
-<!-- Author & Action Footer -->
-<div class="pt-space-md flex items-center justify-between">
+<div class="pt-4 mt-4 border-t border-surface-container-highest/50 flex items-center justify-between">
 <div class="flex flex-col">
-<span class="font-title-md text-body-md text-on-surface font-semibold">Claire Beauchamp, MSc</span>
-<span class="font-code-telemetry text-label-sm text-on-surface-variant">Feb 28, 2025</span>
+<span class="text-sm font-medium text-on-surface">Claire Beauchamp, MSc</span>
+<span class="text-xs text-on-surface-variant">Feb 28, 2025</span>
 </div>
-<a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary hover:text-primary-container tracking-wider uppercase font-semibold transition-colors" href="#">
-              Read Article
-              <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+<a class="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-container transition-colors" href="blog/anti-islanding-trip-delays">
+              Read More
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </a>
-</div>
 </div>
 </article>
 </div>
@@ -664,7 +532,7 @@ const logoPrefix = location.pathname.slice(0, location.pathname.lastIndexOf('/')
         });
       }
 
-      const routes = {
+const routes = {
         home: '../index.html',
         troubleshooting: '../guides/',
         'error-codes': '../error-codes/',
@@ -676,6 +544,36 @@ const logoPrefix = location.pathname.slice(0, location.pathname.lastIndexOf('/')
       document.querySelectorAll('a[data-path]').forEach(function (link) {
         const route = routes[link.dataset.path];
         if (route) link.href = route;
+      });
+
+      function timeAgo(dateStr) {
+        const date = new Date(dateStr);
+        if (isNaN(date.getTime())) return '';
+        const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
+        if (seconds < 60) return 'just now';
+        const minutes = Math.floor(seconds / 60);
+        if (minutes < 60) return minutes + (minutes === 1 ? ' minute ago' : ' minutes ago');
+        const hours = Math.floor(minutes / 60);
+        if (hours < 24) return hours + (hours === 1 ? ' hour ago' : ' hours ago');
+        const days = Math.floor(hours / 24);
+        if (days < 7) return days + (days === 1 ? ' day ago' : ' days ago');
+        const weeks = Math.floor(days / 7);
+        if (weeks < 5) return weeks + (weeks === 1 ? ' week ago' : ' weeks ago');
+        const months = Math.floor(days / 30);
+        if (months < 12) return months + (months === 1 ? ' month ago' : ' months ago');
+        const years = Math.floor(days / 365);
+        return years + (years === 1 ? ' year ago' : ' years ago');
+      }
+
+      document.querySelectorAll('.time-ago').forEach(function (el) {
+        const when = el.getAttribute('data-time');
+        if (when) el.textContent = timeAgo(when);
+      });
+
+      document.querySelectorAll('article[data-slug]').forEach(function (card) {
+        const slug = card.getAttribute('data-slug');
+        const link = card.querySelector('a[href]');
+        if (link && slug) link.href = '../' + slug;
       });
     });
   </script>
