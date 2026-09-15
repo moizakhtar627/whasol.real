@@ -83,7 +83,7 @@
 <div class="flex items-center gap-space-md shrink-0 font-code-telemetry text-body-sm text-on-surface-variant">
 <div class="flex items-center gap-space-xs">
 <span class="material-symbols-outlined text-primary text-[16px]">menu_book</span>
-<span>48 Verified Guides</span>
+<span><span id="verified-guides-count">0</span> Verified Guides</span>
 </div>
 <span class="text-surface-container-highest">/</span>
 <div class="flex items-center gap-space-xs">
@@ -403,7 +403,7 @@
             </p>
 </div>
 </div>
-<a class="shrink-0 px-space-md py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-secondary hover:text-secondary-fixed font-code-telemetry text-label-sm uppercase tracking-wider transition-colors flex items-center gap-space-xs" href="#">
+<a class="shrink-0 px-space-md py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-secondary hover:text-secondary-fixed font-code-telemetry text-label-sm uppercase tracking-wider transition-colors flex items-center gap-space-xs" href="../safety-manual/">
           View Safety Standards
           <span class="material-symbols-outlined text-[15px]">shield</span>
 </a>
@@ -411,6 +411,7 @@
 </div>
 </aside>
 <!-- Interactive Client-side Script for Instant Filtering and Search Feedback -->
+<script src="../data/articles.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
       document.title = document.title.replace(/Solar Nexus/g, 'WhaSol');
@@ -575,6 +576,9 @@ const routes = {
         const link = card.querySelector('a[href]');
         if (link && slug) link.href = '../' + slug;
       });
+
+      const verifiedGuides = document.getElementById('verified-guides-count');
+      if (verifiedGuides) verifiedGuides.textContent = (window.WHASOL_ARTICLES || []).length;
     });
   </script>
 </div></main><footer class="w-full bg-surface-container-lowest pt-space-xl pb-space-lg mt-space-xl"><div class="w-full px-margin"><div class="flex flex-col gap-space-xl"><div class="flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface uppercase tracking-wider">Explore</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm"><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="home" href="#">Home</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="troubleshooting" href="#">Troubleshooting Guides</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="error-codes" href="#">Inverter Error Codes</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="brands" href="#">Brands &amp; Inverter Models</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="blogs" href="#">Engineering Blogs</a></li></ul></div><div class="pt-space-lg border-t border-surface-container-high font-body-sm text-body-sm text-on-surface-variant">© 2026 WhaSol. All rights reserved.</div></div></div></footer></body></html>

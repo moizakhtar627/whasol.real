@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solar Safety Manual | WhaSol</title>
+  <meta name="description" content="Comprehensive solar energy system safety guide covering high-voltage procedures, PPE requirements, emergency shutdown, and maintenance checklists." />
+  <link rel="canonical" href="https://whasol-real.vercel.app/safety-manual/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Solar Safety Manual | WhaSol" />
+  <meta property="og:description" content="Complete solar system safety manual for technicians, installers, and homeowners." />
+  <meta property="og:url" content="https://whasol-real.vercel.app/safety-manual/" />
+  <meta property="og:site_name" content="WhaSol" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{background:'#0a1422',surface:'#16202f','surface-low':'#121c2a','surface-high':'#212a39',primary:'#b6edff','primary-container':'#38d9ff',secondary:'#ffb955',error:'#ffb4ab','on-surface':'#d9e3f7','muted':'#bbc9ce'},fontFamily:{display:['Space Grotesk'],body:['Inter']}}}};</script>
+  <style>body{font-family:'Inter',sans-serif;}</style>
+</head>
+<body class="min-h-screen bg-background text-on-surface">
+  <header class="sticky top-0 z-10 border-b border-surface-high/70 bg-background/90 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-5">
+      <a href="../index.html" class="flex items-center gap-3"><span class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-container text-background"><span class="material-symbols-outlined">solar_power</span></span><span><strong class="block font-display text-lg">Solar Nexus</strong><small class="uppercase tracking-[0.2em] text-primary">Engineering Intelligence</small></span></a>
+      <nav class="hidden items-center gap-2 text-sm font-semibold xl:flex" data-active-classes="bg-surface text-primary" data-inactive-classes="text-muted hover:bg-surface hover:text-primary"><a class="rounded-full px-4 py-2" data-path="home" href="#">Home</a><a class="rounded-full px-4 py-2" data-path="troubleshooting" href="#">Troubleshooting</a><a class="rounded-full px-4 py-2" data-path="error-codes" href="#">Error Codes</a><a class="rounded-full px-4 py-2" data-path="brands" href="#">Brands &amp; Models</a><a class="rounded-full px-4 py-2" data-path="blogs" href="#">Blogs</a><a class="rounded-full px-4 py-2" data-path="about" href="#">About Us</a><a class="rounded-full px-4 py-2" data-path="contact" href="#">Contact</a></nav>
+      <button id="mobile-nav-toggle" class="flex h-10 w-10 items-center justify-center rounded-lg bg-surface text-primary xl:hidden" type="button" aria-label="Toggle navigation menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button>
+    </div>
+    <div id="mobile-nav-menu" class="hidden mx-auto max-w-7xl px-6 pb-5 xl:hidden"><nav class="flex flex-col gap-1 text-sm font-semibold" data-active-classes="bg-surface text-primary" data-inactive-classes="text-muted hover:bg-surface hover:text-primary"><a class="rounded-full px-4 py-2" data-path="home" href="#">Home</a><a class="rounded-full px-4 py-2" data-path="troubleshooting" href="#">Troubleshooting</a><a class="rounded-full px-4 py-2" data-path="error-codes" href="#">Error Codes</a><a class="rounded-full px-4 py-2" data-path="brands" href="#">Brands &amp; Models</a><a class="rounded-full px-4 py-2" data-path="blogs" href="#">Blogs</a><a class="rounded-full px-4 py-2" data-path="about" href="#">About Us</a><a class="rounded-full px-4 py-2" data-path="contact" href="#">Contact</a></nav></div>
+  </header>
+
+  <main>
+    <!-- Safety Banner -->
+    <section class="bg-secondary/10 border-b border-secondary/30">
+      <div class="mx-auto max-w-5xl px-6 py-16 flex items-start gap-5">
+        <span class="material-symbols-outlined text-secondary text-5xl shrink-0 mt-1">warning</span>
+        <div>
+          <p class="font-mono text-sm uppercase tracking-[0.22em] text-secondary mb-3">Critical Safety Reference</p>
+          <h1 class="font-display text-4xl md:text-5xl font-bold leading-tight">Solar Safety Manual</h1>
+          <p class="mt-4 text-lg text-muted max-w-3xl">Photovoltaic systems generate lethal voltages and currents that cannot be shut off while exposed to sunlight. Always follow proper safety procedures, use appropriate PPE, and consult certified professionals when in doubt.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-5xl px-6 py-16 space-y-20">
+
+      <!-- 1. General Solar System Safety -->
+      <article>
+        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">shield</span> General Solar System Safety</h2>
+        <div class="space-y-4 text-muted leading-8 text-lg">
+          <p>Solar energy systems operate at dangerously high voltages. A typical residential string can produce 300-600V DC, and commercial systems can exceed 1000V DC. Unlike AC circuits, DC voltage from illuminated panels cannot be switched off or disconnected from the source while sunlight is present.</p>
+          <p>Never assume a system is de-energized because a breaker is off or an inverter is powered down. Solar panels generate electricity whenever exposed to light, regardless of the state of any switches, breakers, or inverters in the system.</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Treat every conductor as live until verified safe with a calibrated multimeter</li>
+            <li>Follow lockout/tagout (LOTO) procedures before any maintenance work</li>
+            <li>Use only insulated tools rated for the system voltage (minimum 1000V CAT III/IV)</li>
+            <li>Ensure at least two people are present for work on live high-voltage systems</li>
+            <li>Keep a minimum safe approach distance from exposed energized conductors</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 2. Solar Panel Safety -->
+      <article>
+        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">solar_power</span> Solar Panel Safety</h2>
+        <div class="space-y-4 text-muted leading-8 text-lg">
+          <p>Solar panels produce DC voltage proportional to the number of cells in series. Even a single panel under direct sunlight can produce 40-50V DC. Multiple panels wired in series multiply this voltage to hazardous levels.</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Always cover panels with opaque material (e.g., thick black polyethylene) before working on DC wiring to reduce voltage to safe levels</li>
+            <li>Inspect panels for cracked glass, delamination, or burn marks before touching frame or junction box areas</li>
+            <li>Do not step on panel glass surfaces or apply point loads to modules</li>
+            <li>Handle panels with at least two people due to size and weight (20-30 kg per panel)</li>
+            <li>Check for water ingress in junction boxes, which can cause shock hazards</li>
+            <li>Replace any panel with visible burn marks, melted connectors, or damaged backsheet immediately</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 3. Solar Inverter Safety -->
+      <article>
+        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">power</span> Solar Inverter Safety</h2>
+        <div class="space-y-4 text-muted leading-8 text-lg">
+          <p>Inverters contain large electrolytic capacitors that store lethal charge even after the unit is powered off. Internal bus voltages can reach 400-800V DC. Residual energy may persist for 5-15 minutes after shutdown.</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Always power down the inverter and wait a minimum of 10 minutes before opening any enclosure</li>
+            <li>Verify zero voltage on internal DC bus capacitors before touching any internal components</li>
+            <li>Never bypass or disable built-in safety features (GFCI, AFCI, ground fault detection)</li>
+            <li>Ensure proper ventilation around the inverter; do not block airflow openings</li>
+            <li>Do not operate the inverter if the enclosure shows signs of water damage or corrosion</li>
+            <li>Firmware updates must only be performed by qualified technicians following manufacturer procedures</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 4. Solar Battery Safety -->
+      <article>
+        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-secondary">battery_charging_full</span> Solar Battery Safety</h2>
+        <div class="space-y-4 text-muted leading-8 text-lg">
+          <p>Lithium-ion batteries used in solar storage systems store enormous energy and present risks including thermal runaway, fire, and explosion. Lead-acid batteries produce hydrogen gas during charging, which is highly flammable.</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Install batteries in well-ventilated areas, especially lead-acid types which off-gas hydrogen during charging</li>
+            <li>Never enclose lead-acid batteries in airtight compartments without active ventilation</li>
+            <li>Disconnect batteries at the DC breaker before performing any maintenance</li>
+            <li>Use insulated tools and wear Class 00 rubber gloves rated for the battery system voltage</li>
+            <li>Do not short-circuit battery terminals; even a low-voltage lithium battery can deliver thousands of amps</li>
+            <li>Keep fire extinguisher rated for lithium or electrical fires (Class D or CO2) within reach during battery work</li>
+            <li>Replace damaged battery modules immediately; do not attempt to repair lithium cells</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 5. Electrical Wiring Safety -->
+      <article>
+        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">cable</span> Electrical Wiring Safety</h2>
+        <div class="space-y-4 text-muted leading-8 text-lg">
+          <p>DC wiring in solar systems carries continuous high-voltage current that behaves differently from household AC wiring. Arc faults in DC circuits are self-sustaining and extremely difficult to extinguish.</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Use appropriately rated wire and connectors for the system voltage and current (NEC Table 310.16)</li>
+            <li>MC4 connectors must be properly crimped with manufacturer-specified tools; never use pliers</li>
+            <li>Verify polarity before energizing any circuit; reverse polarity can cause fire or equipment damage</li>
+            <li>Run DC wiring in dedicated conduit, separated from AC wiring per NEC Article 690</li>
+            <li>Use appropriately rated cable glands and strain reliefs at all entry points</li>
+            <li>Ground all equipment frames and mounting structures per NEC Article 690.43</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 6. Fire Safety -->
+      <article>
+        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-error">local_fire_department</span> Fire Safety</h2>
+        <div class="space-y-4 text-muted leading-8 text-lg">
+          <p>Electrical fires in solar installations can be caused by arc faults, overloaded circuits, poor connections, or damaged insulation. Once started, DC arc fires are continuous as long as panels produce voltage in sunlight.</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Install Class C (ABC) fire extinguishers near inverter and battery locations</li>
+            <li>For lithium battery fires, use a Class D extinguisher or cover the battery with dry sand; never use water on lithium fires</li>
+            <li>Ensure clear access to emergency disconnect switches from both inside and outside the building</li>
+            <li>Inform local fire departments about the solar installation and its emergency shutdown procedures</li>
+            <li>Install arc-fault circuit interrupter (AFCI) protection per NEC 690.11</li>
+            <li>Mark all DC disconnect switches clearly with labels indicating "DANGER: DC HIGH VOLTAGE"</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 7. Maintenance Safety Checklist -->
+      <article>
+        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">checklist</span> Maintenance Safety Checklist</h2>
+        <div class="space-y-4 text-muted leading-8 text-lg">
+          <p>Before performing any maintenance on a solar energy system, complete the following safety checklist:</p>
+          <ol class="list-decimal pl-6 space-y-3">
+            <li>Notify all persons on-site that maintenance work is about to begin</li>
+            <li>Turn off the inverter and allow 10 minutes for capacitors to discharge</li>
+            <li>Open the DC disconnect switch and lock it in the off position</li>
+            <li>Open the AC disconnect switch and lock it in the off position</li>
+            <li>Test DC voltage at the inverter input terminals with a calibrated multimeter to confirm zero energy</li>
+            <li>Place warning signs: "Maintenance in Progress - Do Not Energize"</li>
+            <li>Set up barriers to prevent accidental contact with any accessible conductors</li>
+            <li>Verify all appropriate PPE is worn before proceeding with work</li>
+            <li>After completing work, remove all tools and debris from the work area</li>
+            <li>Conduct a thorough visual inspection before restoring power</li>
+            <li>Remove warning signs and locks, then restore power in reverse order (AC first, then DC)</li>
+            <li>Verify system operation and record any anomalies in the maintenance log</li>
+          </ol>
+        </div>
+      </article>
+
+      <!-- 8. Emergency Shutdown Procedure -->
+      <article>
+        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-secondary">emergency</span> Emergency Shutdown Procedure</h2>
+        <div class="space-y-4 text-muted leading-8 text-lg">
+          <p>In an emergency involving a solar energy system (fire, flooding, structural damage, or electrical accident), follow these steps to shut down the system as safely as possible:</p>
+          <ol class="list-decimal pl-6 space-y-3">
+            <li><strong>If safe to do so:</strong> Shut off the inverter via its power switch or display panel</li>
+            <li>Open the AC main breaker to disconnect the system from the utility grid</li>
+            <li>Open the DC disconnect switch (located between panels and inverter)</li>
+            <li>If DC disconnect is inaccessible, isolate the building's main DC supply at the service entrance</li>
+            <li>Call emergency services (fire department, utility company, emergency electrician)</li>
+            <li>Do NOT attempt to disconnect panel wiring while panels are producing voltage (in sunlight)</li>
+            <li>Do NOT enter areas where electrical equipment may be submerged in water</li>
+            <li>Wait for professional responders to confirm the area is safe before re-entry</li>
+          </ol>
+          <p class="text-secondary font-semibold">Important: Even after shutdown, solar panels continue to generate dangerous voltage in any amount of sunlight. Emergency responders must be informed that a PV system is present.</p>
+        </div>
+      </article>
+
+      <!-- 9. Troubleshooting Safety -->
+      <article>
+        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">troubleshoot</span> Troubleshooting Safety</h2>
+        <div class="space-y-4 text-muted leading-8 text-lg">
+          <p>When diagnosing solar system faults, never prioritize speed over safety. Incorrect troubleshooting steps on high-voltage DC systems can result in equipment damage, electrical shock, or fire.</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Start troubleshooting only after verifying the system is properly isolated and locked out</li>
+            <li>Use only calibrated test equipment rated for the voltages present in the system</li>
+            <li>When measuring voltage, always start with the highest range on the multimeter</li>
+            <li>Never use continuity/ohm-mode on a live circuit; this can damage the meter and injure the operator</li>
+            <li>Inspect test leads and probes for damage before each use</li>
+            <li>Document all measurements and observations in a troubleshooting log</li>
+            <li>If unsure about any procedure, stop work and consult a certified solar professional</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 10. Personal Protective Equipment -->
+      <article>
+        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">health_and_safety</span> Personal Protective Equipment</h2>
+        <div class="space-y-4 text-muted leading-8 text-lg">
+          <p>Appropriate PPE is mandatory when working on or near solar energy system components. The minimum PPE requirements for solar system work include:</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Insulated gloves:</strong> Class 00 (500V) or Class 0 (1000V) rubber electrical gloves with leather protectors, tested per ASTM F496</li>
+            <li><strong>Safety glasses:</strong> ANSI Z87.1 rated safety glasses or face shield to protect against arc flash</li>
+            <li><strong>Non-conductive footwear:</strong> EH-rated (Electrical Hazard) safety boots per ASTM F2413</li>
+            <li><strong>Hard hat:</strong> Non-conductive (Class E) hard hat when working at height or near overhead conductors</li>
+            <li><strong>Arc flash protection:</strong> When working on or near the inverter output (AC side), wear arc-rated clothing rated per NFPA 70E</li>
+            <li><strong>Insulated tools:</strong> All hand tools must be rated for live-line work (1000V VDE certified)</li>
+            <li><strong>Fire-resistant clothing:</strong> FR-rated long-sleeve shirt and pants when working on energized DC systems</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 11. Children and Public Safety -->
+      <article>
+        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-secondary">family_restroom</span> Children and Public Safety</h2>
+        <div class="space-y-4 text-muted leading-8 text-lg">
+          <p>Solar installations accessible to the public or children require additional safety measures to prevent accidental contact with hazardous voltages.</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>All DC disconnect switches must be enclosed in locked cabinets when not in active use</li>
+            <li>Conduit carrying DC conductors in publicly accessible areas must be fully enclosed and secured</li>
+            <li>Ground-mounted solar arrays require perimeter fencing (minimum 1.8m height) with locked gates</li>
+            <li>All exposed electrical terminals and busbars must be covered with insulating barriers</li>
+            <li>Safety signage must be posted at eye level near all electrical equipment and at entry points</li>
+            <li>Educate household members about the dangers of touching solar panels, wiring, or electrical enclosures</li>
+            <li>Install childproof covers on any accessible DC disconnect or circuit breakers</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 12. Weather and Environmental Safety -->
+      <article>
+        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">thunderstorm</span> Weather and Environmental Safety</h2>
+        <div class="space-y-4 text-muted leading-8 text-lg">
+          <p>Weather conditions significantly affect both the safety of solar system work and the performance of installed systems.</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Never work on a solar system during thunderstorms; lightning can induce dangerous voltages in PV arrays</li>
+            <li>Do not perform rooftop panel work during high winds (sustained winds exceeding 40 km/h / 25 mph)</li>
+            <li>Ice and snow on panels reduce electrical output but do NOT eliminate voltage; assume panels are live</li>
+            <li>Wet conditions increase shock hazard; use additional insulation and avoid working in standing water</li>
+            <li>After severe weather events (hail, hurricanes, heavy snow), conduct a thorough inspection before restoring power</li>
+            <li>Check mounting structures, racking, and panel clamps for storm damage before energizing the system</li>
+            <li>Extreme heat can cause inverter thermal derating; ensure cooling systems are functional before summer peak loads</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 13. Professional Installation Requirement -->
+      <article>
+        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">engineering</span> Professional Installation Requirement</h2>
+        <div class="space-y-4 text-muted leading-8 text-lg">
+          <p>Solar energy system installation, modification, and repair must be performed by qualified professionals. Improper installation is a leading cause of solar system fires and electrical accidents.</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>All electrical work must comply with the National Electrical Code (NEC) Article 690 or equivalent local standards</li>
+            <li>Installers must hold current electrical licensing appropriate for the jurisdiction (e.g., Master Electrician, Licensed Solar Installer)</li>
+            <li>Structural modifications for panel mounting require a licensed structural engineer's assessment</li>
+            <li>Utility interconnection must be performed by a qualified installer with utility approval and proper permits</li>
+            <li>Obtain all required building and electrical permits before commencing installation work</li>
+            <li>System commissioning must include verification of all safety devices, ground fault protection, and AFCI function</li>
+            <li>Retain all installation documentation, test reports, and warranty information for future reference</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 14. Important Safety Disclaimer -->
+      <article class="bg-surface p-8 rounded-2xl border border-secondary/30">
+        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-secondary">gpp_maybe</span> Important Safety Disclaimer</h2>
+        <div class="space-y-4 text-muted leading-8 text-lg">
+          <p>The information provided in this safety manual is for general educational purposes only and does not constitute professional engineering advice, electrical consulting, or warranty of any kind.</p>
+          <p>Solar energy systems involve lethal voltages and hazardous materials. The content presented here reflects widely recognized safety practices based on standards including IEC 62109, NFPA 70E, NEC Article 690, and UL 1741, but individual system configurations may require additional or different safety measures.</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Always consult a certified solar professional before performing work on any high-voltage system</li>
+            <li>Local codes, regulations, and safety requirements may differ from those referenced in this manual</li>
+            <li>Do not attempt repairs or modifications beyond your training and qualification level</li>
+            <li>WhaSol does not accept liability for damages, injuries, or losses arising from reliance on this information</li>
+            <li>When in doubt, stop work and seek professional assistance</li>
+          </ul>
+          <p class="text-secondary font-semibold pt-4 border-t border-surface-high">Safety is not optional. If you are not a qualified, licensed professional, hire one. The cost of professional installation is insignificant compared to the cost of an electrical fire or fatal shock.</p>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Back Link -->
+    <section class="mx-auto max-w-5xl px-6 pb-16">
+      <a href="../index.html" class="inline-flex items-center gap-2 text-primary hover:text-primary-container transition-colors font-semibold">
+        <span class="material-symbols-outlined">arrow_back</span>
+        Back to Home
+      </a>
+    </section>
+  </main>
+
+  <footer class="border-t border-surface-high/70 bg-surface-low py-12">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-3">
+          <h4 class="font-display text-sm font-bold uppercase tracking-widest text-on-surface">Explore</h4>
+          <ul class="flex flex-col gap-2 text-sm text-muted">
+            <li><a data-path="home" href="../index.html" class="hover:text-primary transition-colors">Home</a></li>
+            <li><a data-path="troubleshooting" href="../guides/" class="hover:text-primary transition-colors">Troubleshooting Guides</a></li>
+            <li><a data-path="error-codes" href="../error-codes/" class="hover:text-primary transition-colors">Inverter Error Codes</a></li>
+            <li><a data-path="brands" href="../error-codes/#brands" class="hover:text-primary transition-colors">Brands &amp; Inverter Models</a></li>
+            <li><a data-path="blogs" href="../blog/" class="hover:text-primary transition-colors">Engineering Blogs</a></li>
+          </ul>
+        </div>
+        <div class="pt-6 border-t border-surface-high text-sm text-muted">&copy; 2026 WhaSol. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    document.addEventListener('DOMContentLoaded', function() {
+      document.title = 'Solar Safety Manual | WhaSol';
+      var brandLink = document.querySelector('header a');
+      if (brandLink) brandLink.innerHTML = '<img src="../whasol-logo-clean.svg" alt="WhaSol" class="h-20 w-80 object-contain" />';
+      var mobileNavToggle = document.getElementById('mobile-nav-toggle');
+      var mobileNavMenu = document.getElementById('mobile-nav-menu');
+      if (mobileNavToggle && mobileNavMenu) {
+        mobileNavToggle.addEventListener('click', function() {
+          var isOpen = !mobileNavMenu.classList.contains('hidden');
+          mobileNavMenu.classList.toggle('hidden');
+          mobileNavToggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+          var iconEl = mobileNavToggle.querySelector('.material-symbols-outlined');
+          if (iconEl) iconEl.textContent = isOpen ? 'menu' : 'close';
+        });
+        mobileNavMenu.addEventListener('click', function(ev) {
+          if (ev.target.closest('a[data-path]')) {
+            mobileNavMenu.classList.add('hidden');
+            mobileNavToggle.setAttribute('aria-expanded', 'false');
+            var iconEl2 = mobileNavToggle.querySelector('.material-symbols-outlined');
+            if (iconEl2) iconEl2.textContent = 'menu';
+          }
+        });
+      }
+      var routes = {
+        home: '../index.html',
+        troubleshooting: '../guides/',
+        'error-codes': '../error-codes/',
+        brands: '../error-codes/#brands',
+        blogs: '../blog/',
+        about: '../about-us/',
+        contact: '../contact-us/'
+      };
+      document.querySelectorAll('a[data-path]').forEach(function(link) {
+        if (routes[link.dataset.path]) link.href = routes[link.dataset.path];
+      });
+      function resolveActivePath() {
+        var seg = (location.pathname.split('/').filter(Boolean).pop() || '').split('.')[0];
+        if (location.hash === '#brands') return 'brands';
+        if (!seg || seg === 'index') return 'home';
+        if (seg === 'guides') return 'troubleshooting';
+        if (seg === 'error-codes') return 'error-codes';
+        if (seg === 'blog') return 'blogs';
+        if (seg === 'about-us') return 'about';
+        if (seg === 'contact-us') return 'contact';
+        if (seg === 'safety-manual') return null;
+        return null;
+      }
+      document.querySelectorAll('nav[data-active-classes]').forEach(function(nav) {
+        var activeCls = (nav.getAttribute('data-active-classes') || '').split(' ').filter(Boolean);
+        var inactiveCls = (nav.getAttribute('data-inactive-classes') || '').split(' ').filter(Boolean);
+        nav.querySelectorAll('a[data-path]').forEach(function(link) {
+          link.removeAttribute('aria-current');
+          activeCls.forEach(function(cls) { link.classList.remove(cls); });
+          inactiveCls.forEach(function(cls) { link.classList.add(cls); });
+          var activeKey = resolveActivePath();
+          if (link.getAttribute('data-path') === activeKey) {
+            inactiveCls.forEach(function(cls) { link.classList.remove(cls); });
+            activeCls.forEach(function(cls) { link.classList.add(cls); });
+            link.setAttribute('aria-current', 'page');
+          }
+        });
+      });
+      document.body.innerHTML = document.body.innerHTML.replace(/Solar Nexus/g, 'WhaSol').replace(/Engineering Intelligence/g, '');
+    });
+  })();
+  </script>
+</body>
+</html>
