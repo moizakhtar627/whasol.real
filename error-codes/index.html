@@ -77,7 +77,7 @@ Read Safety Manual
   document.addEventListener('DOMContentLoaded', function() {
     document.title = document.title.replace(/Solar Nexus/g, 'WhaSol');
     const logoPrefix = location.pathname.slice(0, location.pathname.lastIndexOf('/') + 1).split('/').filter(Boolean).length > 0 ? '../' : '';
-    document.querySelectorAll('header img').forEach(function(logo) { logo.src = logoPrefix + 'whasol-logo.png'; logo.alt = 'WhaSol'; logo.className = 'whasol-logo object-contain'; if (logo.nextElementSibling) logo.nextElementSibling.style.display = 'none'; });
+    document.querySelectorAll('header img').forEach(function(logo) { logo.src = logoPrefix + 'whasol-logo.png'; logo.alt = 'WHA SOL — Smart Solar Engineering'; logo.width = 162; logo.height = 40; logo.className = 'whasol-logo object-contain'; if (logo.nextElementSibling) logo.nextElementSibling.style.display = 'none'; });
     document.querySelectorAll('header .w-8.h-8.rounded-full.bg-primary').forEach(function(profile) { profile.remove(); });
     const mobileNavToggle = document.getElementById('mobile-nav-toggle');
     const mobileNavMenu = document.getElementById('mobile-nav-menu');
@@ -247,7 +247,7 @@ mobileNavMenu.classList.toggle('hidden');
 <div class="flex flex-col gap-space-md sm:col-span-2 lg:col-span-4 lg:pr-space-md">
 <a data-path="home" href="../index.html" class="inline-flex w-fit" aria-label="WhaSol home">
 <span class="inline-flex items-center rounded-lg bg-[#091525] px-space-sm py-space-xs">
-<img src="../whasol-logo.png" alt="WhaSol - Solar Engineering Knowledge Platform" class="whasol-footer-logo object-contain" />
+<img src="../whasol-logo.png" alt="WHA SOL — Smart Solar Engineering" class="whasol-footer-logo object-contain" width="162" height="40" />
 </span>
 </a>
 <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed max-w-md">WHA SOL is a solar engineering knowledge platform helping homeowners, technicians, installers, and electricians understand and solve real-world solar system problems.</p>

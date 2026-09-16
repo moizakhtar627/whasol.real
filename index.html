@@ -349,7 +349,7 @@ const visualStyle = document.createElement('style');
       document.head.appendChild(visualStyle);
       document.title = document.title.replace(/Solar Nexus/g, 'WhaSol');
 const logoPrefix = location.pathname.slice(0, location.pathname.lastIndexOf('/') + 1).split('/').filter(Boolean).length > 0 ? '../' : '';
-      document.querySelectorAll('header img').forEach(function(logo) { logo.src = logoPrefix + 'whasol-logo.png'; logo.alt = 'WhaSol'; logo.className = 'whasol-logo object-contain'; if (logo.nextElementSibling) logo.nextElementSibling.style.display = 'none'; });
+      document.querySelectorAll('header img').forEach(function(logo) { logo.src = logoPrefix + 'whasol-logo.png'; logo.alt = 'WHA SOL — Smart Solar Engineering'; logo.width = 162; logo.height = 40; logo.className = 'whasol-logo object-contain'; if (logo.nextElementSibling) logo.nextElementSibling.style.display = 'none'; });
       document.querySelectorAll('header .w-8.h-8.rounded-full.bg-primary').forEach(function(profile) { profile.remove(); });
       const mobileNavToggle = document.getElementById('mobile-nav-toggle');
       const mobileNavMenu = document.getElementById('mobile-nav-menu');
@@ -457,11 +457,17 @@ document.querySelectorAll('footer div').forEach(function(element) {
       return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
     }
 
+    function homeCategoryLabel(key) {
+      var categories = window.WHASOL_CATEGORIES || [];
+      var match = categories.filter(function (c) { return c.key === key; })[0];
+      return match ? match.label : 'Engineering Guide';
+    }
+
     function homeCardHtml(article) {
       return '<article class="group relative bg-surface-container-low rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all flex flex-col justify-between">' +
         '<div class="p-6 flex flex-col gap-4">' +
         '<div class="flex items-center justify-between gap-space-xs">' +
-        '<span class="px-2.5 py-0.5 rounded bg-secondary/15 text-secondary text-xs font-semibold">' + escapeHtml(article.brand || 'Solar Guide') + '</span>' +
+        '<span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-xs font-semibold">' + escapeHtml(article.brand || homeCategoryLabel(article.category)) + '</span>' +
         '<span class="text-xs text-on-surface-variant time-ago">' + (function() { try { return (typeof timeAgo === 'function' ? timeAgo(article.publishedAt) : ''); } catch(e){ return ''; } })() + '</span>' +
         '</div>' +
         '<h3 class="text-lg text-on-surface group-hover:text-primary transition-colors font-semibold leading-snug">' + escapeHtml(article.title) + '</h3>' +
@@ -564,7 +570,7 @@ document.querySelectorAll('footer div').forEach(function(element) {
 <div class="flex flex-col gap-space-md sm:col-span-2 lg:col-span-4 lg:pr-space-md">
 <a data-path="home" href="index.html" class="inline-flex w-fit" aria-label="WhaSol home">
 <span class="inline-flex items-center rounded-lg bg-[#091525] px-space-sm py-space-xs">
-<img src="whasol-logo.png" alt="WhaSol - Solar Engineering Knowledge Platform" class="whasol-footer-logo object-contain" />
+<img src="whasol-logo.png" alt="WHA SOL — Smart Solar Engineering" class="whasol-footer-logo object-contain" width="162" height="40" />
 </span>
 </a>
 <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed max-w-md">WHA SOL is a solar engineering knowledge platform helping homeowners, technicians, installers, and electricians understand and solve real-world solar system problems.</p>

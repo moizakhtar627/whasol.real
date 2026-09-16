@@ -48,6 +48,24 @@ window.WHASOL_CATEGORIES = [
   { key: "voltage",             label: "Voltage & Frequency" }
 ];
 
+window.WHASOL_CATEGORY_MAP = {
+  "inverter":            "inverter",
+  "solar-battery-guide": "battery",
+  "battery":             "battery",
+  "solar-panel":         "solar-panel",
+  "wiring":              "wiring",
+  "voltage":             "voltage"
+};
+
+window.WHASOL_CATEGORY_GRADIENTS = {
+  "inverter":            { from: "#0b1623", via: "#112a3d", to: "#0d1f33", icon: "electrical_services" },
+  "solar-battery-guide": { from: "#0b1623", via: "#1a1f0e", to: "#0d1f33", icon: "battery_charging_full" },
+  "battery":             { from: "#0b1623", via: "#1a1f0e", to: "#0d1f33", icon: "battery_charging_full" },
+  "solar-panel":         { from: "#0b1623", via: "#0f2a1e", to: "#0d1f33", icon: "solar_power" },
+  "wiring":              { from: "#0b1623", via: "#1f1510", to: "#0d1f33", icon: "cable" },
+  "voltage":             { from: "#0b1623", via: "#1a1020", to: "#0d1f33", icon: "electric_meter" }
+};
+
 window.WHASOL_ARTICLES = [
   {
     id: "solar-battery-troubleshooting-wiring-safety",
@@ -71,8 +89,30 @@ window.WHASOL_ARTICLES = [
       "Solar Maintenance",
       "Battery"
     ],
+    status: "published",
     publishedAt: "2026-09-16T12:20:00",
     slug: "blog/solar-battery-troubleshooting-wiring-safety",
     content: "<h2>1. Common Solar Battery Problems</h2><p>Diagnosing the five most common solar battery faults: overcharging, undercharging, overheating, physical damage or swelling, and short backup time.</p><h2>2. Solar Battery Maintenance Checklist</h2><p>Monthly visual checks, quarterly terminal tightening, bi-annual cleaning, and periodic hydrometer checks for flooded batteries.</p><h2>3. Essential Battery Wiring Safety Rules</h2><p>Core assembly order, proper fusing, insulated tools, and load terminal guidance.</p><h2>4. Step-by-Step Solar Battery Wiring Overview</h2><p>Safe connection sequence from battery bank to charge controller, solar panels, and inverter.</p><h2>5. Important Safety Considerations</h2><p>Energy storage hazards, lithium handling requirements, and professional inspection guidance.</p><h2>6. When to Contact a Qualified Solar Technician</h2><p>Recognizing situations that require a certified electrician.</p>"
   }
 ];
+
+window.WHASOL_IMAGES = {
+  _esc: function (s) {
+    if (s == null) return '';
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  },
+  buildCategoryFallback: function (category, altText, heightClass) {
+    var g = (window.WHASOL_CATEGORY_GRADIENTS || {})[category] || { from: '#0b1623', via: '#112a3d', to: '#0d1f33', icon: 'solar_power' };
+    var h = heightClass || 'h-48';
+    var label = category ? category.replace(/-/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); }) : 'Article';
+    var bg = 'background:linear-gradient(135deg,' + g.from + ' 0%,' + g.via + ' 50%,' + g.to + ' 100%);';
+    return '<div class="w-full ' + h + ' rounded-t-xl flex flex-col items-center justify-center gap-3 relative overflow-hidden" style="' + bg + '">' +
+      '<div class="absolute inset-0 opacity-10" style="background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(56,217,255,0.05) 20px,rgba(56,217,255,0.05) 40px);"></div>' +
+      '<span class="material-symbols-outlined text-4xl text-on-surface-variant relative z-10">' + (g.icon || 'solar_power') + '</span>' +
+      '<span class="text-xs text-on-surface-variant font-medium relative z-10 uppercase tracking-wider">' + this._esc(label) + '</span>' +
+      '</div>';
+  },
+  buildArticleFallback: function (category, altText) {
+    return this.buildCategoryFallback(category, altText, 'h-56 sm:h-72 md:h-80');
+  }
+};
