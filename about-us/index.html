@@ -28,6 +28,7 @@
     document.body.innerHTML = document.body.innerHTML.replace(/Solar Nexus/g, 'WhaSol').replace(/Engineering Intelligence/g, '');
   });
 </script>
+<link rel="stylesheet" href="../animations.css" />
 </head>
 <body class="min-h-screen bg-background font-body text-on-surface">
   <header class="sticky top-0 z-10 border-b border-surface-high/70 bg-background/90 backdrop-blur-xl">
@@ -40,9 +41,9 @@
   </header>
   <main>
     <section class="mx-auto flex min-h-[70vh] max-w-7xl items-center px-6 py-28">
-      <div class="max-w-5xl"><p class="mb-4 font-mono text-sm uppercase tracking-[0.22em] text-secondary">About Solar Nexus</p><h1 class="max-w-4xl font-display text-5xl font-bold leading-tight md:text-7xl">Who Are We?</h1><p class="mt-8 max-w-4xl text-xl leading-9 text-muted">We are a solar technology knowledge platform dedicated to making complex solar systems easier to understand. From inverter errors and battery issues to wiring, voltage problems, and brand-specific troubleshooting, we provide clear and practical information to help users find the right answers.</p><p class="mt-6 max-w-4xl text-xl leading-9 text-muted">Our goal is to connect technology with understanding—helping homeowners, technicians, electricians, and solar enthusiasts solve problems with confidence and make smarter decisions for their solar systems.</p></div>
+      <div class="max-w-5xl" data-anim-hero="1"><p class="mb-4 font-mono text-sm uppercase tracking-[0.22em] text-secondary">About Solar Nexus</p><h1 class="max-w-4xl font-display text-5xl font-bold leading-tight md:text-7xl">Who Are We?</h1><p class="mt-8 max-w-4xl text-xl leading-9 text-muted">We are a solar technology knowledge platform dedicated to making complex solar systems easier to understand. From inverter errors and battery issues to wiring, voltage problems, and brand-specific troubleshooting, we provide clear and practical information to help users find the right answers.</p><p class="mt-6 max-w-4xl text-xl leading-9 text-muted">Our goal is to connect technology with understanding—helping homeowners, technicians, electricians, and solar enthusiasts solve problems with confidence and make smarter decisions for their solar systems.</p></div>
     </section>
-    <section class="border-y border-surface-high bg-surface-low"><div class="mx-auto grid max-w-7xl gap-8 px-6 py-16 md:grid-cols-3"><div><span class="material-symbols-outlined text-4xl text-primary">fact_check</span><h2 class="mt-5 font-display text-2xl font-bold">Practical first</h2><p class="mt-3 leading-7 text-muted">Every guide is organized around the next safe, useful diagnostic step.</p></div><div><span class="material-symbols-outlined text-4xl text-secondary">hub</span><h2 class="mt-5 font-display text-2xl font-bold">System thinking</h2><p class="mt-3 leading-7 text-muted">We connect equipment, symptoms, error codes, and operating conditions.</p></div><div><span class="material-symbols-outlined text-4xl text-primary">verified_user</span><h2 class="mt-5 font-display text-2xl font-bold">Safety always</h2><p class="mt-3 leading-7 text-muted">High-voltage warnings stay visible, with certified help recommended when needed.</p></div></div></section>
+    <section class="border-y border-surface-high bg-surface-low"><div class="mx-auto grid max-w-7xl gap-8 px-6 py-16 md:grid-cols-3" data-anim="fade-up"><div data-anim="fade-up" data-delay="1"><span class="material-symbols-outlined text-4xl text-primary">fact_check</span><h2 class="mt-5 font-display text-2xl font-bold">Practical first</h2><p class="mt-3 leading-7 text-muted">Every guide is organized around the next safe, useful diagnostic step.</p></div><div data-anim="fade-up" data-delay="2"><span class="material-symbols-outlined text-4xl text-secondary">hub</span><h2 class="mt-5 font-display text-2xl font-bold">System thinking</h2><p class="mt-3 leading-7 text-muted">We connect equipment, symptoms, error codes, and operating conditions.</p></div><div data-anim="fade-up" data-delay="3"><span class="material-symbols-outlined text-4xl text-primary">verified_user</span><h2 class="mt-5 font-display text-2xl font-bold">Safety always</h2><p class="mt-3 leading-7 text-muted">High-voltage warnings stay visible, with certified help recommended when needed.</p></div></div></section>
     <section class="mx-auto max-w-7xl px-6 py-16"><div class="rounded-2xl bg-surface p-8 md:flex md:items-center md:justify-between md:gap-8"><div><p class="font-mono text-sm uppercase tracking-widest text-primary">Need a hand?</p><h2 class="mt-3 font-display text-3xl font-bold">Talk with the Solar Nexus team.</h2></div><a class="mt-6 inline-flex items-center gap-2 rounded-full bg-primary-container px-6 py-3 font-semibold text-background hover:bg-primary md:mt-0" href="../contact-us/">Contact Engineering <span class="material-symbols-outlined">arrow_forward</span></a></div></section>
   </main>
 <script>
@@ -107,5 +108,6 @@
     });
   })();
 </script>
+<script src="../animations.js" defer></script>
 </body>
 </html>

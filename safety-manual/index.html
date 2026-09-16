@@ -19,6 +19,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{background:'#0a1422',surface:'#16202f','surface-low':'#121c2a','surface-high':'#212a39',primary:'#b6edff','primary-container':'#38d9ff',secondary:'#ffb955',error:'#ffb4ab','on-surface':'#d9e3f7','muted':'#bbc9ce'},fontFamily:{display:['Space Grotesk'],body:['Inter']}}}};</script>
   <style>body{font-family:'Inter',sans-serif;}</style>
+<link rel="stylesheet" href="../animations.css" />
 </head>
 <body class="min-h-screen bg-background text-on-surface">
   <header class="sticky top-0 z-10 border-b border-surface-high/70 bg-background/90 backdrop-blur-xl">
@@ -33,7 +34,7 @@
   <main>
     <!-- Safety Banner -->
     <section class="bg-secondary/10 border-b border-secondary/30">
-      <div class="mx-auto max-w-5xl px-6 py-16 flex items-start gap-5">
+      <div class="mx-auto max-w-5xl px-6 py-16 flex items-start gap-5" data-anim-hero="1">
         <span class="material-symbols-outlined text-secondary text-5xl shrink-0 mt-1">warning</span>
         <div>
           <p class="font-mono text-sm uppercase tracking-[0.22em] text-secondary mb-3">Critical Safety Reference</p>
@@ -46,8 +47,7 @@
     <section class="mx-auto max-w-5xl px-6 py-16 space-y-20">
 
       <!-- 1. General Solar System Safety -->
-      <article>
-        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">shield</span> General Solar System Safety</h2>
+      <article data-anim="fade-up" data-delay="2"><h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">shield</span> General Solar System Safety</h2>
         <div class="space-y-4 text-muted leading-8 text-lg">
           <p>Solar energy systems operate at dangerously high voltages. A typical residential string can produce 300-600V DC, and commercial systems can exceed 1000V DC. Unlike AC circuits, DC voltage from illuminated panels cannot be switched off or disconnected from the source while sunlight is present.</p>
           <p>Never assume a system is de-energized because a breaker is off or an inverter is powered down. Solar panels generate electricity whenever exposed to light, regardless of the state of any switches, breakers, or inverters in the system.</p>
@@ -62,8 +62,7 @@
       </article>
 
       <!-- 2. Solar Panel Safety -->
-      <article>
-        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">solar_power</span> Solar Panel Safety</h2>
+      <article data-anim="fade-up" data-delay="3"><h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">solar_power</span> Solar Panel Safety</h2>
         <div class="space-y-4 text-muted leading-8 text-lg">
           <p>Solar panels produce DC voltage proportional to the number of cells in series. Even a single panel under direct sunlight can produce 40-50V DC. Multiple panels wired in series multiply this voltage to hazardous levels.</p>
           <ul class="list-disc pl-6 space-y-2">
@@ -78,8 +77,7 @@
       </article>
 
       <!-- 3. Solar Inverter Safety -->
-      <article>
-        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">power</span> Solar Inverter Safety</h2>
+      <article data-anim="fade-up" data-delay="4"><h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">power</span> Solar Inverter Safety</h2>
         <div class="space-y-4 text-muted leading-8 text-lg">
           <p>Inverters contain large electrolytic capacitors that store lethal charge even after the unit is powered off. Internal bus voltages can reach 400-800V DC. Residual energy may persist for 5-15 minutes after shutdown.</p>
           <ul class="list-disc pl-6 space-y-2">
@@ -94,8 +92,7 @@
       </article>
 
       <!-- 4. Solar Battery Safety -->
-      <article>
-        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-secondary">battery_charging_full</span> Solar Battery Safety</h2>
+      <article data-anim="fade-up" data-delay="1"><h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-secondary">battery_charging_full</span> Solar Battery Safety</h2>
         <div class="space-y-4 text-muted leading-8 text-lg">
           <p>Lithium-ion batteries used in solar storage systems store enormous energy and present risks including thermal runaway, fire, and explosion. Lead-acid batteries produce hydrogen gas during charging, which is highly flammable.</p>
           <ul class="list-disc pl-6 space-y-2">
@@ -111,8 +108,7 @@
       </article>
 
       <!-- 5. Electrical Wiring Safety -->
-      <article>
-        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">cable</span> Electrical Wiring Safety</h2>
+      <article data-anim="fade-up" data-delay="2"><h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">cable</span> Electrical Wiring Safety</h2>
         <div class="space-y-4 text-muted leading-8 text-lg">
           <p>DC wiring in solar systems carries continuous high-voltage current that behaves differently from household AC wiring. Arc faults in DC circuits are self-sustaining and extremely difficult to extinguish.</p>
           <ul class="list-disc pl-6 space-y-2">
@@ -127,8 +123,7 @@
       </article>
 
       <!-- 6. Fire Safety -->
-      <article>
-        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-error">local_fire_department</span> Fire Safety</h2>
+      <article data-anim="fade-up" data-delay="3"><h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-error">local_fire_department</span> Fire Safety</h2>
         <div class="space-y-4 text-muted leading-8 text-lg">
           <p>Electrical fires in solar installations can be caused by arc faults, overloaded circuits, poor connections, or damaged insulation. Once started, DC arc fires are continuous as long as panels produce voltage in sunlight.</p>
           <ul class="list-disc pl-6 space-y-2">
@@ -143,8 +138,7 @@
       </article>
 
       <!-- 7. Maintenance Safety Checklist -->
-      <article>
-        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">checklist</span> Maintenance Safety Checklist</h2>
+      <article data-anim="fade-up" data-delay="4"><h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">checklist</span> Maintenance Safety Checklist</h2>
         <div class="space-y-4 text-muted leading-8 text-lg">
           <p>Before performing any maintenance on a solar energy system, complete the following safety checklist:</p>
           <ol class="list-decimal pl-6 space-y-3">
@@ -165,8 +159,7 @@
       </article>
 
       <!-- 8. Emergency Shutdown Procedure -->
-      <article>
-        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-secondary">emergency</span> Emergency Shutdown Procedure</h2>
+      <article data-anim="fade-up" data-delay="1"><h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-secondary">emergency</span> Emergency Shutdown Procedure</h2>
         <div class="space-y-4 text-muted leading-8 text-lg">
           <p>In an emergency involving a solar energy system (fire, flooding, structural damage, or electrical accident), follow these steps to shut down the system as safely as possible:</p>
           <ol class="list-decimal pl-6 space-y-3">
@@ -184,8 +177,7 @@
       </article>
 
       <!-- 9. Troubleshooting Safety -->
-      <article>
-        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">troubleshoot</span> Troubleshooting Safety</h2>
+      <article data-anim="fade-up" data-delay="2"><h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">troubleshoot</span> Troubleshooting Safety</h2>
         <div class="space-y-4 text-muted leading-8 text-lg">
           <p>When diagnosing solar system faults, never prioritize speed over safety. Incorrect troubleshooting steps on high-voltage DC systems can result in equipment damage, electrical shock, or fire.</p>
           <ul class="list-disc pl-6 space-y-2">
@@ -201,8 +193,7 @@
       </article>
 
       <!-- 10. Personal Protective Equipment -->
-      <article>
-        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">health_and_safety</span> Personal Protective Equipment</h2>
+      <article data-anim="fade-up" data-delay="3"><h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">health_and_safety</span> Personal Protective Equipment</h2>
         <div class="space-y-4 text-muted leading-8 text-lg">
           <p>Appropriate PPE is mandatory when working on or near solar energy system components. The minimum PPE requirements for solar system work include:</p>
           <ul class="list-disc pl-6 space-y-2">
@@ -218,8 +209,7 @@
       </article>
 
       <!-- 11. Children and Public Safety -->
-      <article>
-        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-secondary">family_restroom</span> Children and Public Safety</h2>
+      <article data-anim="fade-up" data-delay="4"><h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-secondary">family_restroom</span> Children and Public Safety</h2>
         <div class="space-y-4 text-muted leading-8 text-lg">
           <p>Solar installations accessible to the public or children require additional safety measures to prevent accidental contact with hazardous voltages.</p>
           <ul class="list-disc pl-6 space-y-2">
@@ -235,8 +225,7 @@
       </article>
 
       <!-- 12. Weather and Environmental Safety -->
-      <article>
-        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">thunderstorm</span> Weather and Environmental Safety</h2>
+      <article data-anim="fade-up" data-delay="1"><h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">thunderstorm</span> Weather and Environmental Safety</h2>
         <div class="space-y-4 text-muted leading-8 text-lg">
           <p>Weather conditions significantly affect both the safety of solar system work and the performance of installed systems.</p>
           <ul class="list-disc pl-6 space-y-2">
@@ -252,8 +241,7 @@
       </article>
 
       <!-- 13. Professional Installation Requirement -->
-      <article>
-        <h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">engineering</span> Professional Installation Requirement</h2>
+      <article data-anim="fade-up" data-delay="2"><h2 class="font-display text-3xl font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary">engineering</span> Professional Installation Requirement</h2>
         <div class="space-y-4 text-muted leading-8 text-lg">
           <p>Solar energy system installation, modification, and repair must be performed by qualified professionals. Improper installation is a leading cause of solar system fires and electrical accidents.</p>
           <ul class="list-disc pl-6 space-y-2">
@@ -382,5 +370,6 @@
     });
   })();
   </script>
+<script src="../animations.js" defer></script>
 </body>
 </html>

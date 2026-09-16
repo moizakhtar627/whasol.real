@@ -1,0 +1,119 @@
+/* ============================================================
+   WhaSol Professional Animations
+   Animation-only layer — no UI/design changes.
+   Hidden states only apply under `html.wha-anim` which is added
+   by animations.js — if that script fails, content never hides.
+   All enhancement rules use :where() (zero specificity) so
+   existing Tailwind utilities always win.
+   ============================================================ */
+
+/* --- Keyframes --- */
+@keyframes whaFadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes whaFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes whaSlideInLeft {
+  from { opacity: 0; transform: translateX(-28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes whaSlideInRight {
+  from { opacity: 0; transform: translateX(28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes whaScaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* --- Base hidden state for scroll-reveal elements (JS-gated) --- */
+html.wha-anim [data-anim] {
+  opacity: 0;
+  transform: none;
+}
+html.wha-anim [data-anim="fade-up"]     { transform: translateY(24px); }
+html.wha-anim [data-anim="fade-in"]     { transform: none; }
+html.wha-anim [data-anim="slide-left"]  { transform: translateX(-28px); }
+html.wha-anim [data-anim="slide-right"] { transform: translateX(28px); }
+html.wha-anim [data-anim="scale-in"]    { transform: scale(0.95); }
+
+/* --- Triggered visible state --- */
+html.wha-anim [data-anim].is-visible {
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+html.wha-anim [data-anim="fade-up"].is-visible     { animation-name: whaFadeInUp; }
+html.wha-anim [data-anim="fade-in"].is-visible     { animation-name: whaFadeIn; }
+html.wha-anim [data-anim="slide-left"].is-visible  { animation-name: whaSlideInLeft; }
+html.wha-anim [data-anim="slide-right"].is-visible { animation-name: whaSlideInRight; }
+html.wha-anim [data-anim="scale-in"].is-visible    { animation-name: whaScaleIn; }
+
+/* --- Stagger delays --- */
+html.wha-anim [data-anim].is-visible[data-delay="1"] { animation-delay: 0.08s; }
+html.wha-anim [data-anim].is-visible[data-delay="2"] { animation-delay: 0.16s; }
+html.wha-anim [data-anim].is-visible[data-delay="3"] { animation-delay: 0.24s; }
+html.wha-anim [data-anim].is-visible[data-delay="4"] { animation-delay: 0.32s; }
+html.wha-anim [data-anim].is-visible[data-delay="5"] { animation-delay: 0.40s; }
+html.wha-anim [data-anim].is-visible[data-delay="6"] { animation-delay: 0.48s; }
+
+/* --- Page-load hero entrance (no observer; runs on parse) --- */
+html.wha-anim [data-anim-hero] {
+  opacity: 0;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-name: whaFadeInUp;
+  animation-duration: 0.7s;
+}
+html.wha-anim [data-anim-hero]     { animation-delay: 0.1s; }
+html.wha-anim [data-anim-hero="2"] { animation-delay: 0.25s; }
+html.wha-anim [data-anim-hero="3"] { animation-delay: 0.4s; }
+html.wha-anim [data-anim-hero="4"] { animation-delay: 0.55s; }
+
+/* --- Hover micro-interactions (zero-specificity, additive) --- */
+
+/* Cards: slight lift. Existing transition utilities handle smoothness. */
+:where(.anim-card-hover) { transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1); }
+:where(.anim-card-hover):hover { transform: translateY(-4px); }
+
+/* Buttons: subtle lift + scale. */
+:where(.anim-btn-hover) { transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1); }
+:where(.anim-btn-hover):hover  { transform: translateY(-2px) scale(1.02); }
+:where(.anim-btn-hover):active { transform: translateY(0) scale(0.98); }
+
+/* Arrow icons in links: nudge right on link hover */
+:where(.anim-arrow-hover .material-symbols-outlined) {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+:where(.anim-arrow-hover:hover .material-symbols-outlined) {
+  transform: translateX(3px);
+}
+
+/* Images: gentle scale on hover (cards with background images) */
+:where(.anim-img-hover) { transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+:where(.group:hover .anim-img-hover) { transform: scale(1.05); }
+
+/* Nav links: smooth color transition reinforcement */
+:where(.anim-nav-hover) {
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* --- Accessibility: reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  html.wha-anim [data-anim],
+  html.wha-anim [data-anim-hero] {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  :where(.anim-card-hover),
+  :where(.anim-btn-hover),
+  :where(.anim-arrow-hover .material-symbols-outlined),
+  :where(.anim-img-hover) {
+    transition: none !important;
+    transform: none !important;
+  }
+}
