@@ -102,10 +102,10 @@ svg {
 }
 
 /* Make the header background match the logo's own opaque dark-navy
-   (#0b1828) so the logo has no contrasting rectangle behind it. */
+   (#091525) so the logo has no contrasting rectangle behind it. */
 header.fixed,
 header.sticky {
-  background-color: #0b1828 !important;
+  background-color: #091525 !important;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
 }
