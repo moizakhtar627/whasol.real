@@ -35,40 +35,69 @@ svg {
 /* --- 2. Header / navigation --- */
 
 /* WhaSol logo: responsive across all pages.
-   Mobile ~116-136px, tablet/desktop up to 152px. The native
-   1.79:1 ratio keeps heights around 65-85px inside the bar. */
+   Mobile ~124-136px, tablet ~136-148px, desktop up to ~168px.
+   The native 1.79:1 ratio keeps heights ~69-94px inside the bar. */
 .whasol-logo {
-  width: clamp(7.25rem, 32vw, 8.25rem);
+  width: clamp(7.75rem, 30vw, 8.5rem);
   height: auto;
   max-width: 100%;
   flex-shrink: 1;
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .whasol-logo {
-    width: clamp(8.5rem, 12vw, 9.5rem);
+    width: clamp(8.5rem, 11.5vw, 9.25rem);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .whasol-logo {
+    width: clamp(9.25rem, 10vw, 9.75rem);
   }
 }
 
 @media (min-width: 1280px) {
   .whasol-logo {
-    width: 9.5rem;
+    width: clamp(9.75rem, 10vw, 10.5rem);
   }
 }
 
-/* Fixed header (A-type pages): slightly taller desktop bar so the
-   larger logo gets breathing room. Offsets below keep main + sticky
-   aligned to the new desktop bar height. */
-@media (min-width: 1024px) {
+/* Fixed header (A-type pages): taller bars (tablet 5.5rem, desktop
+   6.25rem) so the larger logo gets breathing room. Offsets below
+   keep main + sticky aligned to the matching bar height. */
+@media (min-width: 768px) and (max-width: 1023px) {
   header.fixed > div:first-child,
   .header-bar {
     height: 5.5rem !important;
   }
-  main.lg\:pt-20 {
+  main.pt-16,
+  main.pt-20 {
     padding-top: 5.5rem !important;
   }
-  .sticky.lg\:top-20 {
+  .sticky.top-16,
+  .sticky.top-20 {
     top: 5.5rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  header.fixed > div:first-child,
+  .header-bar {
+    height: 6.25rem !important;
+  }
+  main.lg\:pt-20 {
+    padding-top: 6.25rem !important;
+  }
+  .sticky.lg\:top-20 {
+    top: 6.25rem !important;
+  }
+}
+
+/* Keep balanced spacing on smaller desktop widths: shrink the decorative
+   right-side spacer so the larger logo never crowds the nav links. */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  header.fixed > div:first-child > div.w-80 {
+    width: 14rem !important;
   }
 }
 
@@ -93,7 +122,7 @@ header.sticky {
   header.fixed > div:first-child,
   .header-bar {
     height: auto !important;
-    min-height: 4.5rem !important;
+    min-height: 5rem !important;
     gap: 0.5rem !important;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
@@ -225,23 +254,9 @@ header.sticky {
 }
 
 /* --- 3. Page top offset under the fixed header --- */
-/* Mobile bar is auto-height (up to ~74px once the larger logo is
+/* Mobile bar is auto-height (up to ~80px once the larger logo is
    inside), so keep content clear of it with a matching offset. */
 @media (max-width: 767px) {
-  main.pt-16 {
-    padding-top: 4.75rem !important;
-  }
-  main.pt-20 {
-    padding-top: 4.75rem !important;
-  }
-  .sticky.top-16,
-  .sticky.top-20 {
-    top: 4.75rem !important;
-  }
-}
-
-/* Tablet: fixed bar is still h-20 (80px) here, so align main + sticky. */
-@media (min-width: 768px) and (max-width: 1023px) {
   main.pt-16 {
     padding-top: 5rem !important;
   }
@@ -251,6 +266,20 @@ header.sticky {
   .sticky.top-16,
   .sticky.top-20 {
     top: 5rem !important;
+  }
+}
+
+/* Tablet: fixed bar is 5.5rem (88px) here, so align main + sticky. */
+@media (min-width: 768px) and (max-width: 1023px) {
+  main.pt-16 {
+    padding-top: 5.5rem !important;
+  }
+  main.pt-20 {
+    padding-top: 5.5rem !important;
+  }
+  .sticky.top-16,
+  .sticky.top-20 {
+    top: 5.5rem !important;
   }
 }
 
@@ -295,19 +324,67 @@ header.sticky {
   }
 }
 
-/* Metric cards: stack full-width on phones, one row on larger
-   screens. Targeted via the hero stats data attribute. */
+/* Metric cards: 2-column grid on phones (third spans the full row),
+   stacked on the smallest screens, single row on larger screens.
+   Targeted via the hero stats data attribute. */
 @media (max-width: 639px) {
   [data-anim-hero="4"] {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 0.625rem !important;
     width: 100%;
+    max-width: 100%;
   }
   [data-anim-hero="4"] > div {
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 0.875rem;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    min-height: 3.5rem;
+  }
+  [data-anim-hero="4"] > div:last-child {
+    grid-column: 1 / -1;
+  }
+  /* Bigger, clearer numbers and labels on mobile */
+  [data-anim-hero="4"] > div > div:first-child {
+    gap: 0.35rem;
+  }
+  [data-anim-hero="4"] > div > div:first-child span:last-child {
+    font-size: 1.45rem !important;
+  }
+  [data-anim-hero="4"] > div > span:last-child {
+    font-size: 0.7rem !important;
+    line-height: 1.25 !important;
+    text-align: right;
+  }
+}
+
+/* Very small phones: stack badges for maximum readability. */
+@media (max-width: 399px) {
+  [data-anim-hero="4"] {
+    grid-template-columns: 1fr !important;
+  }
+  [data-anim-hero="4"] > div:last-child {
+    grid-column: auto;
+  }
+  [data-anim-hero="4"] > div > div:first-child span:last-child {
+    font-size: 1.55rem !important;
+  }
+  [data-anim-hero="4"] > div > span:last-child {
+    font-size: 0.72rem !important;
+  }
+}
+
+/* --- Homepage search bars (hero mobile/tablet + desktop problem finder) --- */
+.home-search-input {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+@media (max-width: 767px) {
+  .home-search-input {
+    min-height: 3.25rem;
+    font-size: 1rem !important;
+    border-radius: 0.5rem;
   }
 }
 

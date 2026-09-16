@@ -38,10 +38,6 @@
             </button>
 </div>
 <div class="flex items-center gap-space-xs w-full md:w-auto">
-<button class="flex-1 md:flex-initial px-space-lg py-space-md rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center gap-space-xs font-label-md text-label-md uppercase tracking-wider" id="filter-modal-toggle">
-<span class="material-symbols-outlined text-[18px] text-primary">tune</span>
-<span>Advanced Filter</span>
-</button>
 <button class="flex-1 md:flex-initial px-space-xl py-space-md rounded-lg bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-primary transition-all flex items-center justify-center gap-space-xs shadow-md" id="search-submit">
 <span>SEARCH</span>
 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
@@ -137,6 +133,7 @@
 </div>
 </section>
 <script src="../data/articles.js"></script>
+<script src="../data/search.js"></script>
 <script>
     var ARTICLES = window.WHASOL_ARTICLES || [];
     var CATEGORIES = window.WHASOL_CATEGORIES || [];
@@ -180,12 +177,20 @@
     }
 
     function filterArticles() {
-      const q = searchQuery.trim().toLowerCase();
-      return ARTICLES.filter(function (article) {
-        if (activeCategory !== 'all' && article.category !== activeCategory) return false;
-        if (!q) return true;
+      const q = searchQuery.trim();
+      let base = ARTICLES;
+      if (activeCategory !== 'all') {
+        base = base.filter(function (a) { return a.category === activeCategory; });
+      }
+      if (!q) return base;
+      /* Token-based multi-keyword matching via the shared search engine. */
+      if (window.WHASOL_SEARCH) {
+        return window.WHASOL_SEARCH.search(q, base);
+      }
+      const hayQ = q.toLowerCase();
+      return base.filter(function (article) {
         const hay = (article.title + ' ' + article.excerpt + ' ' + article.brand + ' ' + (article.tags || []).join(' ')).toLowerCase();
-        return hay.indexOf(q) !== -1;
+        return hay.indexOf(hayQ) !== -1;
       });
     }
 

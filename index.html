@@ -41,6 +41,21 @@
 <p class="font-body-lg text-[1.15rem] lg:text-[1.2rem] text-on-surface-variant max-w-2xl leading-relaxed mt-space-md" data-anim-hero="3">
             Diagnose inverter errors, battery issues, wiring problems, and solar panel failures with clear, practical solutions engineered for residential and commercial solar systems.
           </p>
+<!-- Mobile & Tablet Search (below the header, kept out of the navbar) -->
+<div class="flex flex-col w-full max-w-2xl mt-space-md xl:hidden" data-anim-hero="5">
+<form class="relative w-full flex items-center" data-search-form role="search" aria-label="Search guides">
+<span class="material-symbols-outlined text-primary-container absolute left-space-md text-[22px] pointer-events-none">search</span>
+<input class="home-search-input w-full pl-12 pr-8 sm:pr-44 py-space-md bg-surface-container rounded-lg border border-surface-container-high/60 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-primary/40" data-search-input type="search" placeholder="Search guides by brand, error code or problem (e.g. Growatt error 02)" autocomplete="off" aria-label="Search troubleshooting guides"/>
+<button class="hidden sm:inline-flex absolute right-space-sm items-center gap-space-xs px-space-md py-2 rounded-md bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-primary transition-all" type="submit">
+<span class="material-symbols-outlined text-[16px]">search</span>
+<span>Search</span>
+</button>
+</form>
+<p class="home-search-msg hidden items-start gap-space-xs font-body-md text-[0.9rem] text-secondary mt-space-xs" data-search-msg role="status" aria-live="polite">
+<span class="material-symbols-outlined text-[16px] shrink-0">search_off</span>
+<span data-search-msg-text>No results found for your search. Please try another keyword.</span>
+</p>
+</div>
 <!-- Hero Statistics -->
 <div class="grid grid-cols-3 gap-space-sm max-w-lg mt-space-md xl:mt-space-lg" data-anim-hero="4">
 <div class="bg-surface-container-low rounded-lg px-space-md py-space-sm flex flex-col gap-1 border border-surface-container-high/60 hover:border-primary/40 transition-colors">
@@ -96,6 +111,21 @@
 <div class="flex flex-col gap-space-xs" data-anim="fade-up">
 <h2 class="font-headline-lg text-headline-lg text-on-surface">What Problem Are You Facing?</h2>
 <p class="font-body-md text-body-md text-on-surface-variant">Select an equipment subsystem to isolate your fault pattern in seconds.</p>
+</div>
+<!-- Desktop Search Bar (same functional search system) -->
+<div class="hidden xl:block w-full max-w-3xl" data-anim="fade-up" data-delay="1">
+<form class="relative w-full flex items-center" data-search-form role="search" aria-label="Search guides">
+<span class="material-symbols-outlined text-primary-container absolute left-space-md text-[22px] pointer-events-none">search</span>
+<input class="home-search-input w-full pl-12 pr-44 py-space-md bg-surface-container-lowest rounded-lg border border-surface-container-high/60 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-primary/40" data-search-input type="search" placeholder="Search guides by brand, error code or problem (e.g. Inverex battery not charging)" autocomplete="off" aria-label="Search troubleshooting guides"/>
+<button class="absolute right-space-sm top-1/2 -translate-y-1/2 items-center gap-space-xs px-space-md py-2 rounded-md bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-primary transition-all flex" type="submit">
+<span class="material-symbols-outlined text-[16px]">search</span>
+<span>Search</span>
+</button>
+</form>
+<p class="home-search-msg hidden items-start gap-space-xs font-body-md text-[0.9rem] text-secondary mt-space-sm" data-search-msg role="status" aria-live="polite">
+<span class="material-symbols-outlined text-[16px] shrink-0">search_off</span>
+<span data-search-msg-text>No results found for your search. Please try another keyword.</span>
+</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
 <!-- Card 1: Wiring Problems -->
@@ -157,139 +187,17 @@
         <h2 class="font-headline-lg text-headline-lg text-on-surface">Troubleshooting, Made Clear.</h2>
         <p class="font-body-md text-body-md text-on-surface-variant">Step-by-step diagnostic workflows validated by certified solar engineers.</p>
       </div>
-<a class="px-space-lg py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors flex items-center gap-space-xs shrink-0 self-start md:self-auto" href="#troubleshooting">
-<span>View All 180+ Guides</span>
+<a id="home-guides-viewall" class="hidden px-space-lg py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors flex items-center gap-space-xs shrink-0 self-start md:self-auto" href="#troubleshooting">
+<span>View All Guides</span>
 <span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
 </a>
 </div>
-<!-- 6 Editorial Cards Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<!-- Guide 1 -->
-<article class="bg-surface-container rounded-xl p-6 shadow-lg hover:shadow-xl transition-all flex flex-col justify-between group" data-slug="guides/inverter-error-code-02" data-anim="fade-up" data-delay="1">
-<div class="flex flex-col gap-4">
-<div class="flex items-center justify-between">
-<span class="px-2.5 py-0.5 rounded-full bg-secondary/15 text-secondary text-xs font-semibold">Growatt / Inverex</span>
-<span class="text-xs text-on-surface-variant time-ago" data-time="2026-09-15T09:00:00"></span>
-</div>
-<h3 class="text-lg font-semibold text-on-surface group-hover:text-primary transition-colors leading-snug">
-              How to Fix Inverter Error Code 02 (DC Bus Overvoltage)
-            </h3>
-<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-3">
-              High open-circuit voltage during cold mornings can trigger critical safety locks. Learn how to recalculate string VOC and reset safely.
-            </p>
-</div>
-<div class="pt-4 mt-4 border-t border-surface-container-highest/50">
-<a class="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-container transition-colors" href="guides/">
-              Read More
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- Guide 2 -->
-<article class="bg-surface-container rounded-xl p-6 shadow-lg hover:shadow-xl transition-all flex flex-col justify-between group" data-slug="guides/solax-not-charging" data-anim="fade-up" data-delay="2">
-<div class="flex flex-col gap-4">
-<div class="flex items-center justify-between">
-<span class="px-2.5 py-0.5 rounded-full bg-secondary/15 text-secondary text-xs font-semibold">SolaX Power</span>
-<span class="text-xs text-on-surface-variant time-ago" data-time="2026-09-12T14:30:00"></span>
-</div>
-<h3 class="text-lg font-semibold text-on-surface group-hover:text-secondary transition-colors leading-snug">
-              SolaX Inverter Not Charging Battery: Complete Troubleshooting Guide
-            </h3>
-<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-3">
-              Differentiate between EPS mode override lockouts, BMS CAN-bus parity mismatches, and dead lithium wake-up protocols.
-            </p>
-</div>
-<div class="pt-4 mt-4 border-t border-surface-container-highest/50">
-<a class="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-container transition-colors" href="guides/">
-              Read More
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- Guide 3 -->
-<article class="bg-surface-container rounded-xl p-6 shadow-lg hover:shadow-xl transition-all flex flex-col justify-between group" data-slug="guides/solar-panel-not-charging" data-anim="fade-up" data-delay="3">
-<div class="flex flex-col gap-4">
-<div class="flex items-center justify-between">
-<span class="px-2.5 py-0.5 rounded-full bg-secondary/15 text-secondary text-xs font-semibold">Universal Solar</span>
-<span class="text-xs text-on-surface-variant time-ago" data-time="2026-09-10T08:00:00"></span>
-</div>
-<h3 class="text-lg font-semibold text-on-surface group-hover:text-primary transition-colors leading-snug">
-              Why Is My Solar Panel Not Charging the Battery? 5 Diagnostics
-            </h3>
-<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-3">
-              Inspect irradiance thresholds, MPPT minimum tracking voltage start gates, and faulty inline DC combiner fuses without specialized tools.
-            </p>
-</div>
-<div class="pt-4 mt-4 border-t border-surface-container-highest/50">
-<a class="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-container transition-colors" href="guides/">
-              Read More
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- Guide 4 -->
-<article class="bg-surface-container rounded-xl p-6 shadow-lg hover:shadow-xl transition-all flex flex-col justify-between group" data-slug="guides/low-ac-grid-voltage" data-anim="fade-up" data-delay="4">
-<div class="flex flex-col gap-4">
-<div class="flex items-center justify-between">
-<span class="px-2.5 py-0.5 rounded-full bg-secondary/15 text-secondary text-xs font-semibold">Sungrow / Deye</span>
-<span class="text-xs text-on-surface-variant time-ago" data-time="2026-09-06T11:00:00"></span>
-</div>
-<h3 class="text-lg font-semibold text-on-surface group-hover:text-secondary transition-colors leading-snug">
-              How to Fix Low AC Grid Voltage Errors in Hybrid Inverters
-            </h3>
-<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-3">
-              When neighborhood grid voltage sags below 180V, hybrid units drop offline. Configure grid parameter thresholds legally and securely.
-            </p>
-</div>
-<div class="pt-4 mt-4 border-t border-surface-container-highest/50">
-<a class="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-container transition-colors" href="guides/">
-              Read More
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- Guide 5 -->
-<article class="bg-surface-container rounded-xl p-6 shadow-lg hover:shadow-xl transition-all flex flex-col justify-between group" data-slug="guides/bms-communication-lost" data-anim="fade-up" data-delay="5">
-<div class="flex flex-col gap-4">
-<div class="flex items-center justify-between">
-<span class="px-2.5 py-0.5 rounded-full bg-secondary/15 text-secondary text-xs font-semibold">Pylontech / Deye</span>
-<span class="text-xs text-on-surface-variant time-ago" data-time="2026-09-01T16:00:00"></span>
-</div>
-<h3 class="text-lg font-semibold text-on-surface group-hover:text-primary transition-colors leading-snug">
-              Battery BMS Communication Lost: RS485 &amp; CAN Bus Troubleshooting
-            </h3>
-<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-3">
-              Baud rate errors and RJ45 pinout cross-talk can cause false alarms. Map CAN-H/CAN-L pin positions for standard lithium banks.
-            </p>
-</div>
-<div class="pt-4 mt-4 border-t border-surface-container-highest/50">
-<a class="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-container transition-colors" href="guides/">
-              Read More
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- Guide 6 -->
-<article class="bg-surface-container rounded-xl p-6 shadow-lg hover:shadow-xl transition-all flex flex-col justify-between group" data-slug="guides/solar-array-ground-fault" data-anim="fade-up" data-delay="6">
-<div class="flex flex-col gap-4">
-<div class="flex items-center justify-between">
-<span class="px-2.5 py-0.5 rounded-full bg-secondary/15 text-secondary text-xs font-semibold">Huawei / Solis</span>
-<span class="text-xs text-on-surface-variant time-ago" data-time="2026-08-25T10:00:00"></span>
-</div>
-<h3 class="text-lg font-semibold text-on-surface group-hover:text-primary transition-colors leading-snug">
-              Solar Array Ground Fault (Isolation Fault) Step-by-Step Isolation
-            </h3>
-<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-3">
-              Trace insulation resistance faults down to individual strings using an insulation megohmmeter without risking arc flashes.
-            </p>
-</div>
-<div class="pt-4 mt-4 border-t border-surface-container-highest/50">
-<a class="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-container transition-colors" href="guides/">
-              Read More
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
+<!-- Dynamic Troubleshooting Guides Grid (rendered from data/articles.js) -->
+<div id="home-guides-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+<div id="home-guides-empty" class="p-space-xl text-center bg-surface-container rounded-xl flex flex-col items-center gap-space-md" data-anim="fade-in">
+<span class="material-symbols-outlined text-outline text-5xl">article</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">No guides published yet.</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Troubleshooting guides will appear here once published.</p>
 </div>
 </div>
 </section>
@@ -338,6 +246,7 @@
 </section>
 </div>
 <script src="data/articles.js"></script>
+<script src="data/search.js"></script>
 <script>
   (function() {
 // Hero real-photo auto crossfade slider (4 slides, 2000ms)
@@ -548,5 +457,95 @@ document.querySelectorAll('footer div').forEach(function(element) {
         if (route) link.href = route;
       });
     });
+
+    /* ===========================================================
+       Homepage: Dynamic guides listing + functional search
+       =========================================================== */
+    function escapeHtml(str) {
+      if (str === null || str === undefined) return '';
+      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+
+    function homeCardHtml(article) {
+      return '<article class="group relative bg-surface-container-low rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all flex flex-col justify-between">' +
+        '<div class="p-6 flex flex-col gap-4">' +
+        '<div class="flex items-center justify-between gap-space-xs">' +
+        '<span class="px-2.5 py-0.5 rounded bg-secondary/15 text-secondary text-xs font-semibold">' + escapeHtml(article.brand || 'Solar Guide') + '</span>' +
+        '<span class="text-xs text-on-surface-variant time-ago">' + (function() { try { return (typeof timeAgo === 'function' ? timeAgo(article.publishedAt) : ''); } catch(e){ return ''; } })() + '</span>' +
+        '</div>' +
+        '<h3 class="text-lg text-on-surface group-hover:text-primary transition-colors font-semibold leading-snug">' + escapeHtml(article.title) + '</h3>' +
+        '<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-3">' + escapeHtml(article.excerpt || '') + '</p>' +
+        '</div>' +
+        '<div class="px-6 py-4 bg-surface-container flex items-center justify-end">' +
+        '<a class="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-container transition-colors" href="' + escapeHtml(article.slug) + '">' +
+        '<span>Read More</span>' +
+        '<span class="material-symbols-outlined text-[16px]">arrow_forward</span>' +
+        '</a>' +
+        '</div>' +
+        '</article>';
+    }
+
+    function renderHomeGuides() {
+      var articles = window.WHASOL_ARTICLES || [];
+      var grid     = document.getElementById('home-guides-grid');
+      var empty    = document.getElementById('home-guides-empty');
+      var viewAll  = document.getElementById('home-guides-viewall');
+
+      if (viewAll) {
+        if (articles.length > 0) {
+          viewAll.classList.remove('hidden');
+          viewAll.querySelector('span').textContent = 'View All ' + articles.length + ' Guides';
+        } else {
+          viewAll.classList.add('hidden');
+        }
+      }
+      if (!grid) return;
+      if (articles.length === 0) {
+        grid.classList.add('hidden');
+        grid.innerHTML = '';
+        if (empty) empty.classList.remove('hidden');
+        return;
+      }
+      if (empty) empty.classList.add('hidden');
+      grid.classList.remove('hidden');
+      grid.innerHTML = articles.map(homeCardHtml).join('');
+    }
+
+    function bindHomeSearch() {
+      document.querySelectorAll('[data-search-form]').forEach(function(form) {
+        var input = form.querySelector('[data-search-input]');
+        var wrapper = form.parentElement;
+        var msgEl = wrapper ? wrapper.querySelector('[data-search-msg]') : null;
+
+        function hideMsg() { if (msgEl) { msgEl.classList.add('hidden'); msgEl.classList.remove('flex'); } }
+        function showMsg() { if (msgEl) { msgEl.classList.remove('hidden'); msgEl.classList.add('flex'); } }
+
+        function doSearch(e) {
+          if (e) e.preventDefault();
+          hideMsg();
+          var q = input ? input.value.trim() : '';
+          if (!q) return;
+          var articles = window.WHASOL_ARTICLES || [];
+          var match = window.WHASOL_SEARCH ? window.WHASOL_SEARCH.top(q, articles) : null;
+          if (match) {
+            window.location.href = match.slug;
+          } else {
+            showMsg();
+          }
+        }
+
+        form.addEventListener('submit', doSearch);
+        if (input) {
+          input.addEventListener('input', hideMsg);
+          input.addEventListener('focus', hideMsg);
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      renderHomeGuides();
+      bindHomeSearch();
+    });
+
   })();
 </script></main><footer class="w-full bg-surface-container-lowest pt-space-xl pb-space-lg mt-space-xl"><div class="w-full px-margin-mobile lg:px-margin"><div class="flex flex-col gap-space-xl"><div class="flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface uppercase tracking-wider">Explore</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm"><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="home" href="#">Home</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="troubleshooting" href="#">Troubleshooting Guides</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="error-codes" href="#">Inverter Error Codes</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="blogs" href="#">Engineering Blogs</a></li></ul></div><div class="pt-space-lg border-t border-surface-container-high font-body-sm text-body-sm text-on-surface-variant">© 2026 WhaSol. All rights reserved.</div></div></div></footer><script src="animations.js" defer></script></body></html>
