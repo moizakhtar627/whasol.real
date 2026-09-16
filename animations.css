@@ -60,6 +60,22 @@ html.wha-anim [data-anim].is-visible[data-delay="4"] { animation-delay: 0.32s; }
 html.wha-anim [data-anim].is-visible[data-delay="5"] { animation-delay: 0.40s; }
 html.wha-anim [data-anim].is-visible[data-delay="6"] { animation-delay: 0.48s; }
 
+/* --- Footer entrance reveal (staggered, gated by wha-anim).
+       Units are tagged + delayed by setupFooterReveal() in animations.js;
+       hidden only while JS is active, so failure never hides content. --- */
+html.wha-anim footer .wha-footer-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--wha-foot-delay, 0s);
+}
+
+html.wha-anim footer .wha-footer-reveal.wha-footer-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* --- Page-load hero entrance (no observer; runs on parse) --- */
 html.wha-anim [data-anim-hero] {
   opacity: 0;
@@ -104,10 +120,12 @@ html.wha-anim [data-anim-hero="4"] { animation-delay: 0.55s; }
 /* --- Accessibility: reduced motion --- */
 @media (prefers-reduced-motion: reduce) {
   html.wha-anim [data-anim],
-  html.wha-anim [data-anim-hero] {
+  html.wha-anim [data-anim-hero],
+  html.wha-anim footer .wha-footer-reveal {
     opacity: 1 !important;
     transform: none !important;
     animation: none !important;
+    transition: none !important;
   }
   :where(.anim-card-hover),
   :where(.anim-btn-hover),

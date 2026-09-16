@@ -41,6 +41,8 @@
 
     revealEls.forEach(function (el) { io.observe(el); });
 
+    setupFooterReveal();
+
     addMicroInteractions();
 
     /* --- Hover micro-interactions (additive classes only) --- */
@@ -67,6 +69,53 @@
           link.classList.add('anim-arrow-hover');
         }
       });
+    }
+
+    /* --- Footer entrance reveal (premium footer, every page).
+           Targets existing class hooks only — no HTML changes.
+           Hidden only under the wha-anim gate set above; if JS or
+           IntersectionObserver is unavailable, content stays visible. --- */
+    function setupFooterReveal() {
+      var footer = document.querySelector('footer');
+      if (!footer) return;
+
+      var units = [];
+
+      var cta = footer.querySelector('.footer-cta-panel');
+      if (cta) units.push(cta);
+
+      var grid = footer.querySelector('.grid');
+      if (grid) {
+        Array.prototype.slice.call(grid.children).forEach(function (child) {
+          if (child && child.tagName === 'DIV') units.push(child);
+        });
+      }
+
+      var bottom = footer.querySelector('.pt-space-lg.border-t');
+      if (bottom) units.push(bottom);
+
+      if (!units.length) return;
+
+      units.forEach(function (el, i) {
+        el.classList.add('wha-footer-reveal');
+        el.style.setProperty('--wha-foot-delay', (0.06 + i * 0.07).toFixed(2) + 's');
+      });
+
+      if (!('IntersectionObserver' in window)) {
+        units.forEach(function (el) { el.classList.add('wha-footer-visible'); });
+        return;
+      }
+
+      var fio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('wha-footer-visible');
+            fio.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -6% 0px' });
+
+      units.forEach(function (el) { fio.observe(el); });
     }
   });
 })();

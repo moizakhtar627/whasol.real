@@ -481,6 +481,15 @@ footer {
 footer .whasol-footer-logo {
   width: clamp(6.5rem, 18vw, 8rem);
   height: auto;
+  transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Footer brand logo: gentle brightness + lift on hover/focus. */
+footer a:hover .whasol-footer-logo,
+footer a:focus-visible .whasol-footer-logo {
+  opacity: 0.92;
+  filter: brightness(1.1);
+  transform: translateY(-2px);
 }
 
 footer .footer-column-title {
@@ -667,5 +676,12 @@ footer .footer-error-link:hover {
 @media (prefers-reduced-motion: reduce) {
   #hero-rotating-wrap [data-hero-phrase] {
     transition: none !important;
+  }
+
+  footer .whasol-footer-logo {
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+    opacity: 1 !important;
   }
 }
