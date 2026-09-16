@@ -100,7 +100,7 @@ View Safety Standards
     document.addEventListener('DOMContentLoaded', () => {
       document.title = document.title.replace(/Solar Nexus/g, 'WhaSol');
 const logoPrefix = location.pathname.slice(0, location.pathname.lastIndexOf('/') + 1).split('/').filter(Boolean).length > 0 ? '../' : '';
-      document.querySelectorAll('header img').forEach(function(logo) { logo.src = logoPrefix + 'whasol-logo-clean.svg'; logo.alt = 'WhaSol'; logo.className = 'h-20 w-80 object-contain'; if (logo.nextElementSibling) logo.nextElementSibling.style.display = 'none'; });
+      document.querySelectorAll('header img').forEach(function(logo) { logo.src = logoPrefix + 'whasol-logo.png'; logo.alt = 'WhaSol'; logo.className = 'h-20 w-80 object-contain'; if (logo.nextElementSibling) logo.nextElementSibling.style.display = 'none'; });
       document.querySelectorAll('header .w-8.h-8.rounded-full.bg-primary').forEach(function(profile) { profile.remove(); });
       const mobileNavToggle = document.getElementById('mobile-nav-toggle');
       const mobileNavMenu = document.getElementById('mobile-nav-menu');

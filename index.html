@@ -21,38 +21,48 @@
 <!-- Left Column: Intelligence Triage & Value Prop -->
 <div class="xl:col-span-6 flex flex-col">
 <!-- Headline & Rotating Niche Text -->
-<div class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-sm">
 <h1 class="hero-headline font-display-xl text-[clamp(2.55rem,4.6vw,4.05rem)] text-on-surface tracking-tight leading-[1.05] font-bold">
             Power Problems.<br/>
 <span class="text-primary">Solved Smarter.</span>
 </h1>
 <div class="flex flex-col sm:flex-row sm:items-center gap-x-2 text-[clamp(1.35rem,1.9vw,1.65rem)]">
-<span class="text-on-surface-variant font-semibold leading-tight">We're solving</span>
-<span class="relative inline-block align-middle font-bold text-secondary leading-tight" id="hero-rotating-wrap">
-<span class="invisible" aria-hidden="true">Solar Panel Degradation &amp; Strings</span>
-<span class="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-100" data-hero-phrase="0">Inverter Faults &amp; Error Codes</span>
-<span class="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0" data-hero-phrase="1">Battery Storage &amp; BMS Failures</span>
-<span class="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0" data-hero-phrase="2">Wiring Connections &amp; Voltage Drops</span>
-<span class="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0" data-hero-phrase="3">Solar Panel Degradation &amp; Strings</span>
-</span>
-</div>
+            <span class="text-on-surface-variant font-semibold leading-tight">We're solving</span>
+            <span class="relative inline-block align-middle font-bold text-secondary leading-tight" id="hero-rotating-wrap" style="min-height:1.6em">
+              <span class="invisible" aria-hidden="true">Battery Storage &amp; BMS Failures</span>
+              <span class="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-100" data-hero-phrase="0">Wiring Connections</span>
+              <span class="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0" data-hero-phrase="1">Voltage Drops</span>
+              <span class="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0" data-hero-phrase="2">Inverter Faults &amp; Error Codes</span>
+              <span class="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0" data-hero-phrase="3">Battery Storage &amp; BMS Failures</span>
+              <span class="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0" data-hero-phrase="4">Solar Panel Diagnostics</span>
+            </span>
+          </div>
 </div>
 <p class="font-body-lg text-[1.15rem] lg:text-[1.2rem] text-on-surface-variant max-w-2xl leading-relaxed mt-space-md">
             Diagnose inverter errors, battery issues, wiring problems, and solar panel failures with clear, practical solutions engineered for residential and commercial solar systems.
           </p>
 <!-- Hero Statistics -->
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md sm:gap-space-lg max-w-xl mt-space-lg xl:mt-space-xl">
-<div class="bg-surface-container-low rounded-xl p-space-lg lg:p-space-xl flex flex-col gap-1.5 border border-surface-container-high shadow-lg">
-<span class="text-[2.1rem] lg:text-[2.45rem] text-on-surface font-bold leading-none" id="hero-verified-fixes">0</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Verified Fixes</span>
+<div class="grid grid-cols-3 gap-space-sm max-w-lg mt-space-md xl:mt-space-lg">
+<div class="bg-surface-container-low rounded-lg px-space-md py-space-sm flex flex-col gap-1 border border-surface-container-high/60 hover:border-primary/40 transition-colors">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span class="text-[1.3rem] lg:text-[1.5rem] text-on-surface font-bold leading-none" id="hero-verified-fixes">0</span>
 </div>
-<div class="bg-surface-container-low rounded-xl p-space-lg lg:p-space-xl flex flex-col gap-1.5 border border-surface-container-high shadow-lg">
-<span class="text-[2.1rem] lg:text-[2.45rem] text-secondary font-bold leading-none" id="hero-oem-brands">0</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">OEM Brands</span>
+<span class="font-label-sm text-[0.65rem] text-on-surface-variant uppercase tracking-wider leading-tight">Verified Fixes</span>
 </div>
-<div class="bg-surface-container-low rounded-xl p-space-lg lg:p-space-xl flex flex-col gap-1.5 border border-surface-container-high shadow-lg">
-<span class="text-[2.1rem] lg:text-[2.45rem] text-primary font-bold leading-none">99.4%</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Fixing Accuracy</span>
+<div class="bg-surface-container-low rounded-lg px-space-md py-space-sm flex flex-col gap-1 border border-surface-container-high/60 hover:border-secondary/40 transition-colors">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">factory</span>
+<span class="text-[1.3rem] lg:text-[1.5rem] text-secondary font-bold leading-none" id="hero-oem-brands">0</span>
+</div>
+<span class="font-label-sm text-[0.65rem] text-on-surface-variant uppercase tracking-wider leading-tight">OEM Brands</span>
+</div>
+<div class="bg-surface-container-low rounded-lg px-space-md py-space-sm flex flex-col gap-1 border border-surface-container-high/60 hover:border-primary/40 transition-colors">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">precision_manufacturing</span>
+<span class="text-[1.3rem] lg:text-[1.5rem] text-primary font-bold leading-none">99.4%</span>
+</div>
+<span class="font-label-sm text-[0.65rem] text-on-surface-variant uppercase tracking-wider leading-tight">Fixing Accuracy</span>
 </div>
 </div>
 </div>
@@ -330,13 +340,12 @@
 <script src="data/articles.js"></script>
 <script>
   (function() {
-// Hero real-photo auto crossfade slider + synchronized rotating text
+// Hero real-photo auto crossfade slider (4 slides, 2000ms)
     const heroSlider = document.getElementById('hero-slider');
     if (heroSlider) {
       const heroSlides = Array.prototype.slice.call(heroSlider.querySelectorAll('[data-slide]'));
       const heroDots = Array.prototype.slice.call(heroSlider.querySelectorAll('.hero-dot'));
       const heroLabel = document.getElementById('hero-slide-label');
-      const heroPhrases = Array.prototype.slice.call(document.querySelectorAll('[data-hero-phrase]'));
       const heroSlideLabels = ['Inverter Faults', 'Battery & BMS', 'Wiring & Voltage', 'Panel Strings'];
       const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       let slideIndex = 0;
@@ -350,10 +359,6 @@
           d.classList.toggle('bg-white/40', idx !== i);
         });
         if (heroLabel && heroSlideLabels[i]) heroLabel.textContent = heroSlideLabels[i];
-        heroPhrases.forEach(function(p, idx) {
-          p.classList.toggle('opacity-100', idx === i);
-          p.classList.toggle('opacity-0', idx !== i);
-        });
       }
       showHeroSlide(0);
       if (!reduceMotion) {
@@ -361,6 +366,25 @@
           slideIndex = (slideIndex + 1) % heroSlides.length;
           showHeroSlide(slideIndex);
         }, 2000);
+      }
+    }
+
+// Rotating text: 5 phrases, 2500ms, independent of slider
+    const heroPhrases = Array.prototype.slice.call(document.querySelectorAll('[data-hero-phrase]'));
+    if (heroPhrases.length > 0) {
+      let phraseIndex = 0;
+      function showHeroPhrase(i) {
+        heroPhrases.forEach(function(p, idx) {
+          p.classList.toggle('opacity-100', idx === i);
+          p.classList.toggle('opacity-0', idx !== i);
+        });
+      }
+      showHeroPhrase(0);
+      if (!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+        setInterval(function() {
+          phraseIndex = (phraseIndex + 1) % heroPhrases.length;
+          showHeroPhrase(phraseIndex);
+        }, 2500);
       }
     }
 
@@ -416,7 +440,7 @@ const visualStyle = document.createElement('style');
       document.head.appendChild(visualStyle);
       document.title = document.title.replace(/Solar Nexus/g, 'WhaSol');
 const logoPrefix = location.pathname.slice(0, location.pathname.lastIndexOf('/') + 1).split('/').filter(Boolean).length > 0 ? '../' : '';
-      document.querySelectorAll('header img').forEach(function(logo) { logo.src = logoPrefix + 'whasol-logo-clean.svg'; logo.alt = 'WhaSol'; logo.className = 'h-20 w-80 object-contain'; if (logo.nextElementSibling) logo.nextElementSibling.style.display = 'none'; });
+      document.querySelectorAll('header img').forEach(function(logo) { logo.src = logoPrefix + 'whasol-logo.png'; logo.alt = 'WhaSol'; logo.className = 'h-20 w-80 object-contain'; if (logo.nextElementSibling) logo.nextElementSibling.style.display = 'none'; });
       document.querySelectorAll('header .w-8.h-8.rounded-full.bg-primary').forEach(function(profile) { profile.remove(); });
       const mobileNavToggle = document.getElementById('mobile-nav-toggle');
       const mobileNavMenu = document.getElementById('mobile-nav-menu');
