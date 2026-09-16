@@ -260,9 +260,12 @@ function escapeHtml(str) {
             '<div class="flex flex-col gap-4">' +
               img +
               '<div class="p-6 flex flex-col gap-3">' +
-                '<div class="flex items-center justify-between">' +
+'<div class="flex items-center justify-between">' +
                   '<span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-xs font-semibold">' + categoryLabel(article.category) + '</span>' +
-                  (dateStr ? '<span class="text-xs text-on-surface-variant">' + dateStr + '</span>' : '') +
+                  '<span class="flex items-center gap-2">' +
+                    (dateStr ? '<span class="text-xs text-on-surface-variant">' + dateStr + '</span>' : '') +
+                    (article.readTime ? '<span class="text-xs text-on-surface-variant flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px]">schedule</span>' + escapeHtml(article.readTime) + '</span>' : '') +
+                  '</span>' +
                 '</div>' +
                 '<h3 class="text-lg font-semibold text-on-surface group-hover:text-primary-container transition-colors leading-snug">' + escapeHtml(article.title) + '</h3>' +
                 '<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-3">' + escapeHtml(article.excerpt || '') + '</p>' +

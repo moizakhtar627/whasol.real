@@ -50,4 +50,29 @@ window.WHASOL_CATEGORIES = [
   { key: "voltage",        label: "Voltage & Frequency" }
 ];
 
-window.WHASOL_ARTICLES = [];
+window.WHASOL_ARTICLES = [
+  {
+    id: "solar-battery-troubleshooting-wiring-safety",
+    title: "How to Troubleshoot Solar Batteries and Wire Them Safely",
+    metaTitle: "How to Troubleshoot Solar Batteries and Wire Them Safely",
+    metaDescription: "Solar battery troubleshooting made clear: how to identify charging problems, test battery voltage, spot damaged cables, and understand safe battery wiring for reliable solar power systems.",
+    excerpt: "Solar battery troubleshooting made clear: how to identify charging problems, test battery voltage, spot damaged cables, and understand safe battery wiring for reliable solar power systems.",
+    category: "battery",
+    brand: "",
+    author: "WHA SOL Engineering",
+    readTime: "8 min read",
+    tags: [
+      "Solar Batteries",
+      "Battery Troubleshooting",
+      "Battery Wiring",
+      "Battery Charging Problems",
+      "Lithium Battery Safety",
+      "Off-Grid Solar Systems",
+      "Solar Maintenance",
+      "Battery"
+    ],
+    publishedAt: "2026-09-16T12:20:00",
+    slug: "blog/solar-battery-troubleshooting-wiring-safety",
+    content: "<h2>1. Common Solar Battery Problems</h2><p>Diagnosing the five most common solar battery faults: overcharging, undercharging, overheating, physical damage or swelling, and short backup time.</p><h2>2. Solar Battery Maintenance Checklist</h2><p>Monthly visual checks, quarterly terminal tightening, bi-annual cleaning, and periodic hydrometer checks for flooded batteries.</p><h2>3. Essential Battery Wiring Safety Rules</h2><p>Core assembly order, proper fusing, insulated tools, and load terminal guidance.</p><h2>4. Step-by-Step Solar Battery Wiring Overview</h2><p>Safe connection sequence from battery bank to charge controller, solar panels, and inverter.</p><h2>5. Important Safety Considerations</h2><p>Energy storage hazards, lithium handling requirements, and professional inspection guidance.</p><h2>6. When to Contact a Qualified Solar Technician</h2><p>Recognizing situations that require a certified electrician.</p>"
+  }
+];
