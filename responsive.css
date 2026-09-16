@@ -62,6 +62,15 @@ svg {
   }
 }
 
+/* WhaSol logo in the footer: slightly smaller than header lockup,
+   sized to the 4.045:1 ratio of the current source file. */
+.whasol-footer-logo {
+  width: clamp(6.5rem, 18vw, 8rem);
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
 /* Fixed header (A-type pages): taller bars (tablet 5.5rem, desktop
    6.25rem) so the larger logo gets breathing room. Offsets below
    keep main + sticky aligned to the matching bar height. */
@@ -464,12 +473,112 @@ header.sticky {
 }
 
 /* --- 8. Footer --- */
+/* Premium footer: deep navy canvas, subtle engineering detailing. */
+footer {
+  background-color: #060b14 !important;
+}
+
+footer .whasol-footer-logo {
+  width: clamp(6.5rem, 18vw, 8rem);
+  height: auto;
+}
+
+footer .footer-column-title {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #e9f3ff;
+}
+
+footer .footer-column-title::before {
+  content: "";
+  width: 1.5rem;
+  height: 1px;
+  background: #38d9ff;
+}
+
+footer .footer-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding-left: 0.375rem;
+  color: #8fa3b8;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+footer .footer-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  background: #38d9ff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+footer .footer-link:hover {
+  color: #b6edff;
+  padding-left: 0.625rem;
+}
+
+footer .footer-link:hover::after {
+  transform: scaleX(1);
+}
+
+footer .footer-link.anim-btn-hover,
+footer .footer-link.anim-btn-hover:hover {
+  transform: none;
+}
+
+footer .footer-cta-panel {
+  background: #0b1623;
+  border: 1px solid rgba(41, 67, 75, 0.7);
+  border-radius: 12px;
+}
+
+footer .footer-cta-button {
+  background: #38d9ff;
+  color: #003641;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+footer .footer-cta-button:hover {
+  background: #68d3d0;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(104, 211, 208, 0.22);
+}
+
+footer .footer-error-link {
+  color: #8fa3b8;
+  transition: color 0.2s ease;
+}
+
+footer .footer-error-link:hover {
+  color: #ffb955;
+}
+
 @media (max-width: 767px) {
   footer .px-margin,
   footer > div > div,
   footer {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
+  }
+
+  footer .whasol-footer-logo {
+    width: clamp(6.5rem, 40vw, 8rem);
+  }
+
+  footer .footer-cta-button {
+    width: 100%;
+    justify-content: center;
   }
 
   /* Legacy footer inner container (about / contact / safety) */

@@ -448,15 +448,6 @@ document.querySelectorAll('footer div').forEach(function(element) {
         : pageRoutes['error-codes'];
     });
 
-    document.addEventListener('DOMContentLoaded', function() {
-      const footer = document.querySelector('footer');
-      if (!footer) return;
-      footer.innerHTML = '<div class="w-full px-margin-mobile lg:px-margin"><div class="flex flex-col gap-space-xl"><div class="flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface uppercase tracking-wider">Explore</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm"><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="home" href="#">Home</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="troubleshooting" href="#">Troubleshooting Guides</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="error-codes" href="#">Inverter Error Codes</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="blogs" href="#">Engineering Blogs</a></li></ul></div><div class="pt-space-lg border-t border-surface-container-high font-body-sm text-body-sm text-on-surface-variant">© 2026 WhaSol. All rights reserved.</div></div></div>';
-      footer.querySelectorAll('a[data-path]').forEach(function(link) {
-        const route = pageRoutes[link.dataset.path];
-        if (route) link.href = route;
-      });
-    });
 
     /* ===========================================================
        Homepage: Dynamic guides listing + functional search
@@ -548,4 +539,72 @@ document.querySelectorAll('footer div').forEach(function(element) {
     });
 
   })();
-</script></main><footer class="w-full bg-surface-container-lowest pt-space-xl pb-space-lg mt-space-xl"><div class="w-full px-margin-mobile lg:px-margin"><div class="flex flex-col gap-space-xl"><div class="flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface uppercase tracking-wider">Explore</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm"><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="home" href="#">Home</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="troubleshooting" href="#">Troubleshooting Guides</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="error-codes" href="#">Inverter Error Codes</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"><span class="text-primary-container font-headline-sm">/</span><a data-path="blogs" href="#">Engineering Blogs</a></li></ul></div><div class="pt-space-lg border-t border-surface-container-high font-body-sm text-body-sm text-on-surface-variant">© 2026 WhaSol. All rights reserved.</div></div></div></footer><script src="animations.js" defer></script></body></html>
+</script></main><footer class="w-full border-t border-surface-container-high/70">
+<div class="w-full px-margin-mobile lg:px-margin py-space-xl">
+<div class="w-full flex flex-col gap-space-xl">
+<div class="footer-cta-panel overflow-hidden p-space-lg flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-wide">Need help understanding a solar system problem?</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed max-w-2xl">Explore practical troubleshooting guides, error-code references, and engineering resources built for real solar systems.</p>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center gap-space-sm shrink-0">
+<a data-path="troubleshooting" href="guides/" class="footer-cta-button inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-full font-label-md text-label-md uppercase tracking-wider">
+<span>Explore Troubleshooting Guides</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<a data-path="error-codes" href="error-codes/" class="footer-error-link inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-full border border-surface-container-high text-on-surface font-label-md text-label-md hover:border-primary transition-colors">
+<span>Browse Error Codes</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-gutter gap-y-space-xl w-full">
+<div class="flex flex-col gap-space-md sm:col-span-2 lg:col-span-4 lg:pr-space-md">
+<a data-path="home" href="index.html" class="inline-flex w-fit" aria-label="WhaSol home">
+<span class="inline-flex items-center rounded-lg bg-[#091525] px-space-sm py-space-xs">
+<img src="whasol-logo.png" alt="WhaSol - Solar Engineering Knowledge Platform" class="whasol-footer-logo object-contain" />
+</span>
+</a>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed max-w-md">WHA SOL is a solar engineering knowledge platform helping homeowners, technicians, installers, and electricians understand and solve real-world solar system problems.</p>
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-primary/80">Built for practical solar engineering knowledge.</p>
+</div>
+<div class="flex flex-col gap-space-sm">
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-on-surface footer-column-title">Explore</h4>
+<ul class="flex flex-col gap-2">
+<li><a data-path="home" href="index.html" class="footer-link">Home</a></li>
+<li><a data-path="troubleshooting" href="guides/" class="footer-link">Troubleshooting Guides</a></li>
+<li><a data-path="error-codes" href="error-codes/" class="footer-link">Inverter Error Codes</a></li>
+<li><a data-path="blogs" href="blog/" class="footer-link">Engineering Blogs</a></li>
+<li><a data-path="about" href="about-us/" class="footer-link">About Us</a></li>
+<li><a data-path="contact" href="contact-us/" class="footer-link">Contact</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-space-sm">
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-on-surface footer-column-title">Knowledge Base</h4>
+<ul class="flex flex-col gap-2">
+<li><a data-path="troubleshooting" href="guides/" class="footer-link">Inverter Problems</a></li>
+<li><a data-path="troubleshooting" href="guides/" class="footer-link">Battery Issues</a></li>
+<li><a data-path="troubleshooting" href="guides/" class="footer-link">Solar Panel Problems</a></li>
+<li><a data-path="troubleshooting" href="guides/" class="footer-link">Wiring &amp; Connections</a></li>
+<li><a data-path="troubleshooting" href="guides/" class="footer-link">Voltage &amp; Frequency</a></li>
+<li><a href="safety-manual/" class="footer-link">Safety &amp; Electrical</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-space-sm">
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-on-surface footer-column-title">Resources</h4>
+<ul class="flex flex-col gap-2">
+<li><a data-path="troubleshooting" href="guides/" class="footer-link">Troubleshooting Guides</a></li>
+<li><a data-path="error-codes" href="error-codes/" class="footer-link">Inverter Error Codes</a></li>
+<li><a href="safety-manual/" class="footer-link">Solar Safety Manual</a></li>
+<li><a data-path="blogs" href="blog/" class="footer-link">Engineering Blogs</a></li>
+<li><a data-path="blogs" href="blog/" class="footer-link">Recent Articles</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-space-lg border-t border-surface-container-high/70 flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant">&copy; 2026 WhaSol. All rights reserved.</p>
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant/70">Solar Engineering Knowledge Platform</p>
+</div>
+</div>
+</div>
+</footer>
