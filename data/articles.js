@@ -28,26 +28,24 @@
  * }
  *
  * Blog page category display names map to these keys as follows:
- *   inverter    -> INVERTER ARCHITECTURE
- *   battery     -> BATTERY CHEMISTRY
- *   solar-panel -> SOLAR PV ARRAY DIAGNOSTICS
- *   wiring      -> WIRING & CONNECTIONS
+ *   all                -> ALL ARTICLES (filter only)
+ *   inverter           -> INVERTER ARCHITECTURE
+ *   solar-battery-guide-> SOLAR BATTERY GUIDE
+ *   solar-panel        -> SOLAR PV ARRAY DIAGNOSTICS
+ *   wiring             -> WIRING & CONNECTIONS
  *
- * Categories must match one of these keys:
- *   inverter     -> Inverter Problems
- *   battery      -> Battery Issue
- *   solar-panel  -> Solar Panel Problems
- *   wiring       -> Wiring & Electrical
- *   voltage      -> Voltage & Frequency
+ * Categories match WHASOL_CATEGORIES keys below, which the Troubleshooting
+ * (guides) page uses for its problem-finder counts.
  */
 
 window.WHASOL_CATEGORIES = [
-  { key: "all",            label: "All Problems" },
-  { key: "inverter",       label: "Inverter Problems" },
-  { key: "battery",        label: "Battery Issue" },
-  { key: "solar-panel",    label: "Solar Panel Problems" },
-  { key: "wiring",         label: "Wiring & Electrical" },
-  { key: "voltage",        label: "Voltage & Frequency" }
+  { key: "all",                 label: "All Problems" },
+  { key: "inverter",            label: "Inverter Problems" },
+  { key: "solar-battery-guide", label: "Solar Battery Guide" },
+  { key: "battery",             label: "Battery Issue" },
+  { key: "solar-panel",         label: "Solar Panel Problems" },
+  { key: "wiring",              label: "Wiring & Electrical" },
+  { key: "voltage",             label: "Voltage & Frequency" }
 ];
 
 window.WHASOL_ARTICLES = [
@@ -55,12 +53,14 @@ window.WHASOL_ARTICLES = [
     id: "solar-battery-troubleshooting-wiring-safety",
     title: "How to Troubleshoot Solar Batteries and Wire Them Safely",
     metaTitle: "How to Troubleshoot Solar Batteries and Wire Them Safely",
-    metaDescription: "Solar battery troubleshooting made clear: how to identify charging problems, test battery voltage, spot damaged cables, and understand safe battery wiring for reliable solar power systems.",
+    metaDescription: "Solar battery troubleshooting made clear: how to test voltage, spot bad cables, and wire batteries safely for steady, reliable power at home.",
     excerpt: "Solar battery troubleshooting made clear: how to identify charging problems, test battery voltage, spot damaged cables, and understand safe battery wiring for reliable solar power systems.",
-    category: "battery",
+    category: "solar-battery-guide",
     brand: "",
     author: "WHA SOL Engineering",
     readTime: "8 min read",
+    imageAlt: "Solar battery wiring and troubleshooting equipment",
+    featuredImage: "../assets/images/solar-battery-guide.svg",
     tags: [
       "Solar Batteries",
       "Battery Troubleshooting",

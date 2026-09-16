@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none" role="img" aria-label="Illustration of a solar battery wiring and troubleshooting system showing a PV array, charge controller, battery bank and inverter.">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1828"/>
+      <stop offset="1" stop-color="#0a1321"/>
+    </linearGradient>
+    <radialGradient id="glowCyan" cx="0.5" cy="0.42" r="0.55">
+      <stop offset="0" stop-color="#38d9ff" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#38d9ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowAmber" cx="0.62" cy="0.72" r="0.5">
+      <stop offset="0" stop-color="#ffb955" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#ffb955" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .lbl { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 600; fill: #d9e3f7; letter-spacing: 0.12em; }
+      .sub { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 400; fill: #8fa3b5; letter-spacing: 0.06em; }
+      .box { fill: #14202f; stroke-width: 1.5; }
+      .grid { stroke: #38d9ff; stroke-opacity: 0.18; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bgGrad)"/>
+  <rect width="1200" height="675" fill="url(#glowCyan)"/>
+  <rect width="1200" height="675" fill="url(#glowAmber)"/>
+
+  <g opacity="0.5" stroke="#1c2a3c" stroke-width="1">
+    <path d="M0 50H1200 M0 100H1200 M0 150H1200 M0 200H1200 M0 250H1200 M0 300H1200 M0 350H1200 M0 400H1200 M0 450H1200 M0 500H1200 M0 550H1200 M0 600H1200 M0 650H1200"/>
+    <path d="M50 0V675 M100 0V675 M150 0V675 M200 0V675 M250 0V675 M300 0V675 M350 0V675 M400 0V675 M450 0V675 M500 0V675 M550 0V675 M600 0V675 M650 0V675 M700 0V675 M750 0V675 M800 0V675 M850 0V675 M900 0V675 M950 0V675 M1000 0V675 M1050 0V675 M1100 0V675 M1150 0V675"/>
+  </g>
+
+  <g>
+    <path d="M14 70H168" stroke="#38d9ff" stroke-width="2"/>
+    <text x="14" y="52" class="lbl" font-size="15">WHA SOL ENGINEERING</text>
+    <text x="14" y="92" class="sub" font-size="12">SOLAR BATTERY TROUBLESHOOTING &amp; SAFE WIRING GUIDE</text>
+  </g>
+
+  <g>
+    <rect x="904" y="34" width="282" height="44" rx="22" fill="#ffb955" fill-opacity="0.12" stroke="#ffb955" stroke-width="1"/>
+    <text x="1045" y="61" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" font-size="13" fill="#ffb955" letter-spacing="0.18em">BATTERY WIRING &amp; MAINTENANCE</text>
+  </g>
+
+  <g>
+    <rect x="120" y="170" width="150" height="52" rx="6" fill="none" stroke="#2b3b52" stroke-width="1"/>
+    <text x="195" y="205" text-anchor="middle" class="lbl" font-size="13" fill="#a7c4e4">PV ARRAY</text>
+    <g>
+      <rect x="96" y="140" width="198" height="118" rx="8" fill="#14202f" stroke="#2b3b52" stroke-width="1.5"/>
+      <g class="grid">
+        <path d="M112 158H278 M112 174H278 M112 190H278 M112 206H278 M112 222H278 M112 238H278"/>
+        <path d="M128 142V256 M144 142V256 M160 142V256 M176 142V256 M192 142V256 M208 142V256 M224 142V256 M240 142V256 M256 142V256 M272 142V256"/>
+      </g>
+      <rect x="84" y="246" width="58" height="10" rx="2" fill="#38d9ff" fill-opacity="0.25" stroke="#38d9ff" stroke-opacity="0.6" stroke-width="1"/>
+      <rect x="154" y="246" width="58" height="10" rx="2" fill="#38d9ff" fill-opacity="0.25" stroke="#38d9ff" stroke-opacity="0.6" stroke-width="1"/>
+      <rect x="248" y="246" width="58" height="10" rx="2" fill="#38d9ff" fill-opacity="0.25" stroke="#38d9ff" stroke-opacity="0.6" stroke-width="1"/>
+    </g>
+  </g>
+
+  <g>
+    <rect x="420" y="150" width="230" height="150" rx="10" class="box" stroke="#38d9ff" stroke-opacity="0.85"/>
+    <text x="535" y="196" text-anchor="middle" class="lbl" font-size="13" fill="#7fe0ff">CHARGE</text>
+    <text x="535" y="215" text-anchor="middle" class="lbl" font-size="13" fill="#7fe0ff">CONTROLLER</text>
+    <circle cx="452" cy="258" r="5" fill="#38d9ff"/>
+    <circle cx="474" cy="258" r="5" fill="#38d9ff" fill-opacity="0.55"/>
+    <circle cx="496" cy="258" r="5" fill="#38d9ff" fill-opacity="0.3"/>
+    <text x="618" y="262" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#38d9ff" letter-spacing="0.1em">+ −</text>
+    <rect x="540" y="182" width="96" height="34" rx="6" fill="#0a1321" stroke="#2b3b52" stroke-width="1"/>
+    <text x="588" y="202" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#e8f2ff" letter-spacing="0.08em">44.2 V</text>
+  </g>
+
+  <g>
+    <rect x="920" y="150" width="230" height="150" rx="10" class="box" stroke="#ffb955" stroke-opacity="0.9"/>
+    <text x="1035" y="196" text-anchor="middle" class="lbl" font-size="13" fill="#ffc980">DC / AC</text>
+    <text x="1035" y="215" text-anchor="middle" class="lbl" font-size="13" fill="#ffc980">INVERTER</text>
+    <rect x="1112" y="240" width="22" height="34" rx="4" fill="#ffb955" fill-opacity="0.2" stroke="#ffb955" stroke-width="1.2"/>
+    <path d="M1123 244V274 M1112 258H1134" stroke="#ffb955" stroke-width="1.6"/>
+    <path d="M940 246H1000" stroke="#ffb955" stroke-width="1.4" stroke-dasharray="4 4"/><text x="1005" y="250" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffb955" letter-spacing="0.08em">LIVE</text>
+  </g>
+
+  <g>
+    <rect x="330" y="410" width="540" height="170" rx="12" fill="#101a28" stroke="#2b3b52" stroke-width="1.5"/>
+    <text x="600" y="446" text-anchor="middle" class="lbl" font-size="13" fill="#f2c14f">BATTERY BANK · 48 V</text>
+    <g fill="#15202f">
+      <rect x="368" y="470" width="62" height="92" rx="10" stroke="#3a4a63" stroke-width="1.2"/>
+      <rect x="446" y="470" width="62" height="92" rx="10" stroke="#3a4a63" stroke-width="1.2"/>
+      <rect x="524" y="470" width="62" height="92" rx="10" stroke="#3a4a63" stroke-width="1.2"/>
+      <rect x="602" y="470" width="62" height="92" rx="10" stroke="#3a4a63" stroke-width="1.2"/>
+      <rect x="680" y="470" width="62" height="92" rx="10" stroke="#3a4a63" stroke-width="1.2"/>
+      <rect x="758" y="470" width="62" height="92" rx="10" stroke="#3a4a63" stroke-width="1.2"/>
+    </g>
+    <g fill="#ffb955">
+      <rect x="380" y="452" width="38" height="12" rx="3"/>
+      <rect x="458" y="452" width="38" height="12" rx="3"/>
+      <rect x="536" y="452" width="38" height="12" rx="3"/>
+      <rect x="614" y="452" width="38" height="12" rx="3"/>
+      <rect x="692" y="452" width="38" height="12" rx="3"/>
+      <rect x="770" y="452" width="38" height="12" rx="3"/>
+    </g>
+    <g stroke="#38d9ff" stroke-width="3">
+      <path d="M399 466V526 M477 466V526 M555 466V526 M633 466V526 M711 466V526 M789 466V526"/>
+    </g>
+    <g fill="#38d9ff">
+      <circle cx="399" cy="540" r="5"/><circle cx="477" cy="540" r="5"/><circle cx="555" cy="540" r="5"/><circle cx="633" cy="540" r="5"/><circle cx="711" cy="540" r="5"/><circle cx="789" cy="540" r="5"/>
+    </g>
+    <path d="M820 516H842V548H862" stroke="#ffb955" stroke-width="2.5" fill="none"/>
+    <circle cx="874" cy="558" r="5" fill="#ffb955"/><text x="884" y="562" class="sub" font-size="11" fill="#ffb955">+</text>
+    <path d="M820 508H842V476H862" stroke="#38d9ff" stroke-width="2.5" fill="none"/>
+    <circle cx="874" cy="466" r="5" fill="#38d9ff"/><text x="884" y="470" class="sub" font-size="11" fill="#38d9ff">−</text>
+  </g>
+
+  <g stroke="#38d9ff" stroke-width="3" fill="none">
+    <path d="M292 268 L420 250"/>
+  </g>
+  <circle cx="356" cy="257" r="6" fill="#38d9ff"/>
+  <text x="356" y="240" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" font-size="14" fill="#38d9ff">1</text>
+
+  <g stroke="#ffb955" stroke-width="3" fill="none">
+    <path d="M535 300 L535 410"/>
+  </g>
+  <circle cx="535" cy="352" r="6" fill="#ffb955"/>
+  <text x="535" y="335" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" font-size="14" fill="#ffb955">2</text>
+
+  <g stroke="#7fd8a4" stroke-width="3" fill="none">
+    <path d="M870 440 C 900 420, 960 350, 1012 300"/>
+  </g>
+  <circle cx="955" cy="352" r="6" fill="#7fd8a4"/>
+  <text x="955" y="335" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" font-size="14" fill="#7fd8a4">3</text>
+
+  <g transform="translate(246 430)">
+    <circle cx="18" cy="18" r="16" fill="#14202f" stroke="#ffb955" stroke-width="1.5"/>
+    <path d="M12 18 L30 18 M18 10 V18 M18 18 V26" stroke="#ffb955" stroke-width="2"/>
+    <text x="38" y="23" class="sub" font-size="11" fill="#ffb955">200Ω</text>
+  </g>
+
+  <g transform="translate(80 460) rotate(-18 24 24)">
+    <path d="M14 34 L34 14 M30 6 A22 22 0 1 1 6 30 Z" stroke="#7fe0ff" stroke-width="2.5" fill="none"/>
+    <circle cx="24" cy="22" r="6" fill="#14202f" stroke="#7fe0ff" stroke-width="1.5"/>
+  </g>
+
+  <g>
+    <path d="M600 618H600" stroke="#3a4a63" stroke-width="1"/>
+    <rect x="240" y="618" width="720" height="1" fill="#2b3b52"/>
+    <text x="600" y="650" text-anchor="middle" class="sub" font-size="13" letter-spacing="0.22em">TEST VOLTAGE · CHECK CABLES · WIRE SAFELY</text>
+  </g>
+</svg>

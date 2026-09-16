@@ -2,11 +2,11 @@
 
 <html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>WhaSol | Solar Engineering Blog &amp; Insights</title>
-<meta name="description" content="Expert articles on inverter diagnostics, lithium battery systems, CAN bus protocols, AFCI protection, and solar panel performance optimization by WhaSol certified engineers. Smart solar engineering insights for installers and system designers."/>
+<meta name="description" content="Practical solar engineering and troubleshooting guides from WHA SOL engineers: solar battery care and safe wiring, inverter diagnostics, PV array maintenance, and electrical connection best practices."/>
 <link rel="canonical" href="https://whasol-real.vercel.app/blog/"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="WhaSol | Solar Engineering Blog &amp; Insights"/>
-<meta property="og:description" content="Expert articles on inverter diagnostics, lithium battery systems, CAN bus protocols, AFCI protection, and solar panel performance optimization by WhaSol certified engineers."/>
+<meta property="og:description" content="Practical solar engineering and troubleshooting guides from WHA SOL engineers: solar battery care and safe wiring, inverter diagnostics, PV array maintenance, and electrical connection best practices."/>
 <meta property="og:url" content="https://whasol-real.vercel.app/blog/"/>
 <meta property="og:site_name" content="WhaSol"/>
 <meta property="og:image" content="https://whasol-real.vercel.app/whasol-logo.png"/>
@@ -15,14 +15,14 @@
 <meta name="twitter:author" content="@WhaSolSolar"/>
 <meta name="twitter:image" content="https://whasol-real.vercel.app/whasol-logo.png"/>
 <meta name="twitter:title" content="WhaSol | Solar Engineering Blog & Insights"/>
-<meta name="twitter:description" content="Expert articles on inverter diagnostics, lithium battery systems, CAN bus protocols, AFCI protection, and solar panel performance optimization by WhaSol certified engineers."/>
+<meta name="twitter:description" content="Practical solar engineering and troubleshooting guides from WHA SOL engineers: solar battery care and safe wiring, inverter diagnostics, PV array maintenance, and electrical connection best practices."/>
 <meta name="robots" content="index, follow"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Blog",
   "name": "WhaSol Solar Engineering Blog",
-  "description": "Expert articles on inverter diagnostics, lithium battery systems, CAN bus protocols, AFCI protection, and solar panel performance optimization by WhaSol certified engineers.",
+  "description": "Practical solar engineering and troubleshooting guides from WHA SOL engineers: solar battery care and safe wiring, inverter diagnostics, PV array maintenance, and electrical connection best practices.",
   "url": "https://whasol-real.vercel.app/blog/",
   "publisher": {
     "@type": "Organization",
@@ -52,7 +52,7 @@ Engineering analyses, firmware breakdowns, battery chemistry triage, and field-p
 <div class="mt-space-lg pt-space-md flex items-center gap-space-md">
 <div class="flex items-center gap-space-xs font-code-telemetry text-body-sm text-on-surface-variant">
 <span class="material-symbols-outlined text-primary text-[16px]">menu_book</span>
-<span><span id="verified-guides-count">0</span> Verified Guides</span>
+<span><span id="verified-guides-count">0</span> <span id="verified-guides-unit">Verified Guides</span></span>
 </div>
 </div>
 <div id="blog-category-nav" class="mt-space-md flex items-center gap-space-xs overflow-x-auto pb-space-xs" data-anim="fade-up"></div>
@@ -65,8 +65,8 @@ Engineering analyses, firmware breakdowns, battery chemistry triage, and field-p
 <div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-space-md">
 <span class="material-symbols-outlined text-3xl text-on-surface-variant">article</span>
 </div>
-<h2 class="text-xl font-semibold text-on-surface mb-space-sm">No Articles Available Yet</h2>
-<p class="text-sm text-on-surface-variant max-w-md leading-relaxed">Our engineering team is preparing verified solar troubleshooting guides, technical articles, and field-proven solutions. New articles will appear here as they are published.</p>
+<h2 id="blog-empty-title" class="text-xl font-semibold text-on-surface mb-space-sm">No engineering articles published yet.</h2>
+<p id="blog-empty-text" class="text-sm text-on-surface-variant max-w-md leading-relaxed">New solar troubleshooting guides and technical articles will appear here.</p>
 </div>
 </section>
 <!-- High Voltage Safety Banner -->
@@ -173,15 +173,17 @@ mobileNavMenu.classList.toggle('hidden');
       });
       const articles = window.WHASOL_ARTICLES || [];
       const blogCategories = [
-        { key: 'all',              label: 'ALL ARTICLES' },
-        { key: 'inverter',         label: 'INVERTER ARCHITECTURE' },
-        { key: 'battery',          label: 'BATTERY CHEMISTRY' },
-        { key: 'solar-panel',      label: 'SOLAR PV ARRAY DIAGNOSTICS' },
-        { key: 'wiring',           label: 'WIRING & CONNECTIONS' }
+        { key: 'all',                  label: 'ALL ARTICLES' },
+        { key: 'inverter',             label: 'INVERTER ARCHITECTURE' },
+        { key: 'solar-battery-guide',  label: 'SOLAR BATTERY GUIDE' },
+        { key: 'solar-panel',          label: 'SOLAR PV ARRAY DIAGNOSTICS' },
+        { key: 'wiring',               label: 'WIRING & CONNECTIONS' }
       ];
       let activeBlogCategory = 'all';
-      const verifiedCount = document.getElementById('verified-guides-count');
+const verifiedCount = document.getElementById('verified-guides-count');
+      const verifiedUnit = document.getElementById('verified-guides-unit');
       if (verifiedCount) verifiedCount.textContent = articles.length;
+      if (verifiedUnit) verifiedUnit.textContent = articles.length === 1 ? 'Verified Guide' : 'Verified Guides';
       const catNav = document.getElementById('blog-category-nav');
       const grid = document.getElementById('blog-article-grid');
       const emptyState = document.getElementById('blog-empty-state');
@@ -235,22 +237,34 @@ function escapeHtml(str) {
         return years + (years === 1 ? ' year ago' : ' years ago');
       }
 
-      function renderBlogArticles() {
+function renderBlogArticles() {
         if (!grid) return;
         var filtered = activeBlogCategory === 'all'
           ? articles
           : articles.filter(function(a) { return a.category === activeBlogCategory; });
         if (filtered.length === 0) {
           grid.innerHTML = '';
-          if (emptyState) emptyState.classList.remove('hidden');
+          if (emptyState) {
+            var emptyTitle = document.getElementById('blog-empty-title');
+            var emptyText = document.getElementById('blog-empty-text');
+            if (activeBlogCategory === 'all') {
+              if (emptyTitle) emptyTitle.textContent = 'No engineering articles published yet.';
+              if (emptyText) emptyText.textContent = 'New solar troubleshooting guides and technical articles will appear here.';
+            } else {
+              if (emptyTitle) emptyTitle.textContent = 'No articles published in this category yet.';
+              if (emptyText) emptyText.textContent = 'Check back soon for new solar troubleshooting guides and technical articles in this category.';
+            }
+            emptyState.classList.remove('hidden');
+          }
           return;
         }
         if (emptyState) emptyState.classList.add('hidden');
         var slugBase = 'guides/';
         grid.innerHTML = filtered.map(function(article) {
           var img = article.featuredImage
-            ? '<img src="' + escapeHtml(article.featuredImage) + '" alt="' + escapeHtml(article.title) + '" class="w-full h-48 object-cover rounded-t-xl" loading="lazy">'
-            : '<div class="w-full h-48 rounded-t-xl bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-4xl text-on-surface-variant">image</span></div>';
+            ? '<img src="' + escapeHtml(article.featuredImage) + '" alt="' + escapeHtml(article.imageAlt || article.title) + '" class="w-full h-48 object-cover rounded-t-xl" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+              '<div class="w-full h-48 rounded-t-xl bg-surface-container-high flex items-center justify-center" style="display:none"><span class="material-symbols-outlined text-4xl text-on-surface-variant">solar_power</span></div>'
+            : '<div class="w-full h-48 rounded-t-xl bg-surface-container-high flex items-center justify-center"><span class="material-symbols-outlined text-4xl text-on-surface-variant">solar_power</span></div>';
           var authorHtml = article.author
             ? '<span class="text-sm font-medium text-on-surface">' + escapeHtml(article.author) + '</span>'
             : '';
